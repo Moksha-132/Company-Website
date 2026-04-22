@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #8b5cf6; /* Vibrant Royal Purple */
+  --purple-dark: #2e1065; /* Deep Midnight Purple */
+  --vibrant: #a855f7; /* New Vibrant Violet (replacing gold) */
+  --gold: #a855f7; /* Mapping old gold to vibrant purple */
+  --white: #ffffff;
+  --background: #fdfaff; /* Lilac tint */
+  --surface: #ffffff;
+  --text: #1e1b4b; /* Deep Indigo */
+  --text-muted: #4338ca; /* Indigo-Purple */
+  --border: #ddd6fe;
+  --glass: rgba(255, 255, 255, 0.9);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.bg-purple { background-color: var(--purple-dark); color: var(--white); }
+.bg-light { background-color: var(--background); }
+.bg-gold { background-color: var(--gold); color: var(--white); }
+.bg-surface { background-color: var(--surface); }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+.btn-purple {
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-purple:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3);
+  background: var(--purple-dark);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(214, 157, 54, 0.3);
+}
+
+.card {
+  background: var(--surface);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(76, 29, 149, 0.03);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(76, 29, 149, 0.1);
+  border-color: var(--primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
