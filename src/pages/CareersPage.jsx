@@ -196,8 +196,8 @@ const CareersPage = () => {
                                 key={i}
                                 src={client.logo} 
                                 alt={client.name} 
-                                initial={{ opacity: 0.6, filter: 'grayscale(1)' }}
-                                whileHover={{ opacity: 1, filter: 'grayscale(0)', scale: 1.1 }}
+                                initial={{ opacity: 1 }}
+                                whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.3 }}
                                 style={{ 
                                     height: '45px', 
