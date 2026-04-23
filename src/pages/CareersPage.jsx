@@ -5,11 +5,11 @@ import { ArrowRight, ShieldAlert } from 'lucide-react';
 
 const CareersPage = () => {
     const clients = [
-        { name: 'Etihad', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/0/03/Etihad_Airways_logo.svg/1200px-Etihad_Airways_logo.svg.png' },
-        { name: 'Emirates', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/1200px-Emirates_logo.svg.png' },
-        { name: 'Cosco', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/1/15/COSCO_Shipping_logo.svg/1200px-COSCO_Shipping_logo.svg.png' },
-        { name: 'Zim', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Zim_Integrated_Shipping_Services_logo.svg/1200px-Zim_Integrated_Shipping_Services_logo.svg.png' },
-        { name: 'Maersk', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Maersk_Group_Logo.svg/1200px-Maersk_Group_Logo.svg.png' }
+        { name: 'Etihad', logo: '/images/etihad.png' },
+        { name: 'Emirates', logo: '/images/emirates.png' },
+        { name: 'Cosco', logo: '/images/cosco.png' },
+        { name: 'Zim', logo: '/images/zim.png' },
+        { name: 'Maersk', logo: '/images/maersk.png' }
     ];
 
     return (
@@ -175,16 +175,16 @@ const CareersPage = () => {
                     </motion.div>
                 </div>
 
-                {/* Section 4: Clients Worldwide */}
+                {/* Section 4: Brand Logos */}
                 <div style={{ padding: '80px 0', textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: '#0f172a', marginBottom: '15px' }}>Our Clients Worldwide</h2>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: '#0f172a', marginBottom: '15px' }}>Our Strategic Partners</h2>
                     <p style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '60px' }}>"Building long-term partnerships, one success story at a time."</p>
                     
                     <div style={{ 
                         display: 'flex', 
                         flexWrap: 'wrap', 
                         justifyContent: 'center', 
-                        gap: '60px', 
+                        gap: '80px', 
                         alignItems: 'center',
                         marginBottom: '60px',
                         padding: '60px',
@@ -192,23 +192,20 @@ const CareersPage = () => {
                         borderRadius: '20px'
                     }}>
                         {clients.map((client, i) => (
-                            <span 
-                                key={i} 
+                            <motion.img 
+                                key={i}
+                                src={client.logo} 
+                                alt={client.name} 
+                                initial={{ opacity: 0.6, filter: 'grayscale(1)' }}
+                                whileHover={{ opacity: 1, filter: 'grayscale(0)', scale: 1.1 }}
+                                transition={{ duration: 0.3 }}
                                 style={{ 
-                                    fontSize: '1.8rem', 
-                                    fontWeight: '800', 
-                                    color: '#0f172a', 
-                                    opacity: 0.6, 
-                                    transition: '0.3s',
-                                    letterSpacing: '1px',
-                                    fontFamily: "'Outfit', sans-serif",
-                                    textTransform: 'uppercase'
+                                    height: '45px', 
+                                    width: 'auto', 
+                                    maxWidth: '180px',
+                                    objectFit: 'contain'
                                 }} 
-                                onMouseEnter={(e) => { e.target.style.opacity = 1; e.target.style.color = '#f59e0b'; }}
-                                onMouseLeave={(e) => { e.target.style.opacity = 0.6; e.target.style.color = '#0f172a'; }}
-                            >
-                                {client.name}
-                            </span>
+                            />
                         ))}
                     </div>
 
