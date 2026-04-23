@@ -1,4 +1,57 @@
 export const blogData = {
+    "sap-outsourcing-with-shnoor": {
+        title: "SAP Outsourcing with Shnoor: Enhancing Business Efficiency",
+        subtitle: "In a fast-paced business environment, specialized expertise in ABAP and MM can make the difference between simply running software and truly optimizing business operations.",
+        date: "8/15/2025",
+        readTime: "1 min read",
+        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1519389950473-47ba0277781c&w=1000",
+        content: [
+            {
+                type: "heading",
+                text: "Introduction to SAP Outsourcing"
+            },
+            {
+                type: "paragraph",
+                text: "In a fast-paced business environment, efficiency, accuracy, and adaptability are key to staying competitive. For organizations using SAP, specialized expertise in ABAP (Advanced Business Application Programming) and MM (Materials Management) can make the difference between simply running software and truly optimizing business operations. At SHNOOR International, we provide end-to-end SAP outsourcing services for ABAP and MM, ensuring your systems work seamlessly while your business focuses on growth."
+            },
+            {
+                type: "heading",
+                text: "Why SAP ABAP & MM Outsourcing Matters"
+            },
+            {
+                type: "paragraph",
+                text: "SAP ABAP is the programming language at the heart of SAP applications, enabling custom development, reporting, and integration tailored to your unique business needs. SAP MM is the critical module for managing procurement, inventory, and supply chain operations efficiently. When these two domains are handled by skilled professionals, your SAP environment becomes a true driver of productivity, not just a transactional system."
+            },
+            {
+                type: "heading",
+                text: "Our SAP Outsourcing Services Include:"
+            },
+            {
+                type: "paragraph",
+                text: "For ABAP: Custom program development, enhancements to existing functionality, complex report creation (ALV, SmartForms), data migration, and performance optimization."
+            },
+            {
+                type: "paragraph",
+                text: "For MM: Procurement process automation, vendor evaluation setup, inventory management optimization, and integration with finance and production planning modules."
+            },
+            {
+                type: "heading",
+                text: "Benefits of Choosing SHNOOR International"
+            },
+            {
+                type: "paragraph",
+                text: "• Specialized Expertise – Our consultants bring years of hands-on project experience.\n• Cost Efficiency – Avoid the overheads of full-time hires while accessing top-tier talent.\n• Faster Turnaround – Our dedicated teams ensure quick delivery without compromising quality.\n• Global Delivery Model – Serving clients in India, UAE, Bahrain, Qatar, Oman, and Malaysia."
+            },
+            {
+                type: "heading",
+                text: "Conclusion: Why SHNOOR International?"
+            },
+            {
+                type: "paragraph",
+                text: "At SHNOOR International, we believe in connecting technology and trade together. By outsourcing your ABAP and MM requirements to us, you gain a partner who understands not just the technical side, but also the operational impact of SAP on your business. Whether you need one-off developments or complete project outsourcing, our team ensures your SAP systems deliver measurable ROI."
+            }
+        ]
+    },
     "sap-mm-reporting-essential-t-codes": {
         title: "Unlock the Power of SAP MM Reporting: Essential T-Codes for Effective Procurement",
         subtitle: "Unlock the power of SAP MM reporting. Explore essential T-Codes that help track purchase orders, analyze vendor performance, and monitor stock levels, giving your business real-time insights for smarter procurement decisions.",
