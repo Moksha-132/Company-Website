@@ -1,4 +1,53 @@
 export const blogData = {
+    "general-trading-made-easy": {
+        title: "General Trading Got Easier: Bridging Technology and Global Commerce",
+        subtitle: "Our expertise in cross-border trade means smooth operations, transparent processes, and compliance with international standards.",
+        date: "8/15/2025",
+        readTime: "1 min read",
+        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1516528387618-afa90b13e000&w=1000",
+        content: [
+            {
+                type: "heading",
+                text: "Simplifying International Trade"
+            },
+            {
+                type: "paragraph",
+                text: "In today’s global economy, business success depends on building reliable connections across borders. At SHNOOR International, we combine our expertise in technology with a strong foundation in international trade, making us the trusted choice for companies looking to expand their reach."
+            },
+            {
+                type: "heading",
+                text: "Our Global Trade Network"
+            },
+            {
+                type: "paragraph",
+                text: "We specialize in the import and export of high-quality products between India, the UAE, Bahrain, Qatar, Oman, and Malaysia. Our network ensures that goods move quickly, securely, and in compliance with all international regulations—eliminating the stress from cross-border business."
+            },
+            {
+                type: "heading",
+                text: "What We Offer"
+            },
+            {
+                type: "paragraph",
+                text: "• End-to-End Trade Solutions – From sourcing products to final delivery.\n• Quality Assurance – Every product is vetted for international standards.\n• Seamless Logistics – Efficient shipping, customs clearance, and delivery.\n• Diverse Product Categories – Tailored to your specific industry needs."
+            },
+            {
+                type: "heading",
+                text: "Why Choose SHNOOR International?"
+            },
+            {
+                type: "paragraph",
+                text: "Expertise You Can Trust – Years of experience in both IT and trade industries. Strong Regional Presence – Deep understanding of Middle Eastern and Asian markets. Commitment to Reliability – On-time delivery and transparent communication. Innovation in Trade – Leveraging technology to streamline processes."
+            },
+            {
+                type: "heading",
+                text: "Bridging Technology and Trade"
+            },
+            {
+                type: "paragraph",
+                text: "What makes SHNOOR International unique is our dual focus. While we lead in IT Consulting and SAP Outsourcing, our trade division ensures that businesses can also benefit from global commerce without dealing with the usual challenges of import/export operations. At SHNOOR International, we don’t just move goods—we move businesses forward."
+            }
+        ]
+    },
     "it-consulting-at-shnoor-international": {
         title: "IT Consulting at SHNOOR International – Driving Innovation & Efficiency",
         subtitle: "In today’s competitive business environment, technology is more than just a tool—it’s a catalyst for transformation.",
