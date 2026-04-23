@@ -18,7 +18,7 @@ const Partners = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    style={{ fontSize: '3.5rem', marginBottom: '20px', fontWeight: '800' }}
+                    style={{ fontSize: '3.5rem', marginBottom: '20px', fontWeight: '800', color: 'var(--secondary)' }}
                 >
                     Partners
                 </motion.h2>

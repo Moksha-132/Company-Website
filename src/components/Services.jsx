@@ -53,8 +53,8 @@ const Services = () => {
                         viewport={{ once: true }}
                     >
                         <h4 style={{ color: 'var(--primary)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '3px', marginBottom: '15px' }}>Our Expertise</h4>
-                        <h2 style={{ fontSize: '3.5rem', fontWeight: '900', color: 'var(--purple-dark)', marginBottom: '25px' }}>
-                            Unique <span style={{ color: 'var(--primary)' }}>Solutions</span>
+                        <h2 style={{ fontSize: '3.5rem', fontWeight: '900', color: 'var(--secondary)', marginBottom: '25px' }}>
+                            Our <span style={{ color: 'var(--primary)' }}>Services</span>
                         </h2>
                         <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', lineHeight: 1.8 }}>
                             Providing a single partner for growth through integrated technology and global trade expertise.
@@ -86,18 +86,18 @@ const Services = () => {
                         >
                             <div style={{ 
                                 color: 'var(--primary)', 
-                                background: '#f5f3ff', 
+                                background: 'rgba(37, 99, 235, 0.05)', 
                                 width: '85px', 
                                 height: '85px', 
                                 display: 'flex', 
                                 alignItems: 'center', 
                                 justifyContent: 'center',
                                 borderRadius: '24px',
-                                boxShadow: '0 10px 20px rgba(139, 92, 246, 0.1)'
+                                boxShadow: '0 10px 20px rgba(37, 99, 235, 0.1)'
                             }}>
                                 {service.icon}
                             </div>
-                            <h3 style={{ fontSize: '1.8rem', color: 'var(--purple-dark)', fontWeight: '800' }}>{service.title}</h3>
+                            <h3 style={{ fontSize: '1.8rem', color: 'var(--secondary)', fontWeight: '800' }}>{service.title}</h3>
                             <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.8 }}>{service.desc}</p>
                             <Link to={service.href} style={{ 
                                 marginTop: 'auto', 

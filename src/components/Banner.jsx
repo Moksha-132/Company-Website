@@ -5,13 +5,13 @@ const Banner = () => {
     return (
         <section style={{ 
             padding: '120px 0', 
-            background: 'var(--purple-dark)', 
+            background: 'var(--secondary)', 
             color: '#fff', 
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden'
         }}>
-            {/* Subtle purple glow */}
+            {/* Subtle blue glow */}
             <div style={{ position: 'absolute', top: '-50%', left: '-20%', width: '100%', height: '200%', background: 'radial-gradient(circle, var(--primary) 0%, transparent 70%)', opacity: 0.1 }}></div>
             
             <div className="container">
@@ -22,7 +22,7 @@ const Banner = () => {
                     style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}
                 >
                     <h2 style={{ fontSize: '3.5rem', marginBottom: '40px', fontWeight: '900' }}>
-                        Connecting Technology & Trade <span style={{ color: 'var(--gold)' }}>Together</span>
+                        Connecting Technology & Trade <span style={{ color: 'var(--accent)' }}>Together</span>
                     </h2>
                     <p style={{ fontSize: '1.3rem', opacity: 0.9, lineHeight: 2, marginBottom: '30px', textAlign: 'justify' }}>
                         At SHNOOR International LLC, we believe innovation should have no borders. Our unique approach combines cutting-edge IT solutions with seamless global trade services, helping businesses thrive in both the digital space and the global marketplace.

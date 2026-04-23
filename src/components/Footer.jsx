@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Instagram } from 'luc
 
 const Footer = () => {
     return (
-        <footer style={{ background: 'var(--purple-dark)', color: '#fff', paddingTop: '100px', paddingBottom: '50px' }}>
+        <footer style={{ background: 'var(--secondary)', color: '#fff', paddingTop: '100px', paddingBottom: '50px' }}>
             <div className="container">
                 <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1.2fr', gap: '60px', marginBottom: '80px' }} className="grid-footer">
                     <div>
@@ -25,7 +25,7 @@ const Footer = () => {
                                     justifyContent: 'center', 
                                     borderRadius: '12px',
                                     transition: '0.3s'
-                                }} onMouseEnter={(e) => e.target.style.background = 'var(--gold)'} onMouseLeave={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}>
+                                }} onMouseEnter={(e) => e.target.style.background = 'var(--accent)'} onMouseLeave={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}>
                                     <Icon size={20} />
                                 </a>
                             ))}
@@ -33,13 +33,14 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--gold)', fontWeight: '700' }}>Quick Links</h4>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Quick Links</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                             {Object.entries({
                                 'Home': '/',
                                 'About Us': '/about',
                                 'Services': '/services',
                                 'Careers': '/careers',
+                                'Latest Job Openings': '/latest-openings',
                                 'Contact': '/contact'
                             }).map(([label, path]) => (
                                 <Link key={label} to={path} style={{ color: '#fff', opacity: 0.8, transition: '0.3s' }} onMouseEnter={(e) => e.target.style.opacity = 1} onMouseLeave={(e) => e.target.style.opacity = 0.8}>{label}</Link>
@@ -48,7 +49,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--gold)', fontWeight: '700' }}>Services</h4>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Services</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                             <Link to="/services/cloud" style={{ color: '#fff', opacity: 0.8 }}>Cloud Solutions</Link>
                             <Link to="/services/enterprise" style={{ color: '#fff', opacity: 0.8 }}>Enterprise MGMT</Link>
@@ -59,19 +60,25 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--gold)', fontWeight: '700' }}>Contact Us</h4>
+                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Contact Us</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
                             <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-                                <Mail size={22} color="var(--gold)" />
-                                <span style={{ opacity: 0.9 }}>info@shnoor.com</span>
+                                <Mail size={22} color="var(--accent)" />
+                                <div>
+                                    <span style={{ opacity: 0.9, display: 'block' }}>info@shnoor.com</span>
+                                    <span style={{ opacity: 0.7, fontSize: '0.85rem' }}>proc@shnoor.com (Sales)</span>
+                                </div>
                             </div>
                             <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-                                <Phone size={22} color="var(--gold)" />
+                                <Phone size={22} color="var(--accent)" />
                                 <span style={{ opacity: 0.9 }}>+968 1234 5678</span>
                             </div>
                             <div style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                                <MapPin size={22} color="var(--gold)" style={{ marginTop: '5px' }} />
-                                <span style={{ opacity: 0.9 }}>Muscat, Sultanate of Oman</span>
+                                <MapPin size={22} color="var(--accent)" style={{ marginTop: '5px' }} />
+                                <div>
+                                    <span style={{ opacity: 0.9, display: 'block' }}>Muscat, Sultanate of Oman</span>
+                                    <span style={{ opacity: 0.7, fontSize: '0.85rem' }}>Odessa Missouri, United States</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -84,7 +91,12 @@ const Footer = () => {
                     opacity: 0.6,
                     fontSize: '0.95rem'
                 }}>
-                    <p>© {new Date().getFullYear()} Shnoor International LLC. All rights reserved.</p>
+                    <p>© 2025 Shnoor International LLC. All rights reserved.</p>
+                    <div style={{ marginTop: '15px', display: 'flex', justifyContent: 'center', gap: '20px' }}>
+                        <Link to="/privacy" style={{ color: '#fff' }}>Privacy Policy</Link>
+                        <Link to="/terms" style={{ color: '#fff' }}>Terms & Conditions</Link>
+                        <a href="#" style={{ color: '#fff' }}>Company Profile</a>
+                    </div>
                 </div>
             </div>
 

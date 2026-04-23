@@ -16,6 +16,11 @@ import StaffingPage from './pages/StaffingPage';
 import VerificationPage from './pages/VerificationPage';
 import NetworkPage from './pages/NetworkPage';
 import HealthcarePage from './pages/HealthcarePage';
+import ImportExportPage from './pages/ImportExportPage';
+import RecruitmentScamsPage from './pages/RecruitmentScamsPage';
+import JobOpeningsPage from './pages/JobOpeningsPage';
+import ApplicationFormPage from './pages/ApplicationFormPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 import { Cloud, Globe, Database, Users, ShieldCheck, Network, HeartPulse } from 'lucide-react';
 
 // ScrollToTop component to ensure page starts at top on route change
@@ -75,6 +80,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/logistics" element={<LogisticsPage />} />
           <Route path="/export" element={<ExportPage />} />
+          <Route path="/import-and-export" element={<ImportExportPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services" element={<ServicesPage />} />
@@ -87,6 +93,10 @@ function App() {
           <Route path="/services/verification" element={<VerificationPage />} />
           <Route path="/services/network" element={<NetworkPage />} />
           <Route path="/services/healthcare" element={<HealthcarePage />} />
+          <Route path="/recruitment-scams" element={<RecruitmentScamsPage />} />
+          <Route path="/latest-openings" element={<JobOpeningsPage />} />
+          <Route path="/apply" element={<ApplicationFormPage />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

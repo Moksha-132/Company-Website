@@ -9,7 +9,7 @@ const Contact = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '80px', alignItems: 'center' }} className="grid-2">
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
                         <h4 style={{ color: 'var(--primary)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '3px', marginBottom: '15px' }}>Get in Touch</h4>
-                        <h2 style={{ fontSize: '3.5rem', fontWeight: '800', color: 'var(--navy)', marginBottom: '30px', lineHeight: 1.1 }}>
+                        <h2 style={{ fontSize: '3.5rem', fontWeight: '800', color: 'var(--secondary)', marginBottom: '30px', lineHeight: 1.1 }}>
                             Ready to start your <span style={{ color: 'var(--primary)' }}>next project?</span>
                         </h2>
                         <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', marginBottom: '40px', lineHeight: 1.8 }}>
@@ -23,7 +23,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '600' }}>Email Us</p>
-                                    <p style={{ fontSize: '1.1rem', color: 'var(--navy)', fontWeight: '700' }}>info@shnoor.com</p>
+                                    <p style={{ fontSize: '1.1rem', color: 'var(--secondary)', fontWeight: '700' }}>info@shnoor.com</p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
@@ -32,7 +32,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '600' }}>Call Us</p>
-                                    <p style={{ fontSize: '1.1rem', color: 'var(--navy)', fontWeight: '700' }}>+968 1234 5678</p>
+                                    <p style={{ fontSize: '1.1rem', color: 'var(--secondary)', fontWeight: '700' }}>+968 1234 5678</p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
@@ -41,7 +41,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '600' }}>Visit Us</p>
-                                    <p style={{ fontSize: '1.1rem', color: 'var(--navy)', fontWeight: '700' }}>Muscat, Sultanate of Oman</p>
+                                    <p style={{ fontSize: '1.1rem', color: 'var(--secondary)', fontWeight: '700' }}>Muscat, Sultanate of Oman</p>
                                 </div>
                             </div>
                         </div>
@@ -53,26 +53,29 @@ const Contact = () => {
                         viewport={{ once: true }}
                         style={{ background: '#fff', padding: '60px', borderRadius: '40px', boxShadow: '0 40px 80px rgba(0,0,0,0.08)', border: '1px solid var(--border)' }}
                     >
-                        <form style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+                        <form action="https://formsubmit.co/lmoksha.132@gmail.com" method="POST" style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+                            <input type="hidden" name="_subject" value="New Contact Inquiry - Shnoor International" />
+                            <input type="hidden" name="_template" value="table" />
+                            
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                                     <label style={{ fontWeight: '600', fontSize: '0.9rem', color: 'var(--navy)' }}>Full Name</label>
-                                    <input type="text" placeholder="John Doe" style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem' }} />
+                                    <input type="text" name="name" required placeholder="John Doe" style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem' }} />
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                                     <label style={{ fontWeight: '600', fontSize: '0.9rem', color: 'var(--navy)' }}>Email Address</label>
-                                    <input type="email" placeholder="john@example.com" style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem' }} />
+                                    <input type="email" name="email" required placeholder="john@example.com" style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem' }} />
                                 </div>
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                                <label style={{ fontWeight: '600', fontSize: '0.9rem', color: 'var(--navy)' }}>Subject</label>
-                                <input type="text" placeholder="How can we help?" style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem' }} />
+                                <label style={{ fontWeight: '600', fontSize: '0.9rem', color: 'var(--secondary)' }}>Subject</label>
+                                <input type="text" name="subject" required placeholder="How can we help?" style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem' }} />
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                                <label style={{ fontWeight: '600', fontSize: '0.9rem', color: 'var(--navy)' }}>Message</label>
-                                <textarea placeholder="Your message here..." rows={5} style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem', resize: 'none' }}></textarea>
+                                <label style={{ fontWeight: '600', fontSize: '0.9rem', color: 'var(--secondary)' }}>Message</label>
+                                <textarea name="message" required placeholder="Your message here..." rows={5} style={{ padding: '15px 20px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--surface)', fontSize: '1rem', resize: 'none' }}></textarea>
                             </div>
-                            <button className="btn-navy" style={{ padding: '18px', justifyContent: 'center' }}>
+                            <button type="submit" className="btn-blue" style={{ padding: '18px', justifyContent: 'center', border: 'none', cursor: 'pointer' }}>
                                 Send Message <Send size={20} />
                             </button>
                         </form>

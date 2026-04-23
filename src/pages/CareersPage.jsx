@@ -1,94 +1,236 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Users, Target, Rocket } from 'lucide-react';
-import PageHero from '../components/PageHero';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ShieldAlert } from 'lucide-react';
 
 const CareersPage = () => {
-    return (
-        <section>
-            <PageHero 
-                title="International" 
-                highlight="Careers" 
-                description="Join a passionate and diverse team that pushes boundaries in technology and global trade. We're looking for innovators to build the future." 
-            />
+    const clients = [
+        { name: 'Etihad', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/0/03/Etihad_Airways_logo.svg/1200px-Etihad_Airways_logo.svg.png' },
+        { name: 'Emirates', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/1200px-Emirates_logo.svg.png' },
+        { name: 'Cosco', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/1/15/COSCO_Shipping_logo.svg/1200px-COSCO_Shipping_logo.svg.png' },
+        { name: 'Zim', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Zim_Integrated_Shipping_Services_logo.svg/1200px-Zim_Integrated_Shipping_Services_logo.svg.png' },
+        { name: 'Maersk', logo: 'https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Maersk_Group_Logo.svg/1200px-Maersk_Group_Logo.svg.png' }
+    ];
 
-            {/* Intro with Image */}
-            <div className="section-padding">
-                <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'center' }} className="grid-2">
-                        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <h2 style={{ fontSize: '3rem', color: 'var(--purple-dark)', fontWeight: '800', marginBottom: '30px' }}>Find your future at SHNOOR</h2>
-                            <p style={{ color: 'var(--text)', fontSize: '1.2rem', lineHeight: 1.9, marginBottom: '30px' }}>
-                                We are always looking for talented individuals to join our team in Muscat and across our global trade network. At SHNOOR, you'll work on cutting-edge IT projects and contribute to seamless global logistics operations.
+    return (
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            style={{ backgroundColor: '#fff', color: '#333', minHeight: '100vh', paddingTop: '100px' }}
+        >
+            <div className="container">
+                {/* Section 1: Find Your Future */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '60px', alignItems: 'center', padding: '60px 0' }} className="grid-responsive">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h1 style={{ 
+                            fontSize: '5rem', 
+                            fontWeight: '800', 
+                            lineHeight: '1.1', 
+                            marginBottom: '40px', 
+                            color: '#0f172a' 
+                        }}>
+                            Find your <span style={{ color: '#f59e0b' }}>future</span>
+                        </h1>
+                        
+                        <h2 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#0f172a', marginBottom: '25px' }}>
+                            Are you ready to take on the challenge
+                        </h2>
+                        
+                        <div style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                            <p>
+                                At SHNOOR International LLC, we believe that great companies are built by great people. We're looking for innovators, problem-solvers, and go-getters who are passionate about making an impact in the worlds of technology and global trade.
                             </p>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
-                                {[
-                                    { icon: <Target color="var(--primary)" />, title: "Vision", desc: "Global trade leader" },
-                                    { icon: <Users color="var(--primary)" />, title: "Culture", desc: "Diverse & Inclusive" },
-                                    { icon: <Briefcase color="var(--primary)" />, title: "Work", desc: "Challenging projects" },
-                                    { icon: <Rocket color="var(--primary)" />, title: "Growth", desc: "Continuous learning" }
-                                ].map((item, i) => (
-                                    <motion.div 
-                                        key={i}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.2 + (i * 0.1) }}
-                                        whileHover={{ y: -5, scale: 1.02 }}
-                                        style={{ 
-                                            background: '#fff', 
-                                            padding: '20px', 
-                                            borderRadius: '20px',
-                                            border: '1px solid var(--border)',
-                                            boxShadow: '0 10px 20px rgba(139, 92, 246, 0.05)',
-                                            cursor: 'pointer'
-                                        }}
-                                    >
-                                        <div style={{ marginBottom: '15px', background: 'rgba(139, 92, 246, 0.1)', display: 'inline-block', padding: '12px', borderRadius: '12px' }}>{item.icon}</div>
-                                        <h4 style={{ color: 'var(--purple-dark)', marginBottom: '5px', fontSize: '1.2rem', fontWeight: '700' }}>{item.title}</h4>
-                                        <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)' }}>{item.desc}</p>
-                                    </motion.div>
-                                ))}
+                            <p>
+                                Whether you're an IT expert, software developer, SAP consultant, business strategist, or trade professional, this is your chance to be part of a company that values creativity, collaboration, and continuous growth.
+                            </p>
+                            <p>
+                                At SHNOOR International, you won't just be doing a job—you'll be building a career where your skills make a difference.
+                            </p>
+                            <p style={{ fontWeight: 'bold', color: '#0f172a', fontSize: '1.3rem', marginTop: '10px' }}>
+                                SHNOOR - Get the future you want. !!
+                            </p>
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <img 
+                            src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522071820081-009f0129c71c&w=1200" 
+                            alt="Challenge" 
+                            style={{ width: '100%', borderRadius: '20px', boxShadow: '0 30px 60px rgba(15, 23, 42, 0.15)' }} 
+                        />
+                    </motion.div>
+                </div>
+
+                {/* Section 2: Recruitment Scams (Blue Box) */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    style={{ 
+                        backgroundColor: '#0f172a', 
+                        borderRadius: '30px', 
+                        padding: '80px 60px', 
+                        color: '#fff', 
+                        textAlign: 'center',
+                        margin: '60px 0'
+                    }}
+                >
+                    <h2 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '30px' }}>Recruitment Scams</h2>
+                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                        <p style={{ fontSize: '1.2rem', lineHeight: '1.8', opacity: 0.9, marginBottom: '30px' }}>
+                            At SHNOOR International LLC, integrity and transparency are at the heart of our recruitment process. We want to alert all job seekers that we never charge any fees, request payments, or ask for financial information at any stage of our hiring process.
+                        </p>
+                        <p style={{ fontSize: '1.2rem', lineHeight: '1.8', opacity: 0.9, marginBottom: '40px' }}>
+                            To protect any spam, ensure emails come from **@shnoor.com**. If you receive any communication—via email, phone, social media, or messaging apps—claiming to represent SHNOOR International and requesting money for job opportunities, please treat it as a scam. Such activities are fraudulent and have no connection with our company.
+                        </p>
+                        <Link 
+                            to="/recruitment-scams" 
+                            style={{ 
+                                display: 'inline-block', 
+                                padding: '15px 40px', 
+                                border: '2px solid #fff', 
+                                color: '#fff', 
+                                textDecoration: 'none', 
+                                borderRadius: '30px', 
+                                fontWeight: 'bold',
+                                transition: '0.3s'
+                            }}
+                            onMouseEnter={(e) => { e.target.style.backgroundColor = '#fff'; e.target.style.color = '#0f172a'; }}
+                            onMouseLeave={(e) => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#fff'; }}
+                        >
+                            READ MORE
+                        </Link>
+                    </div>
+                </motion.div>
+
+                {/* Section 3: Explore SHNOOR */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center', padding: '80px 0' }} className="grid-responsive">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 style={{ fontSize: '3.5rem', fontWeight: '800', color: '#0f172a', marginBottom: '30px' }}>Explore SHNOOR</h2>
+                        <div style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                            <p>
+                                When you join us, you become part of a passionate, diverse, and forward-thinking team that believes in pushing boundaries and delivering excellence. From IT Consulting, Product Development, and SAP Outsourcing to international import & export operations, our work spans industries, regions, and technologies.
+                            </p>
+                            <p>
+                                At SHNOOR International LLC, every career path is a journey of growth, innovation, and impact. We are more than just a workplace—we're a dynamic hub where technology meets global trade, creating opportunities that challenge your skills and expand your horizons.
+                            </p>
+                        </div>
+                        <Link 
+                            to="/latest-openings" 
+                            style={{ 
+                                display: 'inline-block', 
+                                marginTop: '40px',
+                                padding: '15px 40px', 
+                                backgroundColor: '#fff', 
+                                border: '2px solid #0f172a',
+                                color: '#0f172a', 
+                                textDecoration: 'none', 
+                                borderRadius: '30px', 
+                                fontWeight: 'bold',
+                                transition: '0.3s'
+                            }}
+                            onMouseEnter={(e) => { e.target.style.backgroundColor = '#0f172a'; e.target.style.color = '#fff'; }}
+                            onMouseLeave={(e) => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#0f172a'; }}
+                        >
+                            LATEST OPENINGS
+                        </Link>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                    >
+                        <div style={{ position: 'relative' }}>
+                            <img 
+                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1542744173-8e7e53415bb0&w=1200" 
+                                alt="Explore Team" 
+                                style={{ width: '100%', borderRadius: '100px 100px 0 0', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} 
+                            />
+                            <div style={{ 
+                                position: 'absolute', 
+                                bottom: '30px', 
+                                left: '50%', 
+                                transform: 'translateX(-50%)',
+                                textAlign: 'center',
+                                color: '#fff'
+                            }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Explore SHNOOR</h3>
+                                <p style={{ fontSize: '0.9rem', opacity: 0.9 }}>Where technology meets global trade</p>
                             </div>
-                        </motion.div>
-                        <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Modern Office Culture" style={{ width: '100%', borderRadius: '40px', boxShadow: '0 30px 60px rgba(139, 92, 246, 0.1)' }} />
-                        </motion.div>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Section 4: Clients Worldwide */}
+                <div style={{ padding: '80px 0', textAlign: 'center' }}>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: '#0f172a', marginBottom: '15px' }}>Our Clients Worldwide</h2>
+                    <p style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: '60px' }}>"Building long-term partnerships, one success story at a time."</p>
+                    
+                    <div style={{ 
+                        display: 'flex', 
+                        flexWrap: 'wrap', 
+                        justifyContent: 'center', 
+                        gap: '60px', 
+                        alignItems: 'center',
+                        marginBottom: '60px',
+                        padding: '60px',
+                        background: '#f8fafc',
+                        borderRadius: '20px'
+                    }}>
+                        {clients.map((client, i) => (
+                            <span 
+                                key={i} 
+                                style={{ 
+                                    fontSize: '1.8rem', 
+                                    fontWeight: '800', 
+                                    color: '#0f172a', 
+                                    opacity: 0.6, 
+                                    transition: '0.3s',
+                                    letterSpacing: '1px',
+                                    fontFamily: "'Outfit', sans-serif",
+                                    textTransform: 'uppercase'
+                                }} 
+                                onMouseEnter={(e) => { e.target.style.opacity = 1; e.target.style.color = '#f59e0b'; }}
+                                onMouseLeave={(e) => { e.target.style.opacity = 0.6; e.target.style.color = '#0f172a'; }}
+                            >
+                                {client.name}
+                            </span>
+                        ))}
+                    </div>
+
+                    <div style={{ maxWidth: '1000px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.8', color: '#64748b', display: 'flex', flexDirection: 'column', gap: '25px' }}>
+                        <p>
+                            At SHNOOR International LLC, our clients are at the heart of everything we do. From emerging startups to global enterprises, we work with businesses across industries and geographies—delivering IT solutions, SAP outsourcing, and global trade services that drive measurable results.
+                        </p>
+                        <p>
+                            We take pride in earning the trust of organizations in India, UAE, Bahrain, Qatar, Oman, and Malaysia, and our success is built on their success.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            {/* Warning Section - Verbatim from site */}
-            <div style={{ background: '#f5f3ff', padding: '80px 0' }}>
-                <div className="container">
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.02, boxShadow: '0 30px 60px rgba(239, 68, 68, 0.15)' }}
-                        style={{ 
-                            background: '#fff', 
-                            padding: '60px', 
-                            borderRadius: '30px', 
-                            border: '2px solid #ef4444',
-                            boxShadow: '0 20px 40px rgba(239, 68, 68, 0.05)',
-                            transition: 'all 0.3s ease'
-                        }}
-                    >
-                        <h3 style={{ color: '#ef4444', fontSize: '2rem', marginBottom: '20px', fontWeight: '800' }}>⚠️ RECRUITMENT FRAUD ALERT</h3>
-                        <p style={{ color: 'var(--text)', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                            SHNOOR International LLC does not charge any fees at any stage of the recruitment process. All official communications will come from `@shnoor.com` email addresses. Please be wary of any requests for money or sensitive information.
-                        </p>
-                    </motion.div>
-                </div>
-            </div>
-
             <style>{`
-                @media (max-width: 992px) {
-                    .grid-2 { grid-template-columns: 1fr !important; text-align: center; }
+                .grid-responsive {
+                    @media (max-width: 992px) {
+                        grid-template-columns: 1fr !important;
+                    }
                 }
             `}</style>
-        </section>
+        </motion.div>
     );
 };
 

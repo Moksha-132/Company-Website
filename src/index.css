@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #8b5cf6; /* Vibrant Royal Purple */
-  --purple-dark: #2e1065; /* Deep Midnight Purple */
-  --vibrant: #a855f7; /* New Vibrant Violet (replacing gold) */
-  --gold: #a855f7; /* Mapping old gold to vibrant purple */
+  --primary: #1e3a8a; /* Dark Professional Blue */
+  --secondary: #0f172a; /* Deep Midnight Blue / Slate 900 */
+  --accent: #f59e0b; /* Premium Gold / Amber 500 */
+  --vibrant: #1d4ed8; /* Strong Blue */
   --white: #ffffff;
-  --background: #fdfaff; /* Lilac tint */
+  --background: #f8fafc; /* Clean Slate 50 */
   --surface: #ffffff;
-  --text: #1e1b4b; /* Deep Indigo */
-  --text-muted: #4338ca; /* Indigo-Purple */
-  --border: #ddd6fe;
+  --text: #1e293b; /* Slate 800 */
+  --text-muted: #64748b; /* Slate 500 */
+  --border: #e2e8f0; /* Slate 200 */
   --glass: rgba(255, 255, 255, 0.9);
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -43,9 +43,10 @@ h1, h2, h3, h4, .outfit {
   padding: 100px 0;
 }
 
-.bg-purple { background-color: var(--purple-dark); color: var(--white); }
+.bg-secondary { background-color: var(--secondary); color: var(--white); }
 .bg-light { background-color: var(--background); }
-.bg-gold { background-color: var(--gold); color: var(--white); }
+.bg-accent { background-color: var(--accent); color: var(--white); }
+.bg-gold { background-color: var(--accent); color: var(--white); }
 .bg-surface { background-color: var(--surface); }
 
 a {
@@ -62,7 +63,7 @@ button {
   font-weight: 600;
 }
 
-.btn-purple {
+.btn-blue {
   background: var(--primary);
   color: var(--white);
   padding: 14px 28px;
@@ -72,10 +73,10 @@ button {
   gap: 10px;
 }
 
-.btn-purple:hover {
+.btn-blue:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3);
-  background: var(--purple-dark);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+  background: var(--secondary);
 }
 
 .btn-gold {
@@ -104,7 +105,7 @@ button {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(76, 29, 149, 0.1);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
   border-color: var(--primary);
 }
 

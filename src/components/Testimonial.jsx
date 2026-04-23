@@ -4,29 +4,29 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
     {
-        quote: "SHNOOR International has been a pivotal partner in our digital transformation journey. Their SAP expertise is unmatched.",
-        author: "Tech Director",
-        company: "Global Trade Corp"
+        quote: "Working with SHNOOR International LLC has been a game-changer for our business. Their IT consulting team understood our requirements perfectly and delivered a custom solution that improved our efficiency by leaps and bounds.",
+        author: "Amita Khanna",
+        company: "SF Technologies - Singapore"
     },
     {
-        quote: "The seamless logistics management between Mumbai and UAE has significantly reduced our supply chain overheads.",
-        author: "Supply Chain Manager",
-        company: "Logistics Pro"
+        quote: "Their import services were smooth, reliable, and hassle-free. It’s rare to find a partner who excels in both technology and trade—SHNOOR does it effortlessly.",
+        author: "Delivery Head",
+        company: "SF Technologies - Singapore"
     }
 ];
 
 const Testimonial = () => {
     return (
-        <section className="section-padding" style={{ background: '#002a4d', color: '#fff' }}>
+        <section className="section-padding" style={{ background: 'var(--secondary)', color: '#fff' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '80px' }}>
                     <motion.h2 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        style={{ fontSize: '3rem', fontWeight: '800' }}
+                        style={{ fontSize: '3.5rem', fontWeight: '800' }}
                     >
-                        What Our <span style={{ color: 'var(--primary)' }}>Clients Say</span>
+                        Client <span style={{ color: 'var(--accent)' }}>Success Stories</span>
                     </motion.h2>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px' }} className="grid-2">
@@ -45,10 +45,10 @@ const Testimonial = () => {
                                 position: 'relative'
                             }}
                         >
-                            <Quote size={40} color="var(--primary)" style={{ opacity: 0.3, marginBottom: '20px' }} />
+                            <Quote size={40} color="var(--accent)" style={{ opacity: 0.3, marginBottom: '20px' }} />
                             <p style={{ fontSize: '1.25rem', lineHeight: 1.8, marginBottom: '30px', fontStyle: 'italic' }}>"{t.quote}"</p>
                             <div>
-                                <h4 style={{ color: 'var(--primary)', marginBottom: '5px' }}>{t.author}</h4>
+                                <h4 style={{ color: 'var(--accent)', marginBottom: '5px' }}>{t.author}</h4>
                                 <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t.company}</p>
                             </div>
                         </motion.div>

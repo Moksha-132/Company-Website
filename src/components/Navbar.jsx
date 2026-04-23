@@ -32,6 +32,7 @@ const Navbar = () => {
         { name: 'Logistics Management', href: '/logistics' },
         { name: 'Careers', href: '/careers' },
         { name: 'Export Management', href: '/export' },
+        { name: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -42,11 +43,11 @@ const Navbar = () => {
             width: '100%',
             zIndex: 1000,
             backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.95)',
-            boxShadow: '0 10px 40px rgba(76, 29, 149, 0.08)',
+            boxShadow: '0 10px 40px rgba(15, 23, 42, 0.08)',
             backdropFilter: 'blur(20px)',
             transition: 'var(--transition)',
             padding: scrolled ? '12px 0' : '20px 0',
-            borderBottom: '1px solid rgba(76, 29, 149, 0.1)'
+            borderBottom: '1px solid rgba(15, 23, 42, 0.1)'
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
@@ -67,7 +68,7 @@ const Navbar = () => {
                                 style={{ 
                                     fontSize: '0.95rem', 
                                     fontWeight: '700', 
-                                    color: 'var(--purple-dark)',
+                                    color: 'var(--secondary)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     gap: '6px',
@@ -75,7 +76,7 @@ const Navbar = () => {
                                     fontFamily: "'Outfit', sans-serif"
                                 }}
                                 onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
-                                onMouseLeave={(e) => e.target.style.color = 'var(--purple-dark)'}
+                                onMouseLeave={(e) => e.target.style.color = 'var(--secondary)'}
                             >
                                 {link.name} {link.isDropdown && <ChevronDown size={16} style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'none', transition: '0.3s' }} />}
                             </Link>
@@ -87,7 +88,7 @@ const Navbar = () => {
                                     left: '-20px',
                                     background: '#fff',
                                     minWidth: '280px',
-                                    boxShadow: '0 20px 60px rgba(76, 29, 149, 0.15)',
+                                    boxShadow: '0 20px 60px rgba(15, 23, 42, 0.15)',
                                     borderRadius: '16px',
                                     padding: '20px 0',
                                     display: 'flex',
@@ -102,12 +103,12 @@ const Navbar = () => {
                                             style={{ 
                                                 padding: '12px 25px', 
                                                 fontSize: '0.95rem', 
-                                                color: 'var(--purple-dark)',
+                                                color: 'var(--secondary)',
                                                 fontWeight: '600',
                                                 transition: '0.2s'
                                             }}
                                             onMouseEnter={(e) => { e.target.style.color = 'var(--primary)'; e.target.style.background = '#f5f3ff'; }}
-                                            onMouseLeave={(e) => { e.target.style.color = 'var(--purple-dark)'; e.target.style.background = 'transparent'; }}
+                                            onMouseLeave={(e) => { e.target.style.color = 'var(--secondary)'; e.target.style.background = 'transparent'; }}
                                         >
                                             {service.name}
                                         </Link>
@@ -116,13 +117,13 @@ const Navbar = () => {
                             )}
                         </div>
                     ))}
-                    <Link to="/contact" className="btn-purple" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '12px', fontWeight: '700' }}>Get in Touch</Link>
+                    <Link to="/contact" className="btn-blue" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '12px', fontWeight: '700' }}>Get in Touch</Link>
                 </div>
 
                 {/* Mobile Toggle */}
                 <button 
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    style={{ color: 'var(--purple-dark)', background: 'none' }}
+                    style={{ color: 'var(--secondary)', background: 'none' }}
                     className="mobile-toggle"
                 >
                     {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -151,7 +152,7 @@ const Navbar = () => {
                             <Link 
                                 to={link.href} 
                                 onClick={() => !link.isDropdown && setMobileMenuOpen(false)} 
-                                style={{ color: 'var(--purple-dark)', fontWeight: '800', fontSize: '1.2rem' }}
+                                style={{ color: 'var(--secondary)', fontWeight: '800', fontSize: '1.2rem' }}
                             >
                                 {link.name}
                             </Link>
