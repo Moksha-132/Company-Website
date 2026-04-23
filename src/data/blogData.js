@@ -1,4 +1,53 @@
 export const blogData = {
+    "it-consulting-at-shnoor-international": {
+        title: "IT Consulting at SHNOOR International – Driving Innovation & Efficiency",
+        subtitle: "In today’s competitive business environment, technology is more than just a tool—it’s a catalyst for transformation.",
+        date: "8/15/2025",
+        readTime: "1 min read",
+        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1499750310107-5fef28a66643&w=1000",
+        content: [
+            {
+                type: "heading",
+                text: "Introduction to IT Consulting"
+            },
+            {
+                type: "paragraph",
+                text: "In today’s competitive business environment, technology is more than just a tool—it’s a catalyst for transformation. At SHNOOR International, our IT Consulting services are designed to help organizations harness the power of technology to achieve operational excellence, accelerate growth, and stay ahead of industry trends."
+            },
+            {
+                type: "heading",
+                text: "Our IT Consulting Approach"
+            },
+            {
+                type: "paragraph",
+                text: "We believe IT consulting is not about one-size-fits-all solutions—it’s about understanding your unique goals, processes, and pain points, then designing strategies that truly work for you. Our approach involves understanding your business, strategic planning, solution implementation, and continuous optimization."
+            },
+            {
+                type: "heading",
+                text: "Core IT Consulting Services We Offer"
+            },
+            {
+                type: "paragraph",
+                text: "• IT Strategy Development – Roadmaps for digital transformation.\n• System Integration – Connecting applications for seamless data flow.\n• Cloud Consulting – Migration, optimization, and security.\n• IT Infrastructure Planning – Scalable and cost-effective design.\n• Business Process Optimization – Improving workflows and efficiency."
+            },
+            {
+                type: "heading",
+                text: "Why Partner with SHNOOR International?"
+            },
+            {
+                type: "paragraph",
+                text: "Our team brings hands-on experience in multiple domains including retail, hospitality, manufacturing, and global trade. We customize strategies to fit your exact requirements and provide end-to-end support from planning to execution."
+            },
+            {
+                type: "heading",
+                text: "Empowering Your Business Through Technology"
+            },
+            {
+                type: "paragraph",
+                text: "At SHNOOR International, we don’t just provide IT consulting—we provide strategic partnership. Our goal is to help you leverage technology in a way that not only solves today’s challenges but also positions you for tomorrow’s opportunities."
+            }
+        ]
+    },
     "sap-outsourcing-with-shnoor": {
         title: "SAP Outsourcing with Shnoor: Enhancing Business Efficiency",
         subtitle: "In a fast-paced business environment, specialized expertise in ABAP and MM can make the difference between simply running software and truly optimizing business operations.",
