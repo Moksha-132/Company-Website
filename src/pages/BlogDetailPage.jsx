@@ -13,6 +13,24 @@ const BlogDetailPage = () => {
         damping: 30,
         restDelta: 0.001
     });
+    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState('idle'); // idle, loading, success, error
+
+    const handleSubscribe = (e) => {
+        e.preventDefault();
+        if (!email || !email.includes('@')) {
+            setStatus('error');
+            return;
+        }
+
+        setStatus('loading');
+        
+        // Simulate API call
+        setTimeout(() => {
+            setStatus('success');
+            setEmail('');
+        }, 1500);
+    };
 
     if (!blog) {
         return (
@@ -183,16 +201,46 @@ const BlogDetailPage = () => {
                     <p style={{ fontSize: '1.1rem', color: '#dbeafe', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
                         Join our network and get the latest news on global trade, logistics, and SAP solutions delivered to your inbox.
                     </p>
-                    <div style={{ display: 'flex', flexDirection: 'row', gap: '15px', maxWidth: '500px', margin: '0 auto', flexWrap: 'wrap', justifyContent: 'center' }}>
+                    <form onSubmit={handleSubscribe} style={{ display: 'flex', flexDirection: 'row', gap: '15px', maxWidth: '500px', margin: '0 auto', flexWrap: 'wrap', justifyContent: 'center' }}>
                         <input 
                             type="email" 
                             placeholder="Your email address" 
-                            style={{ flex: 1, padding: '15px 30px', borderRadius: '50px', border: 'none', minWidth: '250px' }}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            disabled={status === 'loading' || status === 'success'}
+                            style={{ flex: 1, padding: '15px 30px', borderRadius: '50px', border: 'none', minWidth: '250px', color: '#0f172a' }}
+                            required
                         />
-                        <button style={{ padding: '15px 40px', borderRadius: '50px', backgroundColor: '#f59e0b', color: '#0f172a', fontWeight: 'bold' }}>
-                            Subscribe
+                        <button 
+                            type="submit"
+                            disabled={status === 'loading' || status === 'success'}
+                            style={{ 
+                                padding: '15px 40px', 
+                                borderRadius: '50px', 
+                                backgroundColor: status === 'success' ? '#10b981' : '#f59e0b', 
+                                color: '#0f172a', 
+                                fontWeight: 'bold',
+                                transition: 'all 0.3s ease',
+                                cursor: (status === 'loading' || status === 'success') ? 'default' : 'pointer'
+                            }}
+                        >
+                            {status === 'loading' ? 'Subscribing...' : status === 'success' ? 'Subscribed!' : 'Subscribe'}
                         </button>
-                    </div>
+                    </form>
+                    {status === 'success' && (
+                        <motion.p 
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            style={{ marginTop: '20px', color: '#dcfce7', fontWeight: '600' }}
+                        >
+                            Thank you! You've been added to our newsletter.
+                        </motion.p>
+                    )}
+                    {status === 'error' && (
+                        <p style={{ marginTop: '20px', color: '#fee2e2', fontWeight: '600' }}>
+                            Please enter a valid email address.
+                        </p>
+                    )}
                 </section>
             </main>
 
