@@ -5,11 +5,11 @@ import { ArrowRight, ShieldAlert } from 'lucide-react';
 
 const CareersPage = () => {
     const clients = [
-        { name: 'Etihad', logo: '/images/etihad.png' },
-        { name: 'Emirates', logo: '/images/emirates.png' },
-        { name: 'Cosco', logo: '/images/cosco.png' },
-        { name: 'Zim', logo: '/images/zim.png' },
-        { name: 'Maersk', logo: '/images/maersk.png' }
+        { name: 'Etihad', logo: '/etihad.png' },
+        { name: 'Emirates', logo: '/emirates.png' },
+        { name: 'Cosco', logo: '/cosco.png' },
+        { name: 'Zim', logo: '/zim.png' },
+        { name: 'Maersk', logo: '/maersk.png' }
     ];
 
     return (
