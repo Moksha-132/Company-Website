@@ -15,8 +15,13 @@ const Footer = () => {
                             Bridging innovation and trade with expert IT solutions and global reach. Headquartered in Muscat, Oman.
                         </p>
                         <div style={{ display: 'flex', gap: '15px' }}>
-                            {[Facebook, Linkedin, Twitter, Instagram].map((Icon, i) => (
-                                <a key={i} href="#" style={{ 
+                            {[
+                                { Icon: Facebook, url: '#' },
+                                { Icon: Linkedin, url: 'https://www.linkedin.com/company/shnoor-international/' },
+                                { Icon: Twitter, url: '#' },
+                                { Icon: Instagram, url: '#' }
+                            ].map(({ Icon, url }, i) => (
+                                <a key={i} href={url} target="_blank" rel="noopener noreferrer" style={{ 
                                     background: 'rgba(255,255,255,0.1)', 
                                     width: '40px', 
                                     height: '40px', 
@@ -24,7 +29,8 @@ const Footer = () => {
                                     alignItems: 'center', 
                                     justifyContent: 'center', 
                                     borderRadius: '12px',
-                                    transition: '0.3s'
+                                    transition: '0.3s',
+                                    color: '#fff'
                                 }} onMouseEnter={(e) => e.target.style.background = 'var(--accent)'} onMouseLeave={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}>
                                     <Icon size={20} />
                                 </a>
