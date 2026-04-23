@@ -184,10 +184,10 @@ const CareersPage = () => {
                         display: 'flex', 
                         flexWrap: 'wrap', 
                         justifyContent: 'center', 
-                        gap: '80px', 
+                        gap: '100px', 
                         alignItems: 'center',
                         marginBottom: '60px',
-                        padding: '60px',
+                        padding: '80px 60px',
                         background: '#f8fafc',
                         borderRadius: '20px'
                     }}>
@@ -200,9 +200,9 @@ const CareersPage = () => {
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.3 }}
                                 style={{ 
-                                    height: '45px', 
+                                    height: '80px', 
                                     width: 'auto', 
-                                    maxWidth: '180px',
+                                    maxWidth: '220px',
                                     objectFit: 'contain'
                                 }} 
                             />
