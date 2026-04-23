@@ -5,6 +5,7 @@ import { Search, ChevronDown, Package, ShieldCheck, Zap, ArrowRight, Star } from
 
 const ImportExportPage = () => {
     const [activeCategory, setActiveCategory] = useState('All products');
+    const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 3;
 
@@ -86,9 +87,12 @@ const ImportExportPage = () => {
         }
     ];
 
-    const filteredProducts = activeCategory === 'All products' 
-        ? products 
-        : products.filter(p => p.category === activeCategory);
+    const filteredProducts = products.filter(p => {
+        const matchesCategory = activeCategory === 'All products' || p.category === activeCategory;
+        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                             p.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
 
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -202,6 +206,11 @@ const ImportExportPage = () => {
                                     <input 
                                         type="text" 
                                         placeholder="Search products" 
+                                        value={searchQuery}
+                                        onChange={(e) => {
+                                            setSearchQuery(e.target.value);
+                                            setCurrentPage(1);
+                                        }}
                                         style={{ padding: '12px 20px 12px 45px', borderRadius: '30px', border: '1px solid #e2e8f0', width: '300px' }} 
                                     />
                                 </div>
