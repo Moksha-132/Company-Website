@@ -1,5 +1,5 @@
 export const blogData = {
-    "general-trading-made-easy": {
+    "general-trading-got-easier": {
         title: "General Trading Got Easier: Bridging Technology and Global Commerce",
         subtitle: "Our expertise in cross-border trade means smooth operations, transparent processes, and compliance with international standards.",
         date: "8/15/2025",
@@ -48,7 +48,7 @@ export const blogData = {
             }
         ]
     },
-    "it-consulting-at-shnoor-international": {
+    "it-consulting-shnoor": {
         title: "IT Consulting at SHNOOR International – Driving Innovation & Efficiency",
         subtitle: "In today’s competitive business environment, technology is more than just a tool—it’s a catalyst for transformation.",
         date: "8/15/2025",
@@ -97,7 +97,7 @@ export const blogData = {
             }
         ]
     },
-    "sap-outsourcing-with-shnoor": {
+    "sap-outsourcing-shnoor": {
         title: "SAP Outsourcing with Shnoor: Enhancing Business Efficiency",
         subtitle: "In a fast-paced business environment, specialized expertise in ABAP and MM can make the difference between simply running software and truly optimizing business operations.",
         date: "8/15/2025",
@@ -150,7 +150,7 @@ export const blogData = {
             }
         ]
     },
-    "sap-mm-reporting-essential-t-codes": {
+    "unlock-power-sap-mm-reporting": {
         title: "Unlock the Power of SAP MM Reporting: Essential T-Codes for Effective Procurement",
         subtitle: "Unlock the power of SAP MM reporting. Explore essential T-Codes that help track purchase orders, analyze vendor performance, and monitor stock levels, giving your business real-time insights for smarter procurement decisions.",
         date: "9/23/2025",
@@ -211,7 +211,7 @@ export const blogData = {
             }
         ]
     },
-    "best-practices-letters-of-credit-sap-mm": {
+    "best-practices-letters-credit-sap-mm": {
         title: "Best Practices for Handling Letters of Credit in SAP MM for International Trade",
         subtitle: "International trade demands accuracy. Discover best practices for handling Letters of Credit (LC) in SAP MM, ensuring compliance, reducing risk, and streamlining supplier payments in global transactions.",
         date: "9/23/2025",
