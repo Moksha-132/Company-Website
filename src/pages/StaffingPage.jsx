@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const StaffingPage = () => {
     const services = [
@@ -49,7 +50,7 @@ const StaffingPage = () => {
                         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: '#64748b', marginBottom: '40px', maxWidth: '500px' }}>
                             At SHNOOR International LLC, we deliver end-to-end consulting and staffing services that empower businesses to scale efficiently, innovate faster, and achieve sustainable growth.
                         </p>
-                        <button style={{ 
+                        <Link to="/contact" style={{ 
                             backgroundColor: '#f59e0b', 
                             color: '#000', 
                             padding: '15px 35px', 
@@ -57,10 +58,12 @@ const StaffingPage = () => {
                             borderRadius: '5px', 
                             fontSize: '1rem', 
                             fontWeight: 'bold', 
-                            cursor: 'pointer' 
+                            cursor: 'pointer',
+                            textDecoration: 'none',
+                            display: 'inline-block'
                         }}>
                             DISCUSS YOUR REQUIREMENTS
-                        </button>
+                        </Link>
                     </div>
                     <div>
                         <img 

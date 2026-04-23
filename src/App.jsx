@@ -21,6 +21,8 @@ import RecruitmentScamsPage from './pages/RecruitmentScamsPage';
 import JobOpeningsPage from './pages/JobOpeningsPage';
 import ApplicationFormPage from './pages/ApplicationFormPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import BlogDetailPage from './pages/BlogDetailPage';
+
 import { Cloud, Globe, Database, Users, ShieldCheck, Network, HeartPulse } from 'lucide-react';
 
 // ScrollToTop component to ensure page starts at top on route change
@@ -97,6 +99,8 @@ function App() {
           <Route path="/latest-openings" element={<JobOpeningsPage />} />
           <Route path="/apply" element={<ApplicationFormPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/blog/:slug" element={<BlogDetailPage />} />
+
         </Routes>
       </Layout>
     </BrowserRouter>

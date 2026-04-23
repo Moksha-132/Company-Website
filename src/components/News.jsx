@@ -1,24 +1,28 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const newsItems = [
     // Page 1
     [
         {
             title: "SAP MM (Materials Management): A Comprehensive Overview, Features, and Business Benefits",
+            slug: "sap-mm-materials-management-overview",
             desc: "Learn how SAP MM helps businesses manage procurement, inventory, and vendor processes efficiently. Explore features, benefits, integrations, and career opportunities.",
             date: "12/16/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1553413077-190dd305871c&w=1000"
         },
         {
             title: "Import & Export Solutions for India & UAE: Simplifying Global Trade Operations",
+            slug: "import-export-solutions-india-uae",
             desc: "Discover reliable import and export solutions for India and UAE. Learn about trade processes, documentation, customs clearance, compliance, and logistics.",
             date: "12/15/2025 · 3 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1524522173746-f628baad3644&w=1000"
         },
         {
             title: "Building Trust and Security Through Reliable Background Verification Services",
+            slug: "building-trust-security-background-verification",
             desc: "Protect your organization with our professional background verification solutions. We help you validate candidate credentials and ensure safety and reliability.",
             date: "10/14/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1454165833767-027ffea9e77b&w=1000"
@@ -28,18 +32,21 @@ const newsItems = [
     [
         {
             title: "Understanding the Significance of Background Verification Services",
+            slug: "understanding-significance-background-verification",
             desc: "Ensure safe and reliable hiring with our end-to-end background verification services. From employment checks to criminal and address verification.",
             date: "10/13/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1556740758-90de374c12ad&w=1000"
         },
         {
             title: "Exploring Spatial Computing: The Intersection of Digital and Physical Worlds",
+            slug: "exploring-spatial-computing",
             desc: "Explore how spatial computing and XR technologies are powering the metaverse. See how AR, VR, and MR are revolutionizing industries like healthcare.",
             date: "10/03/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1622979135225-d2ba269cf1ac&w=1000"
         },
         {
             title: "Exploring Agentic AI and Autonomous Systems: Implications for Industries",
+            slug: "exploring-agentic-ai-autonomous-systems",
             desc: "Discover how Agentic AI is transforming the future of autonomous systems. Learn the opportunities, challenges, and what lies ahead in building truly intelligent automation.",
             date: "10/03/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=1000"
@@ -49,18 +56,21 @@ const newsItems = [
     [
         {
             title: "Enhancing Procurement Efficiency: The Benefits of Upgrading SAP MM",
+            slug: "enhancing-procurement-efficiency-sap-mm",
             desc: "This blog focuses on the value of upgrading the SAP MM module to strengthen procurement and inventory operations for better business outcomes.",
             date: "9/26/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1586769852044-692d6e3703a0&w=1000"
         },
         {
             title: "The Importance of Master Data in SAP MM for Efficient Procurement",
+            slug: "importance-master-data-sap-mm",
             desc: "Master data is the backbone of SAP MM. Learn how material, vendor, and purchasing records form the foundation of smooth procurement and supply chain operations.",
             date: "9/24/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1551288049-bebda4e38f71&w=1000"
         },
         {
             title: "Transforming Procurement: The Journey from Manual Processes to Automated Efficiency",
+            slug: "transforming-procurement-journey",
             desc: "See how businesses move from slow, manual procurement to automated efficiency with SAP MM. Learn how digital transformation reduces errors and improves visibility.",
             date: "9/23/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1460925895917-afdab827c52f&w=1000"
@@ -70,18 +80,21 @@ const newsItems = [
     [
         {
             title: "Navigating the Challenges of Rolling Out SAP MM Worldwide",
+            slug: "navigating-challenges-sap-mm-worldwide",
             desc: "Rolling out SAP MM worldwide isn't easy. From tax regulations to user adoption, explore the key challenges businesses face and strategies for success.",
             date: "9/23/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1507679799987-c73779587ccf&w=1000"
         },
         {
             title: "Best Practices for Handling Letters of Credit in SAP MM for International Trade",
+            slug: "best-practices-letters-credit-sap-mm",
             desc: "International trade demands accuracy. Discover best practices for handling LC in SAP MM, ensuring compliance and reducing risk in global transactions.",
             date: "9/23/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1450101499163-c8848c66ca85&w=1000"
         },
         {
             title: "Unlock the Power of SAP MM Reporting: Essential T-Codes for Procurement",
+            slug: "unlock-power-sap-mm-reporting",
             desc: "Unlock the power of SAP MM reporting. Explore essential T-Codes that help track purchase orders, analyze vendor performance, and monitor stock levels.",
             date: "9/23/2025 · 2 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1551288049-bebda4e38f71&w=1000"
@@ -91,18 +104,21 @@ const newsItems = [
     [
         {
             title: "SAP OUTSOURCING WITH SHNOOR",
+            slug: "sap-outsourcing-shnoor",
             desc: "In a fast-paced business environment, efficiency, accuracy, and adaptability are key. Learn how our specialized expertise in SAP can optimize your operations.",
             date: "8/15/2025 · 1 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1504384308090-c894fdcc538d&w=1000"
         },
         {
             title: "IT Consulting at SHNOOR International",
+            slug: "it-consulting-shnoor",
             desc: "Driving Innovation & Efficiency in today's competitive business environment. Our IT consulting services are designed to help you achieve operational excellence.",
             date: "8/15/2025 · 1 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1519389950473-47ba0277781c&w=1000"
         },
         {
             title: "General Trading Got Easier",
+            slug: "general-trading-got-easier",
             desc: "Our expertise in cross-border trade means smooth operations and transparent processes. SHNOOR International is your bridge to international business growth.",
             date: "8/15/2025 · 1 min read",
             image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1494412574743-019445217683&w=1000"
@@ -141,16 +157,22 @@ const News = () => {
                         }}
                     >
                         {newsItems[currentPage].map((item, index) => (
-                            <div
+                            <Link
+                                to={`/blog/${item.slug}`}
                                 key={index}
+                                className="group"
                                 style={{ 
                                     display: 'flex', 
                                     flexDirection: 'column',
-                                    background: '#fff'
+                                    background: '#fff',
+                                    textDecoration: 'none',
+                                    color: 'inherit'
                                 }}
                             >
-                                <div style={{ height: '250px', overflow: 'hidden', borderRadius: '5px', marginBottom: '25px' }}>
-                                    <img 
+                                <div style={{ height: '250px', overflow: 'hidden', borderRadius: '12px', marginBottom: '25px', position: 'relative' }}>
+                                    <motion.img 
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ duration: 0.4 }}
                                         src={item.image} 
                                         alt={item.title} 
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -158,19 +180,32 @@ const News = () => {
                                             e.target.src = 'https://images.weserv.nl/?url=images.unsplash.com/photo-1460925895917-afdab827c52f&w=1000';
                                         }}
                                     />
+                                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-                                    <h3 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '20px', color: '#0f172a', lineHeight: '1.3' }}>
+                                    <h3 style={{ 
+                                        fontSize: '1.6rem', 
+                                        fontWeight: 'bold', 
+                                        marginBottom: '15px', 
+                                        color: '#0f172a', 
+                                        lineHeight: '1.3',
+                                        transition: 'color 0.3s'
+                                    }} className="group-hover:text-blue-600">
                                         {item.title}
                                     </h3>
-                                    <p style={{ color: '#64748b', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '25px', flex: 1 }}>
+                                    <p style={{ color: '#64748b', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '20px', flex: 1 }}>
                                         {item.desc}
                                     </p>
-                                    <p style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: '500' }}>
-                                        {item.date}
-                                    </p>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                        <p style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: '500' }}>
+                                            {item.date}
+                                        </p>
+                                        <div className="flex items-center gap-1 text-blue-600 font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                                            Read More <ArrowRight size={16} />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </motion.div>
                 </AnimatePresence>

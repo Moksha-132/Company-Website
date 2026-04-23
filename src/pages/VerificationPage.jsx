@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const VerificationPage = () => {
     const faqs = [
@@ -37,8 +38,8 @@ const VerificationPage = () => {
                     <p style={{ fontSize: '1.2rem', color: '#64748b', maxWidth: '800px', margin: '0 auto 60px' }}>
                         Ensure safe hiring with our comprehensive background verification services tailored for HR professionals.
                     </p>
-                    <button 
-                        onClick={() => window.location.href = '/contact'}
+                    <Link 
+                        to="/contact"
                         style={{ 
                             backgroundColor: '#f59e0b', 
                             color: '#000', 
@@ -48,11 +49,13 @@ const VerificationPage = () => {
                             fontSize: '1rem', 
                             fontWeight: 'bold', 
                             cursor: 'pointer',
-                            marginBottom: '60px'
+                            marginBottom: '60px',
+                            textDecoration: 'none',
+                            display: 'inline-block'
                         }}
                     >
                         DISCUSS YOUR REQUIREMENTS
-                    </button>
+                    </Link>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }} className="grid-responsive-3">
                         {[

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HealthcarePage = () => {
     return (
@@ -31,8 +32,8 @@ const HealthcarePage = () => {
                         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: '#64748b', marginBottom: '40px', maxWidth: '500px' }}>
                             Transform healthcare delivery with intelligent data platforms and AI-driven software solutions designed for the future of medicine.
                         </p>
-                        <button 
-                            onClick={() => window.location.href = '/contact'}
+                        <Link 
+                            to="/contact"
                             style={{ 
                                 backgroundColor: '#f59e0b', 
                                 color: '#000', 
@@ -41,11 +42,13 @@ const HealthcarePage = () => {
                                 borderRadius: '5px', 
                                 fontSize: '1rem', 
                                 fontWeight: 'bold', 
-                                cursor: 'pointer' 
+                                cursor: 'pointer',
+                                textDecoration: 'none',
+                                display: 'inline-block'
                             }}
                         >
                             DISCUSS YOUR REQUIREMENTS
-                        </button>
+                        </Link>
                     </div>
                     <div>
                         <img 

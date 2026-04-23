@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CloudPage = () => {
     const cloudServices = [
@@ -49,7 +50,7 @@ const CloudPage = () => {
                         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: '#64748b', marginBottom: '40px', maxWidth: '500px' }}>
                             We help businesses harness the full potential of cloud technology to optimize operations, improve collaboration, and reduce infrastructure costs.
                         </p>
-                        <button style={{ 
+                        <Link to="/contact" style={{ 
                             backgroundColor: '#f59e0b', 
                             color: '#000', 
                             padding: '15px 35px', 
@@ -57,10 +58,12 @@ const CloudPage = () => {
                             borderRadius: '5px', 
                             fontSize: '1rem', 
                             fontWeight: 'bold', 
-                            cursor: 'pointer' 
+                            cursor: 'pointer',
+                            textDecoration: 'none',
+                            display: 'inline-block'
                         }}>
                             DISCUSS YOUR REQUIREMENTS
-                        </button>
+                        </Link>
                     </div>
                     <div>
                         <img 
