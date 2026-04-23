@@ -329,7 +329,7 @@ export const blogData = {
             }
         ]
     },
-    "transforming-procurement-manual-to-automated-sap-mm": {
+    "transforming-procurement-journey": {
         title: "Transforming Procurement: The Journey from Manual Processes to Automated Efficiency with SAP MM",
         subtitle: "See how businesses move from slow, manual procurement to automated efficiency with SAP MM. Learn how digital transformation reduces errors, improves visibility, and speeds up decision-making.",
         date: "9/23/2025",
