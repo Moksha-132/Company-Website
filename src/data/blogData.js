@@ -272,7 +272,7 @@ export const blogData = {
             }
         ]
     },
-    "challenges-rolling-out-sap-mm-worldwide": {
+    "navigating-challenges-sap-mm-worldwide": {
         title: "Navigating the Challenges of Rolling Out SAP MM Worldwide",
         subtitle: "Rolling out SAP MM worldwide isn’t easy. From tax regulations to localization and user adoption, explore the key challenges businesses face and strategies to ensure a smooth, successful global deployment.",
         date: "9/23/2025",
