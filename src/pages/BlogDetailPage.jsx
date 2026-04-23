@@ -32,6 +32,28 @@ const BlogDetailPage = () => {
         }, 1500);
     };
 
+    const handleShare = (platform) => {
+        const url = window.location.href;
+        const title = blog.title;
+        let shareUrl = '';
+
+        switch (platform) {
+            case 'facebook':
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                break;
+            case 'twitter':
+                shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                break;
+            case 'linkedin':
+                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+                break;
+            default:
+                return;
+        }
+
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    };
+
     if (!blog) {
         return (
             <div className="section-padding text-center py-40">
@@ -128,9 +150,9 @@ const BlogDetailPage = () => {
                             </div>
                             <div style={{ height: '16px', width: '1px', backgroundColor: 'rgba(255,255,255,0.1)' }} />
                             <div style={{ display: 'flex', gap: '16px' }}>
-                                <Facebook size={18} style={{ cursor: 'pointer' }} />
-                                <Twitter size={18} style={{ cursor: 'pointer' }} />
-                                <Linkedin size={18} style={{ cursor: 'pointer' }} />
+                                <Facebook size={18} style={{ cursor: 'pointer' }} onClick={() => handleShare('facebook')} />
+                                <Twitter size={18} style={{ cursor: 'pointer' }} onClick={() => handleShare('twitter')} />
+                                <Linkedin size={18} style={{ cursor: 'pointer' }} onClick={() => handleShare('linkedin')} />
                                 <Bookmark size={18} style={{ cursor: 'pointer', marginLeft: '8px' }} />
                             </div>
                         </div>
@@ -177,8 +199,18 @@ const BlogDetailPage = () => {
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                                 <span style={{ fontWeight: 'bold', color: '#0f172a' }}>Share this article:</span>
                                 <div style={{ display: 'flex', gap: '10px' }}>
-                                    {[Facebook, Twitter, Linkedin].map((Icon, i) => (
-                                        <div key={i} style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b', cursor: 'pointer' }}>
+                                    {[
+                                        { Icon: Facebook, name: 'facebook' },
+                                        { Icon: Twitter, name: 'twitter' },
+                                        { Icon: Linkedin, name: 'linkedin' }
+                                    ].map(({ Icon, name }, i) => (
+                                        <div 
+                                            key={i} 
+                                            onClick={() => handleShare(name)}
+                                            style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b', cursor: 'pointer', transition: 'all 0.3s ease' }}
+                                            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#e2e8f0'; e.currentTarget.style.color = '#0f172a'; }}
+                                            onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#f8fafc'; e.currentTarget.style.color = '#64748b'; }}
+                                        >
                                             <Icon size={18} />
                                         </div>
                                     ))}
