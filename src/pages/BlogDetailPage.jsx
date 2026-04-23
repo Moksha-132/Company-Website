@@ -85,7 +85,7 @@ const BlogDetailPage = () => {
             />
 
             {/* Header / Hero */}
-            <header style={{ 
+            <header className="blog-detail-header" style={{ 
                 paddingTop: '180px', 
                 paddingBottom: '80px', 
                 backgroundColor: '#0f172a', 
@@ -161,11 +161,12 @@ const BlogDetailPage = () => {
             </header>
 
             {/* Main Content Area */}
-            <main className="container" style={{ maxWidth: '900px', marginTop: '-80px', position: 'relative', zIndex: 20 }}>
+            <main className="container article-main-container" style={{ maxWidth: '900px', marginTop: '-80px', position: 'relative', zIndex: 20 }}>
                 <motion.div 
                     initial={{ y: 40, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
+                    className="article-card"
                     style={{ backgroundColor: '#fff', borderRadius: '24px', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)', overflow: 'hidden', marginBottom: '80px' }}
                 >
                     <div style={{ width: '100%', height: '450px', overflow: 'hidden', position: 'relative' }}>
@@ -228,7 +229,7 @@ const BlogDetailPage = () => {
                 </motion.div>
 
                 {/* Newsletter / CTA */}
-                <section style={{ marginBottom: '100px', borderRadius: '32px', overflow: 'hidden', position: 'relative', backgroundColor: '#2563eb', padding: '80px 40px', textAlign: 'center', color: '#fff' }}>
+                <section className="newsletter-section" style={{ marginBottom: '100px', borderRadius: '32px', overflow: 'hidden', position: 'relative', backgroundColor: '#2563eb', padding: '80px 40px', textAlign: 'center', color: '#fff' }}>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '24px' }}>Want to stay updated with more insights?</h2>
                     <p style={{ fontSize: '1.1rem', color: '#dbeafe', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
                         Join our network and get the latest news on global trade, logistics, and SAP solutions delivered to your inbox.
@@ -276,6 +277,21 @@ const BlogDetailPage = () => {
                 </section>
             </main>
 
+            <style>{`
+                @media (max-width: 768px) {
+                    .blog-detail-header { paddingTop: 120px !important; paddingBottom: 60px !important; }
+                    .article-main-container { marginTop: -40px !important; }
+                    .article-card { borderRadius: 0 !important; marginBottom: 40px !important; }
+                    .article-card > div:first-child { height: 300px !important; }
+                    .article-card > div:last-child { padding: 40px 20px !important; }
+                    .newsletter-section { padding: 40px 20px !important; borderRadius: 0 !important; marginBottom: 60px !important; }
+                    .newsletter-section h2 { fontSize: 1.75rem !important; }
+                }
+                @media (max-width: 480px) {
+                    .blog-detail-header { paddingTop: 100px !important; }
+                    .newsletter-section { margin: 0 -1rem !important; }
+                }
+            `}</style>
         </div>
     );
 };
