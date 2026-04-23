@@ -4,7 +4,7 @@ export const blogData = {
         subtitle: "Our expertise in cross-border trade means smooth operations, transparent processes, and compliance with international standards.",
         date: "8/15/2025",
         readTime: "1 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1516528387618-afa90b13e000&w=1000",
+        image: "https://images.unsplash.com/photo-1516528387618-afa90b13e000?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -53,7 +53,7 @@ export const blogData = {
         subtitle: "In today’s competitive business environment, technology is more than just a tool—it’s a catalyst for transformation.",
         date: "8/15/2025",
         readTime: "1 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1499750310107-5fef28a66643&w=1000",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -102,7 +102,7 @@ export const blogData = {
         subtitle: "In a fast-paced business environment, specialized expertise in ABAP and MM can make the difference between simply running software and truly optimizing business operations.",
         date: "8/15/2025",
         readTime: "1 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1519389950473-47ba0277781c&w=1000",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -155,7 +155,7 @@ export const blogData = {
         subtitle: "Unlock the power of SAP MM reporting. Explore essential T-Codes that help track purchase orders, analyze vendor performance, and monitor stock levels, giving your business real-time insights for smarter procurement decisions.",
         date: "9/23/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1551288049-bebda4e38f71&w=1000",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -216,7 +216,7 @@ export const blogData = {
         subtitle: "International trade demands accuracy. Discover best practices for handling Letters of Credit (LC) in SAP MM, ensuring compliance, reducing risk, and streamlining supplier payments in global transactions.",
         date: "9/23/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1554224155-1696413565d3&w=1000",
+        image: "https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -277,7 +277,7 @@ export const blogData = {
         subtitle: "Rolling out SAP MM worldwide isn’t easy. From tax regulations to localization and user adoption, explore the key challenges businesses face and strategies to ensure a smooth, successful global deployment.",
         date: "9/23/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1586528116311-ad8dd3c8310d&w=1000",
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -334,7 +334,7 @@ export const blogData = {
         subtitle: "See how businesses move from slow, manual procurement to automated efficiency with SAP MM. Learn how digital transformation reduces errors, improves visibility, and speeds up decision-making.",
         date: "9/23/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1504384308090-c894fdcc538d&w=1000",
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -387,7 +387,7 @@ export const blogData = {
         subtitle: "Master data is the backbone of SAP MM. Learn how material, vendor, and purchasing records form the foundation of smooth procurement and supply chain operations, ensuring accuracy, efficiency, and better decision-making across your organization.",
         date: "9/24/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1551288049-bebda4e38f71&w=1000",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -444,7 +444,7 @@ export const blogData = {
         subtitle: "This blog will focus on the value of upgrading the SAP Materials Management (MM) module to strengthen procurement and inventory operations.",
         date: "9/26/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1541888941257-2440348701a3&w=1000",
+        image: "https://images.unsplash.com/photo-1541888941257-2440348701a3?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -505,7 +505,7 @@ export const blogData = {
         subtitle: "Discover reliable import and export solutions for India and UAE. Learn about trade processes, documentation, customs clearance, compliance, and logistics for seamless global trade.",
         date: "12/15/2025",
         readTime: "3 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1524522173746-f628baad3644&w=1000",
+        image: "https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -586,7 +586,7 @@ export const blogData = {
         subtitle: "Learn how SAP MM helps businesses manage procurement, inventory, and vendor processes efficiently. Explore features, benefits, integrations, and career opportunities in SAP MM.",
         date: "12/16/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1553413077-190dd305871c&w=1000",
+        image: "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -695,7 +695,7 @@ export const blogData = {
         subtitle: "Protect your organization with our professional background verification solutions. We help you validate candidate credentials, screen criminal records, and verify employment history—ensuring every hire meets your company’s standards for safety, honesty, and reliability.",
         date: "10/14/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1454165833767-027ffea9e77b&w=1000",
+        image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=1000",
         content: [
             {
                 type: "heading",
@@ -756,7 +756,7 @@ export const blogData = {
         subtitle: "Ensure safe and reliable hiring with our end-to-end background verification services. From employment and education checks to criminal and address verification.",
         date: "10/13/2025",
         readTime: "2 min read",
-        image: "https://images.weserv.nl/?url=images.unsplash.com/photo-1556740758-90de374c12ad&w=1000",
+        image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1000",
         content: [
             {
                 type: "heading",
