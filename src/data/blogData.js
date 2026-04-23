@@ -1,5 +1,5 @@
 export const blogData = {
-    "enhancing-procurement-efficiency-sap-mm-upgrade": {
+    "enhancing-procurement-efficiency-sap-mm": {
         title: "Enhancing Procurement Efficiency: The Benefits of Upgrading SAP Materials Management Module",
         subtitle: "This blog will focus on the value of upgrading the SAP Materials Management (MM) module to strengthen procurement and inventory operations.",
         date: "9/26/2025",
