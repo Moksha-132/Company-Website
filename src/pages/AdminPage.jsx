@@ -9,14 +9,15 @@ const AdminPage = () => {
   const [editingId, setEditingId] = useState(null);
   const [editForm, setEditForm] = useState({ keywords: '', response: '', route: '', actionText: '' });
   const [isAdding, setIsAdding] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    const stored = localStorage.getItem('shnoor_chatbot_kb_v9');
+    const stored = localStorage.getItem('shnoor_chatbot_kb_v12');
     if (stored) {
       setKnowledgeBase(JSON.parse(stored));
     } else {
       setKnowledgeBase(INITIAL_KNOWLEDGE_BASE);
-      localStorage.setItem('shnoor_chatbot_kb_v9', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
+      localStorage.setItem('shnoor_chatbot_kb_v12', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
     }
     const storedUnanswered = localStorage.getItem('shnoor_unanswered');
     if (storedUnanswered) {
@@ -52,7 +53,7 @@ const AdminPage = () => {
   }, []);
 
   const saveToStorage = (newKb) => {
-    localStorage.setItem('shnoor_chatbot_kb_v9', JSON.stringify(newKb));
+    localStorage.setItem('shnoor_chatbot_kb_v12', JSON.stringify(newKb));
     setKnowledgeBase(newKb);
   };
 
@@ -139,6 +140,15 @@ const AdminPage = () => {
     setEditingId(null);
     setEditForm({ keywords: '', response: '', route: '', actionText: '' });
   };
+
+  const filteredKnowledgeBase = knowledgeBase.filter(entry => {
+    const q = searchQuery.toLowerCase();
+    if (!q) return true;
+    const inResponse = entry.response.toLowerCase().includes(q);
+    const inKeywords = entry.keywords.some(kw => kw.toLowerCase().includes(q));
+    const inRoute = entry.route && entry.route.toLowerCase().includes(q);
+    return inResponse || inKeywords || inRoute;
+  });
 
   return (
     <div className="admin-container">
@@ -231,9 +241,28 @@ const AdminPage = () => {
           </div>
         )}
 
-        <h2>Current Knowledge Base</h2>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', flexWrap: 'wrap', gap: '15px' }}>
+          <h2 style={{ margin: 0 }}>Current Knowledge Base</h2>
+          <div style={{ position: 'relative', width: '100%', maxWidth: '400px' }}>
+            <Search size={18} style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: '#95a5a6' }} />
+            <input 
+              type="text" 
+              placeholder="Search keywords, responses, or routes..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{ width: '100%', padding: '12px 15px 12px 40px', borderRadius: '8px', border: '1px solid #bdc3c7', fontSize: '0.95rem', outline: 'none' }}
+            />
+          </div>
+        </div>
+        
+        {filteredKnowledgeBase.length === 0 && searchQuery && (
+          <div style={{ textAlign: 'center', padding: '40px', color: '#7f8c8d', background: 'white', borderRadius: '12px', border: '1px dashed #bdc3c7' }}>
+            <p>No matches found for "{searchQuery}". Try a different term or add a new entry.</p>
+          </div>
+        )}
+
         <div className="kb-list">
-          {knowledgeBase.map(entry => (
+          {filteredKnowledgeBase.map(entry => (
             <div key={entry.id} className="kb-card">
               <div className="kb-card-content">
                 <div className="kb-keywords">

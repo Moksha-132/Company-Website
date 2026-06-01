@@ -23,7 +23,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '600' }}>Email Us</p>
-                                    <p style={{ fontSize: '1.1rem', color: 'var(--secondary)', fontWeight: '700' }}>info@shnoor.com</p>
+                                    <p style={{ fontSize: '1.1rem', color: 'var(--secondary)', fontWeight: '700' }}>admin@shnoor.com</p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>

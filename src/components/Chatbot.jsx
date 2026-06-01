@@ -5,11 +5,11 @@ import INITIAL_KNOWLEDGE_BASE from '../data/chatbotKnowledgeBase.json';
 import './Chatbot.css';
 
 const getKnowledgeBase = () => {
-  const stored = localStorage.getItem('shnoor_chatbot_kb_v9');
+  const stored = localStorage.getItem('shnoor_chatbot_kb_v12');
   if (stored) {
     return JSON.parse(stored);
   }
-  localStorage.setItem('shnoor_chatbot_kb_v9', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
+  localStorage.setItem('shnoor_chatbot_kb_v12', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
   return INITIAL_KNOWLEDGE_BASE;
 };
 
@@ -78,6 +78,7 @@ const Chatbot = () => {
     { text: "Hello! I am your Shnoor AI Assistant. I can help you navigate our services, careers, portals, and more. How can I assist you today?", sender: "bot" }
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [pendingQueries, setPendingQueries] = useState([]);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -88,23 +89,100 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages, isOpen]);
 
-  const handleSend = (e) => {
-    e.preventDefault();
-    if (!inputValue.trim()) return;
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      // If Admin updated the knowledge base
+      if (e.key === 'shnoor_chatbot_kb_v12' && e.newValue) {
+        if (pendingQueries.length > 0) {
+           const newKb = JSON.parse(e.newValue);
+           
+           setPendingQueries(currentPending => {
+             const stillPending = [];
+             currentPending.forEach(query => {
+               const normalizedInput = query.toLowerCase().replace(/[^\w\s.]/gi, '');
+               const userWords = normalizedInput.split(/\s+/);
+               
+               let bestMatch = null;
+               let maxScore = 0;
+               for (const entry of newKb) {
+                 let score = 0;
+                 for (const keyword of entry.keywords) {
+                   if (normalizedInput.includes(keyword.toLowerCase())) {
+                     score += keyword.length;
+                   } else {
+                     for (const word of userWords) {
+                       if (word === keyword.toLowerCase()) {
+                         score += 2;
+                       }
+                     }
+                   }
+                 }
+                 if (score > maxScore) {
+                   maxScore = score;
+                   bestMatch = entry;
+                 }
+               }
+               
+               if (maxScore > 0 && bestMatch) {
+                 // Found an answer from the Admin!
+                 setMessages(prev => [...prev, {
+                   text: `Good news! The admin just answered your question about "${query}":\n\n${bestMatch.response}`,
+                   sender: "bot",
+                   route: bestMatch.route,
+                   actionText: bestMatch.actionText
+                 }]);
+               } else {
+                 stillPending.push(query);
+               }
+             });
+             return stillPending;
+           });
+        }
+      }
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, [pendingQueries]);
 
-    const userMsg = { text: inputValue, sender: "user" };
+  const sendQuery = (text) => {
+    if (!text.trim()) return;
+
+    const userMsg = { text: text, sender: "user" };
     setMessages(prev => [...prev, userMsg]);
-    setInputValue("");
+    
     setTimeout(() => {
-      const responseData = getLocalAIResponse(userMsg.text);
+      const responseData = getLocalAIResponse(text);
       const botResponse = { 
         text: responseData.text, 
         sender: "bot", 
         route: responseData.route,
         actionText: responseData.actionText 
       };
+      
+      // If the bot didn't know the answer, add it to pending queries
+      if (responseData.text.includes("forwarded to our admin team")) {
+        setPendingQueries(prev => {
+          if (!prev.includes(text)) {
+            return [...prev, text];
+          }
+          return prev;
+        });
+      }
+
       setMessages(prev => [...prev, botResponse]);
     }, 600);
+  };
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    if (!inputValue.trim()) return;
+    sendQuery(inputValue);
+    setInputValue("");
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    sendQuery(suggestion);
   };
 
   return (
@@ -153,6 +231,24 @@ const Chatbot = () => {
             </div>
           ))}
           <div ref={messagesEndRef} />
+        </div>
+
+        <div className="chatbot-suggestions">
+          {[
+            "Explore our platforms",
+            "What services do you offer?",
+            "Tell me about HRM platform",
+            "How does the LMS work?",
+          ].map((suggestion, i) => (
+            <button 
+              key={i} 
+              type="button"
+              className="suggestion-pill"
+              onClick={() => handleSuggestionClick(suggestion)}
+            >
+              {suggestion}
+            </button>
+          ))}
         </div>
 
         <form className="chatbot-input-area" onSubmit={handleSend}>

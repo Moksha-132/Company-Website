@@ -257,5 +257,96 @@
     "response": "I'm sorry, but that information is private and confidential. As an AI Assistant, I am not authorized to disclose internal company data, financials, or private user credentials.",
     "route": null,
     "actionText": null
+  },
+  {
+    "id": "22",
+    "keywords": ["location", "address", "headquarters", "where are you located", "office"],
+    "response": "Our headquarters is located in the UAE, with additional operations running globally out of India. You can find our exact contact details on our Contact page.",
+    "route": "/contact",
+    "actionText": "View Contact Info"
+  },
+  {
+    "id": "23",
+    "keywords": ["operating hours", "timings", "when are you open", "working hours"],
+    "response": "We operate Monday through Friday, 9:00 AM to 6:00 PM. However, our enterprise support teams are available 24/7 for urgent requests.",
+    "route": "/contact",
+    "actionText": "Contact Support"
+  },
+  {
+    "id": "24",
+    "keywords": ["ceo", "founder", "leadership", "who owns"],
+    "response": "Shnoor International is led by a dedicated team of experienced IT and Logistics professionals committed to simplifying global trade and technology.",
+    "route": "/about",
+    "actionText": "Learn About Us"
+  },
+  {
+    "id": "25",
+    "keywords": ["tell me about hrm", "what is hrm platform", "hrm details", "human resources system"],
+    "response": "Our HRM (Human Resource Management) platform helps you manage employees, attendance, leaves, shifts, awards, and company policies all in one centralized dashboard. It's built for modern, scaling teams.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Visit HRM Platform"
+  },
+  {
+    "id": "26",
+    "keywords": ["tell me about lms", "what is lms platform", "lms details", "learning management system details"],
+    "response": "Our LMS (Learning Management System) provides structured training formats including instructor-led sessions, hands-on practice arenas, and compliance tracking to rapidly upskill your entire workforce.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Visit LMS Platform"
+  },
+  {
+    "id": "27",
+    "keywords": ["tell me about invoicecloud", "what is invoicecloud", "invoice platform details", "billing software details"],
+    "response": "Shnoor Invoicing (invoicecloud.in) automates your billing. It lets you create professional invoices in under 30 seconds, send automated payment reminders, and track your revenue growth.",
+    "route": "https://www.invoicecloud.in",
+    "actionText": "Visit Invoicing Platform"
+  },
+  {
+    "id": "28",
+    "keywords": ["how to apply for leave", "track attendance", "leave management", "attendance tracking"],
+    "response": "Using our HRM platform, employees can easily apply for leaves and track their daily attendance directly from their personal dashboard. Managers receive instant notifications for approval.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Manage Attendance on HRM"
+  },
+  {
+    "id": "29",
+    "keywords": ["certification courses", "get certified", "upskill", "training completion"],
+    "response": "Yes! Our LMS provides structured certification paths. Once you complete the required modules and pass the final assessments, you will be awarded an industry-recognized certificate of completion.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "View LMS Certifications"
+  },
+  {
+    "id": "30",
+    "keywords": ["internet disconnects during exam", "power cut during test", "auto save exam", "resume assessment"],
+    "response": "Don't worry! Our Assessment platform features Auto-Save functionality. If your internet disconnects or you lose power, your progress is securely saved and you can resume the exam from where you left off.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "Learn About Secure Exams"
+  },
+  {
+    "id": "31",
+    "keywords": ["are exams recorded", "webcam recording", "live monitoring", "proctoring"],
+    "response": "Yes, to ensure academic integrity, our Assessment platform uses Live Proctoring. This includes secure webcam monitoring and full-screen enforcement to prevent tab-switching during exams.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Assessment Security"
+  },
+  {
+    "id": "32",
+    "keywords": ["free trial invoicing", "is invoicing free", "freelancer billing", "small business invoice"],
+    "response": "Shnoor Invoicing offers a completely Free plan perfect for freelancers and small businesses, allowing up to 10 invoices per month at no cost. You can easily upgrade as your business grows.",
+    "route": "https://www.invoicecloud.in",
+    "actionText": "Start Invoicing for Free"
+  },
+  {
+    "id": "33",
+    "keywords": ["automate payment reminders", "chase payments", "auto reminders", "late payment"],
+    "response": "Our InvoiceCloud platform allows you to set up Smart Payment Reminders. The system will automatically follow up on unpaid or overdue invoices via email, so you get paid faster without the manual hassle.",
+    "route": "https://www.invoicecloud.in",
+    "actionText": "Explore Smart Reminders"
+  },
+  {
+    "id": "34",
+    "keywords": ["explore our platforms", "other platforms", "what platforms", "list platforms", "all platforms", "portals list"],
+    "response": "Shnoor International operates 4 specialized platforms:\n\n• HRM: Human Resources & Employee Management\n• LMS: Enterprise Learning & Training\n• Assessments: Secure Examinations\n• InvoiceCloud: Automated Billing\n\nTell me which one you'd like to explore in detail!",
+    "route": null,
+    "actionText": null
   }
 ]

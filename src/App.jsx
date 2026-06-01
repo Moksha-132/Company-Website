@@ -25,8 +25,6 @@ import BlogDetailPage from './pages/BlogDetailPage';
 import AdminPage from './pages/AdminPage';
 
 import { Cloud, Globe, Database, Users, ShieldCheck, Network, HeartPulse } from 'lucide-react';
-
-// ScrollToTop component to ensure page starts at top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {

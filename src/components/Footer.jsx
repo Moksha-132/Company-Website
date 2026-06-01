@@ -71,7 +71,7 @@ const Footer = () => {
                             <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                                 <Mail size={22} color="var(--accent)" />
                                 <div>
-                                    <span style={{ opacity: 0.9, display: 'block' }}>info@shnoor.com</span>
+                                    <span style={{ opacity: 0.9, display: 'block' }}>admin@shnoor.com</span>
                                     <span style={{ opacity: 0.7, fontSize: '0.85rem' }}>proc@shnoor.com (Sales)</span>
                                 </div>
                             </div>

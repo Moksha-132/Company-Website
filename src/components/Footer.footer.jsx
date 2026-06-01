@@ -56,7 +56,7 @@ const Footer = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', opacity: 0.8 }}>
                             <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                                 <Mail size={20} color="var(--primary)" />
-                                <span>info@shnoor.com</span>
+                                <span>admin@shnoor.com</span>
                             </div>
                             <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                                 <Phone size={20} color="var(--primary)" />
