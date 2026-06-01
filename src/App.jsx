@@ -22,6 +22,7 @@ import JobOpeningsPage from './pages/JobOpeningsPage';
 import ApplicationFormPage from './pages/ApplicationFormPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import BlogDetailPage from './pages/BlogDetailPage';
+import AdminPage from './pages/AdminPage';
 
 import { Cloud, Globe, Database, Users, ShieldCheck, Network, HeartPulse } from 'lucide-react';
 
@@ -100,6 +101,7 @@ function App() {
           <Route path="/apply" element={<ApplicationFormPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
+          <Route path="/admin" element={<AdminPage />} />
 
         </Routes>
       </Layout>

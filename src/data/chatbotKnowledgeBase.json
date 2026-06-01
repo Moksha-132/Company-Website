@@ -1,0 +1,261 @@
+[
+  {
+    "id": "1",
+    "keywords": ["shnoor.com", "main website", "what is shnoor", "company", "services"],
+    "response": "Shnoor (shnoor.com) offers comprehensive IT solutions including Cloud, Enterprise, AI, Staffing, Verification, Network, and Healthcare.",
+    "route": "/services",
+    "actionText": "View All Services"
+  },
+  {
+    "id": "2",
+    "keywords": ["hrm", "hrm.shnoor.com", "human resource", "hr", "employees", "vue", "laravel", "no hidden fees", "free account", "edit online", "multiple language", "safe and secure"],
+    "response": "hrm.shnoor.com is our Next Generation HR Management application built for small to large businesses. It offers No Hidden Fees, Multiple Language Support, Employee & Staff Management, powerful Payroll processing, and detailed tracking for attendance, leaves, and expenses.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Visit HRM Portal"
+  },
+  {
+    "id": "2a",
+    "keywords": ["payroll", "salary", "slip", "compensation", "payslip", "letter head", "letterhead", "components", "accounting", "expenses", "currencies", "one click payroll"],
+    "response": "Our HRM system features one-click payroll generation, auto-generation based on leaves and attendance, salary group assignments, dynamic letterheads & salary slips, as well as accounting, expenses, and currencies tracking.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Explore Payroll"
+  },
+  {
+    "id": "2b",
+    "keywords": ["staff", "manage employee", "roles", "manager", "attendance", "tracking", "leave", "holiday", "dashboard", "location", "locations", "increment", "promotion"],
+    "response": "Employee management allows you to manage staff by location, assign roles and managers, track leaves, holidays, and attendance. It also handles increments, promotions, and provides a powerful dashboard for the employee view.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Explore Staff Management"
+  },
+  {
+    "id": "2c",
+    "keywords": ["hrm features", "features", "assets", "asset", "shifts", "offboarding", "survey", "awards", "appreciation", "company policy", "permissions", "news"],
+    "response": "Our HRM platform includes comprehensive features like Asset Management, Shifts, Appreciations, Awards, Company Policy, Permissions, Offboarding, Survey Forms, and company News.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Features"
+  },
+  {
+    "id": "3",
+    "keywords": ["lms", "lms.shnoor.com", "learning", "training", "education", "courses", "workforce", "enterprise learning"],
+    "response": "lms.shnoor.com is our Enterprise Learning Platform built for smarter workforce training. It provides a modern learning ecosystem with 8 core capabilities, role-based journeys, guided learning, and 99.9% reliable operations.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Visit LMS Portal"
+  },
+  {
+    "id": "3a",
+    "keywords": ["training options", "format", "instructor-led", "private corporate", "practice arena", "facilitated labs", "exam preparation", "self-paced", "hands-on practice"],
+    "response": "Our LMS delivers learning formats built for how your teams work: Instructor-led training, Private corporate programs, Practice arenas (self-paced exercises), Facilitated labs (hands-on environments), and comprehensive Exam preparation.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore Training Options"
+  },
+  {
+    "id": "3b",
+    "keywords": ["workflow", "role-based", "compliance", "upskilling", "validate mastery", "cohorts", "fast onboarding", "global accessibility", "live instruction"],
+    "response": "Our platform supports modern workflows: launch role-based journeys (onboarding, compliance, upskilling), deliver guided learning via live instruction & practice labs, and validate mastery through structured cohorts, assignments, and certification paths.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "View Learning Workflows"
+  },
+  {
+    "id": "3c",
+    "keywords": ["admin control", "reports", "approvals", "progress tracking", "certifications", "outcomes", "outcome-driven", "measurable growth", "credentials"],
+    "response": "Administrators get a powerful Control Center to manage users, reports, and approvals. Our Learning Delivery Engine organizes modules and session flows, while ensuring outcome-driven progress tracking and industry-facing certifications.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore LMS Features"
+  },
+  {
+    "id": "4",
+    "keywords": ["assessments", "assessments.shnoor.com", "exam", "test", "evaluate", "evaluation", "recruitment portal", "placement assessment"],
+    "response": "assessments.shnoor.com is our Secure Examination Portal for SHNOOR recruitment drives. It allows candidates to access auto-assigned tests, take secure proctored exams, and track results all in one place.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "Visit Assessments Portal"
+  },
+  {
+    "id": "4a",
+    "keywords": ["how it works", "steps", "register", "take assessment", "submit exam", "what to expect", "preparation", "during exam", "after submission"],
+    "response": "Taking an assessment is a 3-step process: Register with your institute details, Take the secure proctored exam, and Submit securely. During the exam, you'll see a timer countdown and your answers will auto-save.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Assessment Process"
+  },
+  {
+    "id": "4b",
+    "keywords": ["assessment features", "features", "auto-assigned", "multiple attempts", "scheduled tests", "auto-save", "submission receipt"],
+    "response": "The platform offers Auto-Assigned Tests based on your institute, Scheduled Tests with deadlines, Multiple Attempts (for some tests), Auto-Save so you can resume if disconnected, and immediate Submission Receipts.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Platform Features"
+  },
+  {
+    "id": "4c",
+    "keywords": ["secure", "security", "proctored", "proctoring", "webcam", "camera monitoring", "tab switch", "fullscreen", "integrity", "encrypted"],
+    "response": "Our exams use a Secure Examination Environment with Live Proctoring (webcam monitoring), Fullscreen Enforcement, Tab Switch Detection (max 3 warnings), Auto-Submit on timeout, and Encrypted Answers.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Security Details"
+  },
+  {
+    "id": "5",
+    "keywords": ["invoice", "invoicecloud", "invoicecloud.in", "billing", "payment", "finances", "reminders", "smart invoicing"],
+    "response": "Shnoor Invoicing (invoicecloud.in) lets you create, manage, and send professional invoices without the hassle. Automate reminders, track payments, and get a real-time financial overview from one simple platform.",
+    "route": "https://www.invoicecloud.in/",
+    "actionText": "Visit Shnoor Invoicing"
+  },
+  {
+    "id": "5a",
+    "keywords": ["invoice features", "dashboard", "smart invoice creation", "payment reminders", "overdue", "revenue", "autofill"],
+    "response": "Our Intelligent Dashboard tracks total revenue, pending, and overdue payments. Features include Smart Invoice Creation (generate in under 30 seconds with autofill) and one-click Smart Payment Reminders.",
+    "route": "https://www.invoicecloud.in/",
+    "actionText": "Explore Invoice Features"
+  },
+  {
+    "id": "5b",
+    "keywords": ["invoicing about", "simplify", "simplicity first", "built for growth", "customer obsessed", "founded", "clients"],
+    "response": "Shnoor Invoicing is built on Simplicity First, Built for Growth, and Customer Obsession. Founded in 2025, our team of 50+ members proudly serves over 1,000 happy clients.",
+    "route": "https://www.invoicecloud.in/",
+    "actionText": "Learn About Us"
+  },
+  {
+    "id": "5c",
+    "keywords": ["invoice pricing", "plans", "free plan", "professional plan", "business plan", "cost", "templates", "unlimited invoices"],
+    "response": "We offer clear value plans: Free (up to 10 invoices/mo), Professional (₹19/mo for unlimited invoices & advanced templates), and Business (₹49/mo with custom templates & 24/7 phone support).",
+    "route": "https://www.invoicecloud.in/",
+    "actionText": "View Pricing Plans"
+  },
+  {
+    "id": "6",
+    "keywords": ["hello", "hi", "hey", "greetings"],
+    "response": "Hello! I am the Shnoor AI Assistant. How can I assist you today?",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "7",
+    "keywords": ["contact", "support", "help", "email", "reach"],
+    "response": "You can connect with us at admin@shnoor.com for further assistance, or visit our Contact page.",
+    "route": "/contact",
+    "actionText": "Go to Contact Page"
+  },
+  {
+    "id": "8",
+    "keywords": ["about", "who are we", "about us", "history"],
+    "response": "Learn about Shnoor, our mission, and our vision on the About page.",
+    "route": "/about",
+    "actionText": "Go to About Page"
+  },
+  {
+    "id": "9",
+    "keywords": ["logistics", "shipping", "transport", "freight"],
+    "response": "We offer end-to-end logistics solutions. Find out more on our Logistics page.",
+    "route": "/logistics",
+    "actionText": "View Logistics Details"
+  },
+  {
+    "id": "10",
+    "keywords": ["export", "import", "trade", "international"],
+    "response": "We manage complex import and export operations globally. Discover our global trade solutions.",
+    "route": "/import-and-export",
+    "actionText": "View Import & Export"
+  },
+  {
+    "id": "11",
+    "keywords": ["careers", "jobs", "hiring", "work with us", "apply"],
+    "response": "Looking to join our team? Check out our latest job openings and apply online.",
+    "route": "/careers",
+    "actionText": "View Careers Page"
+  },
+  {
+    "id": "12",
+    "keywords": ["cloud", "azure", "aws", "google cloud", "hosting"],
+    "response": "We optimize workloads and build next-gen applications using Azure, AWS, and Google Cloud.",
+    "route": "/services/cloud",
+    "actionText": "View Cloud Services"
+  },
+  {
+    "id": "13",
+    "keywords": ["enterprise", "erp", "sap", "management"],
+    "response": "Our Enterprise Management solutions streamline business operations using cutting-edge ERP systems and SAP outsourcing.",
+    "route": "/services/enterprise",
+    "actionText": "View Enterprise Solutions"
+  },
+  {
+    "id": "14",
+    "keywords": ["ai", "artificial intelligence", "data", "analytics", "automation"],
+    "response": "Leverage AI-powered automation and advanced analytics to improve efficiency and decision-making.",
+    "route": "/services/ai",
+    "actionText": "View AI Services"
+  },
+  {
+    "id": "15",
+    "keywords": ["staffing", "consulting", "talent", "recruitment", "it staffing"],
+    "response": "We connect businesses with specialized IT talent through our Consulting & Staffing services.",
+    "route": "/services/staffing",
+    "actionText": "View Staffing Services"
+  },
+  {
+    "id": "16",
+    "keywords": ["verification", "background check", "screening", "trust", "security"],
+    "response": "Ensure trust and security through our reliable background verification and professional screening services.",
+    "route": "/services/verification",
+    "actionText": "View Verification Services"
+  },
+  {
+    "id": "17",
+    "keywords": ["network", "infrastructure", "connectivity"],
+    "response": "We provide robust and secure network infrastructure solutions to support your global trade and IT operations seamlessly.",
+    "route": "/services/network",
+    "actionText": "View Network Services"
+  },
+  {
+    "id": "18",
+    "keywords": ["healthcare", "health", "medical", "patient", "clinical"],
+    "response": "Tailored IT solutions for the healthcare industry, ensuring data security and operational efficiency for healthcare providers.",
+    "route": "/services/healthcare",
+    "actionText": "View Healthcare Services"
+  },
+  {
+    "id": "19",
+    "keywords": ["scam", "fraud", "fake job", "warning"],
+    "response": "Please be aware of recruitment scams. Shnoor will never ask for payment during the hiring process. Read our guidelines to stay safe.",
+    "route": "/recruitment-scams",
+    "actionText": "Read About Recruitment Scams"
+  },
+  {
+    "id": "2d",
+    "keywords": ["hrm register", "sign up hrm", "create hrm account", "join hrm", "hrm registration", "register for hrm"],
+    "response": "You can start with a free account on our HR Management portal. Click the button below to register for hrm.shnoor.com.",
+    "route": "https://hrm.shnoor.com/register",
+    "actionText": "Register for HRM"
+  },
+  {
+    "id": "3d",
+    "keywords": ["lms register", "sign up lms", "create lms account", "join lms", "lms registration", "register for lms"],
+    "response": "Ready to start your learning journey? You can sign up for our Learning Management System using the link below.",
+    "route": "https://lms.shnoor.com/register",
+    "actionText": "Register for LMS"
+  },
+  {
+    "id": "4d",
+    "keywords": ["assessments register", "sign up assessments", "exam register", "test registration", "register for assessments"],
+    "response": "To take a secure proctored exam, you must first register with your institute details and enrollment information.",
+    "route": "https://assessments.shnoor.com/register",
+    "actionText": "Register for Assessments"
+  },
+  {
+    "id": "5d",
+    "keywords": ["invoice register", "sign up invoice", "create invoice account", "billing registration", "register for invoicing"],
+    "response": "Get started for free with Shnoor Invoicing! Create an account to automate your billing and get paid faster.",
+    "route": "https://www.invoicecloud.in/register",
+    "actionText": "Register for Invoicing"
+  },
+  {
+    "id": "20",
+    "keywords": ["register", "sign up", "create account", "join"],
+    "response": "We have multiple platforms! You can register for our specific portals by visiting their registration pages:\n- HRM: hrm.shnoor.com/register\n- LMS: lms.shnoor.com/register\n- Assessments: assessments.shnoor.com/register\n- Invoicing: invoicecloud.in/register",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "21",
+    "keywords": ["password", "secret", "private", "confidential", "salary", "revenue", "credentials", "source code", "admin login", "database"],
+    "response": "I'm sorry, but that information is private and confidential. As an AI Assistant, I am not authorized to disclose internal company data, financials, or private user credentials.",
+    "route": null,
+    "actionText": null
+  }
+]
