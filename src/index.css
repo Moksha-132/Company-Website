@@ -9,7 +9,7 @@
   --background: #f8fafc; /* Clean Slate 50 */
   --surface: #ffffff;
   --text: #1e293b; /* Slate 800 */
-  --text-muted: #64748b; /* Slate 500 */
+  --text-muted: #475569; /* Slate 600 for better contrast */
   --border: #e2e8f0; /* Slate 200 */
   --glass: rgba(255, 255, 255, 0.9);
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

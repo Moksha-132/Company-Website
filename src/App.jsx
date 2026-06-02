@@ -1,28 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import LogisticsPage from './pages/LogisticsPage';
-import ExportPage from './pages/ExportPage';
-import CareersPage from './pages/CareersPage';
-import ContactPage from './pages/ContactPage';
-import ServicesPage from './pages/ServicesPage';
-import ServiceDetail from './pages/ServiceDetail';
-import CloudPage from './pages/CloudPage';
-import EnterprisePage from './pages/EnterprisePage';
-import AIPage from './pages/AIPage';
-import StaffingPage from './pages/StaffingPage';
-import VerificationPage from './pages/VerificationPage';
-import NetworkPage from './pages/NetworkPage';
-import HealthcarePage from './pages/HealthcarePage';
-import ImportExportPage from './pages/ImportExportPage';
-import RecruitmentScamsPage from './pages/RecruitmentScamsPage';
-import JobOpeningsPage from './pages/JobOpeningsPage';
-import ApplicationFormPage from './pages/ApplicationFormPage';
-import ProductDetailPage from './pages/ProductDetailPage';
-import BlogDetailPage from './pages/BlogDetailPage';
-import AdminPage from './pages/AdminPage';
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const LogisticsPage = lazy(() => import('./pages/LogisticsPage'));
+const ExportPage = lazy(() => import('./pages/ExportPage'));
+const CareersPage = lazy(() => import('./pages/CareersPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
+const CloudPage = lazy(() => import('./pages/CloudPage'));
+const EnterprisePage = lazy(() => import('./pages/EnterprisePage'));
+const AIPage = lazy(() => import('./pages/AIPage'));
+const StaffingPage = lazy(() => import('./pages/StaffingPage'));
+const VerificationPage = lazy(() => import('./pages/VerificationPage'));
+const NetworkPage = lazy(() => import('./pages/NetworkPage'));
+const HealthcarePage = lazy(() => import('./pages/HealthcarePage'));
+const ImportExportPage = lazy(() => import('./pages/ImportExportPage'));
+const RecruitmentScamsPage = lazy(() => import('./pages/RecruitmentScamsPage'));
+const JobOpeningsPage = lazy(() => import('./pages/JobOpeningsPage'));
+const ApplicationFormPage = lazy(() => import('./pages/ApplicationFormPage'));
+const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage'));
+const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
+const AdminPage = lazy(() => import('./pages/AdminPage'));
 
 import { Cloud, Globe, Database, Users, ShieldCheck, Network, HeartPulse } from 'lucide-react';
 const ScrollToTop = () => {
@@ -76,32 +76,34 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/logistics" element={<LogisticsPage />} />
-          <Route path="/export" element={<ExportPage />} />
-          <Route path="/import-and-export" element={<ImportExportPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/services" element={<ServicesPage />} />
+        <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', width: '100%' }}>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/logistics" element={<LogisticsPage />} />
+            <Route path="/export" element={<ExportPage />} />
+            <Route path="/import-and-export" element={<ImportExportPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
 
-          {/* Sub-Service Routes */}
-          <Route path="/services/cloud" element={<CloudPage />} />
-          <Route path="/services/enterprise" element={<EnterprisePage />} />
-          <Route path="/services/ai" element={<AIPage />} />
-          <Route path="/services/staffing" element={<StaffingPage />} />
-          <Route path="/services/verification" element={<VerificationPage />} />
-          <Route path="/services/network" element={<NetworkPage />} />
-          <Route path="/services/healthcare" element={<HealthcarePage />} />
-          <Route path="/recruitment-scams" element={<RecruitmentScamsPage />} />
-          <Route path="/latest-openings" element={<JobOpeningsPage />} />
-          <Route path="/apply" element={<ApplicationFormPage />} />
-          <Route path="/product/:id" element={<ProductDetailPage />} />
-          <Route path="/blog/:slug" element={<BlogDetailPage />} />
-          <Route path="/admin" element={<AdminPage />} />
+            {/* Sub-Service Routes */}
+            <Route path="/services/cloud" element={<CloudPage />} />
+            <Route path="/services/enterprise" element={<EnterprisePage />} />
+            <Route path="/services/ai" element={<AIPage />} />
+            <Route path="/services/staffing" element={<StaffingPage />} />
+            <Route path="/services/verification" element={<VerificationPage />} />
+            <Route path="/services/network" element={<NetworkPage />} />
+            <Route path="/services/healthcare" element={<HealthcarePage />} />
+            <Route path="/recruitment-scams" element={<RecruitmentScamsPage />} />
+            <Route path="/latest-openings" element={<JobOpeningsPage />} />
+            <Route path="/apply" element={<ApplicationFormPage />} />
+            <Route path="/product/:id" element={<ProductDetailPage />} />
+            <Route path="/blog/:slug" element={<BlogDetailPage />} />
+            <Route path="/admin" element={<AdminPage />} />
 
-        </Routes>
+          </Routes>
+        </Suspense>
       </Layout>
     </BrowserRouter>
   );
