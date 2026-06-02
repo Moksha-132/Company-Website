@@ -339,7 +339,7 @@ const Chatbot = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button type="submit" disabled={!inputValue.trim()}>
+          <button type="submit" disabled={!inputValue.trim()} aria-label="Send message">
             <Send size={18} />
           </button>
         </form>
