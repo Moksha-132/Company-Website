@@ -97,17 +97,11 @@
     "id": "2c",
     "keywords": [
       "hrm features",
-      "features",
-      "assets",
-      "asset",
-      "shifts",
-      "offboarding",
-      "survey",
-      "awards",
-      "appreciation",
-      "company policy",
-      "permissions",
-      "news"
+      "features of hrm",
+      "list of hrm modules",
+      "hrm modules",
+      "what modules does hrm have",
+      "hrm engine"
     ],
     "response": "Hrmifly (our core HRM engine) comes packed with powerful features specifically designed to increase your business growth.\n\nComplete list of modules:\n• **HR & Employee Management**\n• **Asset Management & Shifts**\n• **Appreciations & Awards**\n• **Holiday & Leave Management**\n• **Company Policy & News**\n• **Attendance Tracking**\n• **Roles & Permissions**\n• **Offboarding & Survey Forms**\n• **Accounting, Expenses & Currencies**\n• **Payroll & Salary Slips**\n• **Increment/Promotion Tracking**",
     "route": "https://hrm.shnoor.com",
@@ -364,10 +358,10 @@
   {
     "id": "10",
     "keywords": [
-      "export",
-      "import",
-      "trade",
-      "international",
+      "export services",
+      "import services",
+      "global trade",
+      "international trade",
       "imports and exports"
     ],
     "response": "Navigating the complexities of international trade requires deep expertise and reliable technological infrastructure, which is exactly what Shnoor provides.\n\nWe manage intricate import and export operations on a global scale, ensuring full compliance with international regulations and smooth customs clearances.\n\nDiscover how our global trade solutions can significantly reduce your operational friction by visiting our Import & Export services page.",
@@ -1251,15 +1245,14 @@
   {
     "id": "114",
     "keywords": [
-      "export",
-      "exports",
-      "import",
-      "imports",
-      "global trade",
       "export management",
+      "export services",
+      "import management",
+      "import services",
+      "global trade",
       "cross-border trade",
-      "customs",
-      "shipping"
+      "customs clearance",
+      "international shipping"
     ],
     "response": "We provide end-to-end export management services to streamline global business operations with absolute trust and transparency. Our core services include:\n\n**Product Sourcing & Procurement**\nWith our deep understanding of global markets and complex supply chains, we offer complete management of your procurement process. This includes everything from identifying and qualifying reliable sources, to negotiating the best terms and ensuring quality and consistency.\n\n**International Shipping & Logistics**\nAt SHNOOR International LLC, we make global trade simple by delivering reliable, efficient, and cost-effective international shipping & logistics solutions. From India to markets across the UAE, Bahrain, Qatar, Oman, Malaysia, and beyond, we ensure your products reach their destination on time and in perfect condition.\n\n**Quality Control & Compliances**\nOur Quality Control & Compliance services ensure every product we source, export, or import meets international standards and client expectations. We work with certified inspection agencies, follow stringent testing procedures, and handle all legal and regulatory documentation for a smooth cross-border trade experience.",
     "route": "/export",
@@ -1669,6 +1662,9 @@
       "intelligent dashboard",
       "payment reminders",
       "export invoices",
+      "export my invoices",
+      "pdf and excel",
+      "export to pdf",
       "white-label",
       "team collaboration"
     ],

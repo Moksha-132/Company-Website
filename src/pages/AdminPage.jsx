@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Save, Plus, Edit2, Trash2, Search, X } from 'lucide-react';
 import INITIAL_KNOWLEDGE_BASE from '../data/chatbotKnowledgeBase.json';
+import { db } from '../firebase';
+import { collection, onSnapshot, setDoc, doc, deleteDoc } from 'firebase/firestore';
 import './AdminPage.css';
 
 const AdminPage = () => {
@@ -12,50 +14,41 @@ const AdminPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    const stored = localStorage.getItem('shnoor_chatbot_kb_v47');
-    if (stored) {
-      setKnowledgeBase(JSON.parse(stored));
-    } else {
-      setKnowledgeBase(INITIAL_KNOWLEDGE_BASE);
-      localStorage.setItem('shnoor_chatbot_kb_v47', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
-    }
-    const storedUnanswered = localStorage.getItem('shnoor_unanswered');
-    if (storedUnanswered) {
-      setUnansweredQueries(JSON.parse(storedUnanswered));
-    }
-
     if ("Notification" in window) {
       Notification.requestPermission();
     }
 
-    const handleStorageChange = (e) => {
-      if (e.key === 'shnoor_unanswered' && e.newValue) {
-        const oldQueries = e.oldValue ? JSON.parse(e.oldValue) : [];
-        const newQueries = JSON.parse(e.newValue);
-        
-        if (newQueries.length > oldQueries.length) {
-          const latestQuery = newQueries[newQueries.length - 1];
-          setUnansweredQueries(newQueries);
+    const kbRef = collection(db, 'knowledge_base');
+    const unsubscribeKb = onSnapshot(kbRef, (snapshot) => {
+      if (!snapshot.empty) {
+        setKnowledgeBase(snapshot.docs.map(docSnap => docSnap.data()));
+      } else {
+        setKnowledgeBase(INITIAL_KNOWLEDGE_BASE);
+      }
+    });
 
+    const unRef = collection(db, 'unanswered_queries');
+    const unsubscribeUn = onSnapshot(unRef, (snapshot) => {
+      const newQueries = snapshot.docs.map(docSnap => docSnap.data());
+      
+      setUnansweredQueries(prevQueries => {
+        if (newQueries.length > prevQueries.length && prevQueries.length > 0) {
+          const latestQuery = newQueries[newQueries.length - 1];
           if ("Notification" in window && Notification.permission === "granted") {
             new Notification("Shnoor AI: New Unanswered Query", {
               body: `User asked: "${latestQuery.query}"\nPlease answer it in the Admin Dashboard.`
             });
           }
-        } else if (newQueries.length < oldQueries.length) {
-          setUnansweredQueries(newQueries);
         }
-      }
+        return newQueries;
+      });
+    });
+
+    return () => {
+      unsubscribeKb();
+      unsubscribeUn();
     };
-
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
-
-  const saveToStorage = (newKb) => {
-    localStorage.setItem('shnoor_chatbot_kb_v47', JSON.stringify(newKb));
-    setKnowledgeBase(newKb);
-  };
 
   const handleEdit = (entry) => {
     setEditingId(entry.id);
@@ -69,17 +62,14 @@ const AdminPage = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this entry?')) {
-      const newKb = knowledgeBase.filter(entry => entry.id !== id);
-      saveToStorage(newKb);
+      await deleteDoc(doc(db, 'knowledge_base', id));
     }
   };
 
-  const handleDeleteUnanswered = (id) => {
-    const updated = unansweredQueries.filter(q => q.id !== id);
-    setUnansweredQueries(updated);
-    localStorage.setItem('shnoor_unanswered', JSON.stringify(updated));
+  const handleDeleteUnanswered = async (id) => {
+    await deleteDoc(doc(db, 'unanswered_queries', id));
   };
 
   const handleAnswerQuery = (queryObj) => {
@@ -90,7 +80,7 @@ const AdminPage = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!editForm.keywords.trim() || !editForm.response.trim()) {
       alert("Keywords and Response cannot be empty.");
       return;
@@ -106,22 +96,17 @@ const AdminPage = () => {
         route: editForm.route || null,
         actionText: editForm.actionText || null
       };
-      saveToStorage([...knowledgeBase, newEntry]);
+      await setDoc(doc(db, 'knowledge_base', newEntry.id), newEntry);
       setIsAdding(false);
     } else {
-      const newKb = knowledgeBase.map(entry => {
-        if (entry.id === editingId) {
-          return { 
-            ...entry, 
-            keywords: keywordArray, 
-            response: editForm.response,
-            route: editForm.route || null,
-            actionText: editForm.actionText || null
-          };
-        }
-        return entry;
-      });
-      saveToStorage(newKb);
+      const updatedEntry = {
+        id: editingId,
+        keywords: keywordArray,
+        response: editForm.response,
+        route: editForm.route || null,
+        actionText: editForm.actionText || null
+      };
+      await setDoc(doc(db, 'knowledge_base', editingId), updatedEntry);
       setEditingId(null);
     }
     

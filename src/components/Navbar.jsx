@@ -36,7 +36,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav style={{ 
+        <nav style={{
             position: 'fixed',
             top: 0,
             left: 0,
@@ -50,24 +50,24 @@ const Navbar = () => {
             borderBottom: '1px solid rgba(15, 23, 42, 0.1)'
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+                <Link to="/" aria-label="Shnoor Home" style={{ display: 'flex', alignItems: 'center' }}>
                     <img src="/logo.png" alt="SHNOOR Logo" style={{ height: scrolled ? '55px' : '65px', width: 'auto', transition: '0.3s' }} />
                 </Link>
 
                 {/* Desktop Nav */}
                 <div style={{ display: 'flex', gap: '30px', alignItems: 'center' }} className="desktop-nav">
                     {navLinks.map((link) => (
-                        <div 
-                            key={link.name} 
+                        <div
+                            key={link.name}
                             style={{ position: 'relative' }}
                             onMouseEnter={() => link.isDropdown && setDropdownOpen(true)}
                             onMouseLeave={() => link.isDropdown && setDropdownOpen(false)}
                         >
-                            <Link 
-                                to={link.href} 
-                                style={{ 
-                                    fontSize: '0.95rem', 
-                                    fontWeight: '700', 
+                            <Link
+                                to={link.href}
+                                style={{
+                                    fontSize: '0.95rem',
+                                    fontWeight: '700',
                                     color: 'var(--secondary)',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -82,7 +82,7 @@ const Navbar = () => {
                             </Link>
 
                             {link.isDropdown && dropdownOpen && (
-                                <div style={{ 
+                                <div style={{
                                     position: 'absolute',
                                     top: '100%',
                                     left: '-20px',
@@ -97,12 +97,12 @@ const Navbar = () => {
                                     animation: 'slideUp 0.3s ease-out'
                                 }}>
                                     {services.map((service) => (
-                                        <Link 
-                                            key={service.name} 
-                                            to={service.href} 
-                                            style={{ 
-                                                padding: '12px 25px', 
-                                                fontSize: '0.95rem', 
+                                        <Link
+                                            key={service.name}
+                                            to={service.href}
+                                            style={{
+                                                padding: '12px 25px',
+                                                fontSize: '0.95rem',
                                                 color: 'var(--secondary)',
                                                 fontWeight: '600',
                                                 transition: '0.2s'
@@ -121,10 +121,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Toggle */}
-                <button 
+                <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     style={{ color: 'var(--secondary)', background: 'none' }}
                     className="mobile-toggle"
+                    aria-label="Toggle navigation menu"
                 >
                     {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
                 </button>
@@ -132,7 +133,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div style={{ 
+                <div style={{
                     position: 'absolute',
                     top: '100%',
                     left: 0,
@@ -149,9 +150,9 @@ const Navbar = () => {
                 }}>
                     {navLinks.map((link) => (
                         <React.Fragment key={link.name}>
-                            <Link 
-                                to={link.href} 
-                                onClick={() => !link.isDropdown && setMobileMenuOpen(false)} 
+                            <Link
+                                to={link.href}
+                                onClick={() => !link.isDropdown && setMobileMenuOpen(false)}
                                 style={{ color: 'var(--secondary)', fontWeight: '800', fontSize: '1.2rem' }}
                             >
                                 {link.name}

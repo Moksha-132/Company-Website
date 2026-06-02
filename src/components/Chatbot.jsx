@@ -2,21 +2,12 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { MessageSquare, X, Send, Bot, User, ArrowRight } from 'lucide-react';
 import INITIAL_KNOWLEDGE_BASE from '../data/chatbotKnowledgeBase.json';
+import { db } from '../firebase';
+import { collection, onSnapshot, setDoc, doc, getDocs } from 'firebase/firestore';
 import './Chatbot.css';
 
-const getKnowledgeBase = () => {
-  const stored = localStorage.getItem('shnoor_chatbot_kb_v47');
-  if (stored) {
-    return JSON.parse(stored);
-  }
-  localStorage.setItem('shnoor_chatbot_kb_v47', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
-  return INITIAL_KNOWLEDGE_BASE;
-};
-
-const getLocalAIResponse = (input, currentMode) => {
+const getLocalAIResponse = async (input, currentMode, knowledgeBase) => {
   const normalizedInput = input.toLowerCase().replace(/[^\w\s.]/gi, '');
-
-  const knowledgeBase = getKnowledgeBase();
 
   let bestMatch = null;
   let maxScore = 0;
@@ -41,9 +32,9 @@ const getLocalAIResponse = (input, currentMode) => {
       else if (currentMode === 'Assessments' && entry.route.includes('assessments.shnoor.com')) isAllowed = true;
       else if (currentMode === 'InvoiceCloud' && entry.route.includes('invoicecloud.in')) isAllowed = true;
       const switchKeywords = [
-        "tell me about hrm", "hrm platform",
-        "tell me about lms", "lms platform",
-        "tell me about assessments", "assessment portal",
+        "tell me about hrm", "hrm platform", "hrm",
+        "tell me about lms", "lms platform", "lms",
+        "tell me about assessments", "assessment portal", "assessments portal", "assessments",
         "tell me about invoicecloud", "invoicecloud", "invoice cloud", "invoice cloud platform",
         "explore all platforms"
       ];
@@ -76,14 +67,21 @@ const getLocalAIResponse = (input, currentMode) => {
   }
 
   try {
-    const unanswered = JSON.parse(localStorage.getItem('shnoor_unanswered') || '[]');
-    if (!unanswered.some(q => q.query.toLowerCase() === input.toLowerCase())) {
-      unanswered.push({
-        id: Date.now().toString(),
+    const querySnapshot = await getDocs(collection(db, "unanswered_queries"));
+    let exists = false;
+    querySnapshot.forEach((docSnap) => {
+      if (docSnap.data().query.toLowerCase() === input.toLowerCase()) {
+        exists = true;
+      }
+    });
+
+    if (!exists) {
+      const newId = Date.now().toString();
+      await setDoc(doc(db, "unanswered_queries", newId), {
+        id: newId,
         query: input,
         date: new Date().toISOString()
       });
-      localStorage.setItem('shnoor_unanswered', JSON.stringify(unanswered));
     }
   } catch (e) {
     console.error("Could not save unanswered query", e);
@@ -114,6 +112,7 @@ const Chatbot = () => {
   ]);
   const [inputValue, setInputValue] = useState("");
   const [pendingQueries, setPendingQueries] = useState([]);
+  const [knowledgeBase, setKnowledgeBase] = useState(INITIAL_KNOWLEDGE_BASE);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -125,11 +124,13 @@ const Chatbot = () => {
   }, [messages, isOpen]);
 
   useEffect(() => {
-    const handleStorageChange = (e) => {
-      if (e.key === 'shnoor_chatbot_kb_v47' && e.newValue) {
-        if (pendingQueries.length > 0) {
-          const newKb = JSON.parse(e.newValue);
+    const kbRef = collection(db, 'knowledge_base');
+    const unsubscribe = onSnapshot(kbRef, (snapshot) => {
+      if (!snapshot.empty) {
+        const newKb = snapshot.docs.map(doc => doc.data());
+        setKnowledgeBase(newKb);
 
+        if (pendingQueries.length > 0) {
           const stillPending = [];
           const resolvedMessages = [];
 
@@ -171,48 +172,49 @@ const Chatbot = () => {
             setPendingQueries(stillPending);
           }
         }
+      } else {
+        INITIAL_KNOWLEDGE_BASE.forEach(async (entry) => {
+          await setDoc(doc(db, 'knowledge_base', entry.id), entry);
+        });
       }
-    };
+    });
 
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
+    return () => unsubscribe();
   }, [pendingQueries]);
 
-  const sendQuery = (text) => {
+  const sendQuery = async (text) => {
     if (!text.trim()) return;
 
     const userMsg = { text: text, sender: "user" };
     setMessages(prev => [...prev, userMsg]);
 
-    setTimeout(() => {
-      const responseData = getLocalAIResponse(text, assistantMode);
-      const botResponse = {
-        text: responseData.text,
-        sender: "bot",
-        route: responseData.route,
-        actionText: responseData.actionText
-      };
-      if (responseData.text.includes("forwarded to our admin team")) {
-        setPendingQueries(prev => {
-          if (!prev.includes(text)) {
-            return [...prev, text];
-          }
-          return prev;
-        });
-      }
+    const responseData = await getLocalAIResponse(text, assistantMode, knowledgeBase);
+    const botResponse = {
+      text: responseData.text,
+      sender: "bot",
+      route: responseData.route,
+      actionText: responseData.actionText
+    };
+    if (responseData.text.includes("forwarded to our admin team")) {
+      setPendingQueries(prev => {
+        if (!prev.includes(text)) {
+          return [...prev, text];
+        }
+        return prev;
+      });
+    }
 
-      if (botResponse.route) {
-        if (botResponse.route.includes('hrm.shnoor.com')) setAssistantMode('HRM');
-        else if (botResponse.route.includes('lms.shnoor.com')) setAssistantMode('LMS');
-        else if (botResponse.route.includes('assessments.shnoor.com')) setAssistantMode('Assessments');
-        else if (botResponse.route.includes('invoicecloud.in')) setAssistantMode('InvoiceCloud');
-        else if (botResponse.route.startsWith('/')) setAssistantMode('Global');
-      } else if (text.toLowerCase().includes('explore') || text.toLowerCase().includes('all platforms') || text.toLowerCase().includes('services') || text.toLowerCase().includes('global')) {
-        setAssistantMode('Global');
-      }
+    if (botResponse.route) {
+      if (botResponse.route.includes('hrm.shnoor.com')) setAssistantMode('HRM');
+      else if (botResponse.route.includes('lms.shnoor.com')) setAssistantMode('LMS');
+      else if (botResponse.route.includes('assessments.shnoor.com')) setAssistantMode('Assessments');
+      else if (botResponse.route.includes('invoicecloud.in')) setAssistantMode('InvoiceCloud');
+      else if (botResponse.route.startsWith('/')) setAssistantMode('Global');
+    } else if (text.toLowerCase().includes('explore') || text.toLowerCase().includes('all platforms') || text.toLowerCase().includes('services') || text.toLowerCase().includes('global')) {
+      setAssistantMode('Global');
+    }
 
-      setMessages(prev => [...prev, botResponse]);
-    }, 600);
+    setMessages(prev => [...prev, botResponse]);
   };
 
   const handleSend = (e) => {
@@ -276,7 +278,7 @@ const Chatbot = () => {
               <p>{assistantMode !== 'Global' ? `${assistantMode} Mode Active` : 'Online & Ready to Help'}</p>
             </div>
           </div>
-          <button className="chatbot-close-btn" onClick={() => setIsOpen(false)}>
+          <button className="chatbot-close-btn" onClick={() => setIsOpen(false)} aria-label="Close Chatbot">
             <X size={20} />
           </button>
         </div>
@@ -345,6 +347,7 @@ const Chatbot = () => {
       <button
         className={`chatbot-toggle-btn ${isOpen ? 'hidden' : ''}`}
         onClick={() => setIsOpen(true)}
+        aria-label="Open Chatbot"
       >
         <MessageSquare size={24} />
       </button>

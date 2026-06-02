@@ -265,11 +265,13 @@
   transition: all 0.3s;
 }
 
-.chatbot-nav-btn:hover {
-  background: var(--vibrant);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+@media (hover: hover) {
+  .chatbot-nav-btn:hover {
+    background: var(--vibrant);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+  }
 }
 
 @keyframes slideUpFade {
@@ -326,10 +328,12 @@
   transform: none;
 }
 
-.chatbot-input-area button:not(:disabled):hover {
-  background: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+@media (hover: hover) {
+  .chatbot-input-area button:not(:disabled):hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
 }
 
 @media (max-width: 480px) {
@@ -375,8 +379,115 @@
   transition: all 0.2s ease;
 }
 
-.suggestion-pill:hover {
-  background: rgba(37, 99, 235, 0.05);
-  border-color: rgba(37, 99, 235, 0.3);
-  color: var(--vibrant);
+@media (hover: hover) {
+  .suggestion-pill:hover {
+    background: rgba(37, 99, 235, 0.05);
+    border-color: rgba(37, 99, 235, 0.3);
+    color: var(--vibrant);
+  }
+}
+
+/* Dynamic Mode Styles */
+.chatbot-wrapper.mode-hrm .chatbot-header,
+.chatbot-wrapper.mode-hrm .chatbot-message.bot .chatbot-message-avatar {
+  background: linear-gradient(135deg, #059669, #10b981) !important;
+}
+.chatbot-wrapper.mode-hrm .chatbot-toggle-btn {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+}
+.chatbot-wrapper.mode-hrm .chatbot-message.user .chatbot-message-content {
+  background: #059669 !important;
+}
+.chatbot-wrapper.mode-hrm .suggestion-pill {
+  color: #059669 !important;
+  border-color: #059669 !important;
+}
+@media (hover: hover) {
+  .chatbot-wrapper.mode-hrm .suggestion-pill:hover {
+    background: rgba(16, 185, 129, 0.1) !important;
+  }
+}
+.chatbot-wrapper.mode-hrm .chatbot-nav-btn {
+  color: #059669 !important;
+}
+.chatbot-wrapper.mode-hrm .chatbot-input-area button {
+  background: #059669 !important;
+}
+
+.chatbot-wrapper.mode-lms .chatbot-header,
+.chatbot-wrapper.mode-lms .chatbot-message.bot .chatbot-message-avatar {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6) !important;
+}
+.chatbot-wrapper.mode-lms .chatbot-toggle-btn {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed) !important;
+}
+.chatbot-wrapper.mode-lms .chatbot-message.user .chatbot-message-content {
+  background: #7c3aed !important;
+}
+.chatbot-wrapper.mode-lms .suggestion-pill {
+  color: #7c3aed !important;
+  border-color: #7c3aed !important;
+}
+@media (hover: hover) {
+  .chatbot-wrapper.mode-lms .suggestion-pill:hover {
+    background: rgba(139, 92, 246, 0.1) !important;
+  }
+}
+.chatbot-wrapper.mode-lms .chatbot-nav-btn {
+  color: #7c3aed !important;
+}
+.chatbot-wrapper.mode-lms .chatbot-input-area button {
+  background: #7c3aed !important;
+}
+
+.chatbot-wrapper.mode-assessments .chatbot-header,
+.chatbot-wrapper.mode-assessments .chatbot-message.bot .chatbot-message-avatar {
+  background: linear-gradient(135deg, #ea580c, #f97316) !important;
+}
+.chatbot-wrapper.mode-assessments .chatbot-toggle-btn {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+}
+.chatbot-wrapper.mode-assessments .chatbot-message.user .chatbot-message-content {
+  background: #ea580c !important;
+}
+.chatbot-wrapper.mode-assessments .suggestion-pill {
+  color: #ea580c !important;
+  border-color: #ea580c !important;
+}
+@media (hover: hover) {
+  .chatbot-wrapper.mode-assessments .suggestion-pill:hover {
+    background: rgba(249, 115, 22, 0.1) !important;
+  }
+}
+.chatbot-wrapper.mode-assessments .chatbot-nav-btn {
+  color: #ea580c !important;
+}
+.chatbot-wrapper.mode-assessments .chatbot-input-area button {
+  background: #ea580c !important;
+}
+
+.chatbot-wrapper.mode-invoicecloud .chatbot-header,
+.chatbot-wrapper.mode-invoicecloud .chatbot-message.bot .chatbot-message-avatar {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9) !important;
+}
+.chatbot-wrapper.mode-invoicecloud .chatbot-toggle-btn {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+}
+.chatbot-wrapper.mode-invoicecloud .chatbot-message.user .chatbot-message-content {
+  background: #0284c7 !important;
+}
+.chatbot-wrapper.mode-invoicecloud .suggestion-pill {
+  color: #0284c7 !important;
+  border-color: #0284c7 !important;
+}
+@media (hover: hover) {
+  .chatbot-wrapper.mode-invoicecloud .suggestion-pill:hover {
+    background: rgba(14, 165, 233, 0.1) !important;
+  }
+}
+.chatbot-wrapper.mode-invoicecloud .chatbot-nav-btn {
+  color: #0284c7 !important;
+}
+.chatbot-wrapper.mode-invoicecloud .chatbot-input-area button {
+  background: #0284c7 !important;
 }
