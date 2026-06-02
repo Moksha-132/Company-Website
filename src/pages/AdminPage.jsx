@@ -6,6 +6,8 @@ import { collection, onSnapshot, setDoc, doc, deleteDoc } from 'firebase/firesto
 import './AdminPage.css';
 
 const AdminPage = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
   const [knowledgeBase, setKnowledgeBase] = useState([]);
   const [unansweredQueries, setUnansweredQueries] = useState([]);
   const [editingId, setEditingId] = useState(null);
@@ -14,6 +16,7 @@ const AdminPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
+    if (!isAuthenticated) return;
     if ("Notification" in window) {
       Notification.requestPermission();
     }
@@ -48,7 +51,7 @@ const AdminPage = () => {
       unsubscribeKb();
       unsubscribeUn();
     };
-  }, []);
+  }, [isAuthenticated]);
 
   const handleEdit = (entry) => {
     setEditingId(entry.id);
@@ -134,6 +137,48 @@ const AdminPage = () => {
     const inRoute = entry.route && entry.route.toLowerCase().includes(q);
     return inResponse || inKeywords || inRoute;
   });
+
+  if (!isAuthenticated) {
+    return (
+      <div className="admin-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
+        <div className="admin-form-card fade-in" style={{ maxWidth: '400px', width: '100%', textAlign: 'center' }}>
+          <h2>Admin Login</h2>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '20px' }}>Enter the master password to access the knowledge base.</p>
+          <div className="form-group">
+            <input 
+              type="password" 
+              value={passwordInput} 
+              onChange={(e) => setPasswordInput(e.target.value)}
+              placeholder="Enter password..."
+              style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #bdc3c7', marginBottom: '15px' }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  if (passwordInput === import.meta.env.VITE_ADMIN_PASSWORD) {
+                    setIsAuthenticated(true);
+                  } else {
+                    alert('Incorrect password!');
+                  }
+                }
+              }}
+            />
+          </div>
+          <button 
+            className="btn-blue" 
+            style={{ width: '100%', justifyContent: 'center' }}
+            onClick={() => {
+              if (passwordInput === import.meta.env.VITE_ADMIN_PASSWORD) {
+                setIsAuthenticated(true);
+              } else {
+                alert('Incorrect password!');
+              }
+            }}
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="admin-container">
