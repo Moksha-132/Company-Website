@@ -1,352 +1,1811 @@
 [
   {
     "id": "1",
-    "keywords": ["shnoor.com", "main website", "what is shnoor", "company", "services"],
-    "response": "Shnoor (shnoor.com) offers comprehensive IT solutions including Cloud, Enterprise, AI, Staffing, Verification, Network, and Healthcare.",
+    "keywords": [
+      "shnoor.com",
+      "main website",
+      "what is shnoor",
+      "company",
+      "services",
+      "what are your services",
+      "explain shnoor services",
+      "what do you do",
+      "our services",
+      "what it services do you offer"
+    ],
+    "response": "At SHNOOR International LLC, we provide innovative solutions for global growth across multiple industries.\n\nOur core services include:\n• **Cloud Migration & IT Solutions**\n• **AI & Data Science Solutions**\n• **SAP Outsourcing & Support**\n• **IT Consulting & Staffing Solutions**\n• **Export Management Solutions**\n• **Logistics & Supply Chain Services**\n• **Background Verification**\n• **Healthcare IT**\n\nWould you like to learn more about any specific service or explore our software platforms?",
     "route": "/services",
     "actionText": "View All Services"
   },
   {
+    "id": "1a",
+    "keywords": [
+      "all platforms",
+      "explore all platforms",
+      "explore our platforms",
+      "what are your platforms",
+      "software platforms"
+    ],
+    "response": "Shnoor specializes in enterprise-grade digital platforms designed to fundamentally streamline and accelerate your business operations.\n\nWe offer four core specialized platforms:\n\n• **HRM Platform (hrm.shnoor.com):** A comprehensive Human Resource Management suite with one-click payroll and attendance tracking.\n• **LMS Portal (lms.shnoor.com):** An enterprise Learning Management System featuring role-based workflows and live instruction.\n• **Assessments Portal (assessments.shnoor.com):** A secure, strictly proctored examination environment used for recruitment drives.\n• **InvoiceCloud (invoicecloud.in):** A smart billing and financial tool featuring 30-second invoice creation.\n\nWhich of these powerful platforms would you like to explore today?",
+    "route": null,
+    "actionText": null
+  },
+  {
     "id": "2",
-    "keywords": ["hrm", "hrm.shnoor.com", "human resource", "hr", "employees", "vue", "laravel", "no hidden fees", "free account", "edit online", "multiple language", "safe and secure"],
-    "response": "hrm.shnoor.com is our Next Generation HR Management application built for small to large businesses. It offers No Hidden Fees, Multiple Language Support, Employee & Staff Management, powerful Payroll processing, and detailed tracking for attendance, leaves, and expenses.",
+    "keywords": [
+      "hrm",
+      "hrm.shnoor.com",
+      "human resource",
+      "hr",
+      "employees",
+      "vue",
+      "laravel",
+      "no hidden fees",
+      "free account",
+      "edit online",
+      "multiple language",
+      "safe and secure"
+    ],
+    "response": "hrm.shnoor.com is our highly-rated, Next Generation HR Management application built using robust Vue and Laravel technologies, perfectly scaled for small to large scale businesses.\n\nOur platform operates with absolute transparency—guaranteeing No hidden fees and offering the ability to start with a free account. It is 100% cloud-based, meaning you can edit online with absolutely no software installation needed. To support diverse global teams, we feature comprehensive Multiple Language Support.\n\nThe system is completely Safe and Secure, providing an all-in-one centralized hub for Payroll Processing, Asset tracking across Multiple Locations, dynamic Letter Heads, Attendance Tracking, Employee Survey Forms, and much more.",
     "route": "https://hrm.shnoor.com",
     "actionText": "Visit HRM Portal"
   },
   {
     "id": "2a",
-    "keywords": ["payroll", "salary", "slip", "compensation", "payslip", "letter head", "letterhead", "components", "accounting", "expenses", "currencies", "one click payroll"],
-    "response": "Our HRM system features one-click payroll generation, auto-generation based on leaves and attendance, salary group assignments, dynamic letterheads & salary slips, as well as accounting, expenses, and currencies tracking.",
+    "keywords": [
+      "payroll",
+      "salary",
+      "slip",
+      "compensation",
+      "payslip",
+      "letter head",
+      "letterhead",
+      "components",
+      "accounting",
+      "expenses",
+      "currencies",
+      "one click payroll"
+    ],
+    "response": "Our Payroll and Salary Management module makes it incredibly easy to manage employee compensation accurately and on time.\n\nKey capabilities include:\n• **One Click Payroll:** Completely automate your monthly pay cycles.\n• **Auto-Generated Salaries:** Dynamically calculated based on real-time leaves and attendance.\n• **Salary Groups & Components:** Easily pre-assign complex tax and allowance structures.\n• **Dynamic Letter Heads:** Generate professional company documents instantly.\n• **Detailed Salary Slips:** Distribute compliant payslips directly through the platform.",
     "route": "https://hrm.shnoor.com",
     "actionText": "Explore Payroll"
   },
   {
     "id": "2b",
-    "keywords": ["staff", "manage employee", "roles", "manager", "attendance", "tracking", "leave", "holiday", "dashboard", "location", "locations", "increment", "promotion"],
-    "response": "Employee management allows you to manage staff by location, assign roles and managers, track leaves, holidays, and attendance. It also handles increments, promotions, and provides a powerful dashboard for the employee view.",
+    "keywords": [
+      "staff",
+      "manage employee",
+      "roles",
+      "manager",
+      "attendance",
+      "tracking",
+      "leave",
+      "holiday",
+      "dashboard",
+      "location",
+      "locations",
+      "increment",
+      "promotion",
+      "can i manage multiple locations",
+      "manage multiple locations"
+    ],
+    "response": "The Employee Management suite allows you to categorize and track your workforce with perfect accuracy.\n\nKey features include:\n• **Location-Based Tracking:** Manage employees effortlessly across multiple branch locations.\n• **Roles & Managers:** Assign specific access levels and direct reporting hierarchies.\n• **Real-Time Attendance:** Closely track all daily check-ins and leave balances.\n• **Powerful Employee Dashboard:** Staff stay fully informed about shifts and announcements.\n• **Increment & Promotion Tracking:** Keep a complete historical record of employee growth.",
     "route": "https://hrm.shnoor.com",
     "actionText": "Explore Staff Management"
   },
   {
     "id": "2c",
-    "keywords": ["hrm features", "features", "assets", "asset", "shifts", "offboarding", "survey", "awards", "appreciation", "company policy", "permissions", "news"],
-    "response": "Our HRM platform includes comprehensive features like Asset Management, Shifts, Appreciations, Awards, Company Policy, Permissions, Offboarding, Survey Forms, and company News.",
+    "keywords": [
+      "hrm features",
+      "features",
+      "assets",
+      "asset",
+      "shifts",
+      "offboarding",
+      "survey",
+      "awards",
+      "appreciation",
+      "company policy",
+      "permissions",
+      "news"
+    ],
+    "response": "Hrmifly (our core HRM engine) comes packed with powerful features specifically designed to increase your business growth.\n\nComplete list of modules:\n• **HR & Employee Management**\n• **Asset Management & Shifts**\n• **Appreciations & Awards**\n• **Holiday & Leave Management**\n• **Company Policy & News**\n• **Attendance Tracking**\n• **Roles & Permissions**\n• **Offboarding & Survey Forms**\n• **Accounting, Expenses & Currencies**\n• **Payroll & Salary Slips**\n• **Increment/Promotion Tracking**",
     "route": "https://hrm.shnoor.com",
     "actionText": "View HRM Features"
   },
   {
     "id": "3",
-    "keywords": ["lms", "lms.shnoor.com", "learning", "training", "education", "courses", "workforce", "enterprise learning"],
-    "response": "lms.shnoor.com is our Enterprise Learning Platform built for smarter workforce training. It provides a modern learning ecosystem with 8 core capabilities, role-based journeys, guided learning, and 99.9% reliable operations.",
+    "keywords": [
+      "lms",
+      "lms.shnoor.com",
+      "learning",
+      "training",
+      "education",
+      "courses",
+      "workforce",
+      "enterprise learning"
+    ],
+    "response": "lms.shnoor.com is our state-of-the-art Enterprise Learning Platform constructed to deliver smarter, highly effective workforce training.\n\nIt provides a modern, intuitive learning ecosystem equipped with 8 core organizational capabilities. The platform specializes in creating personalized, role-based learning journeys that guide employees from onboarding to advanced skill mastery.\n\nBacked by 99.9% reliable cloud operations, it ensures that your team always has access to their critical educational resources, anytime and anywhere.",
     "route": "https://lms.shnoor.com",
     "actionText": "Visit LMS Portal"
   },
   {
     "id": "3a",
-    "keywords": ["training options", "format", "instructor-led", "private corporate", "practice arena", "facilitated labs", "exam preparation", "self-paced", "hands-on practice"],
-    "response": "Our LMS delivers learning formats built for how your teams work: Instructor-led training, Private corporate programs, Practice arenas (self-paced exercises), Facilitated labs (hands-on environments), and comprehensive Exam preparation.",
+    "keywords": [
+      "training options",
+      "format",
+      "instructor-led",
+      "private corporate",
+      "practice arena",
+      "facilitated labs",
+      "exam preparation",
+      "self-paced",
+      "hands-on practice",
+      "lms training options"
+    ],
+    "response": "**Training Options: Every learning format, built for the way your teams actually work**\n\nWhether your teams need guided instruction, self-paced flexibility, or hands-on practice, Shnoor delivers each format consistently and at scale.\n\n**Instructor-led training**\nExpert-led sessions for structured learning, discussion, and high-touch guidance.\n\n**Private corporate programs**\nDedicated sessions and customized tracks aligned to your business goals and team skill gaps.\n\n**Practice arena**\nSelf-paced exercises, guided reviews, and repeatable practice for long-term retention.\n\n**Facilitated labs**\nHands-on environments that move learning from theory to execution with confidence.\n\n**Exam preparation**\nFocused review journeys, mock testing, and readiness support for certification outcomes.",
     "route": "https://lms.shnoor.com",
     "actionText": "Explore Training Options"
   },
   {
     "id": "3b",
-    "keywords": ["workflow", "role-based", "compliance", "upskilling", "validate mastery", "cohorts", "fast onboarding", "global accessibility", "live instruction"],
-    "response": "Our platform supports modern workflows: launch role-based journeys (onboarding, compliance, upskilling), deliver guided learning via live instruction & practice labs, and validate mastery through structured cohorts, assignments, and certification paths.",
+    "keywords": [
+      "workflow",
+      "role-based",
+      "upskilling",
+      "validate mastery",
+      "learning workflow",
+      "how lms works"
+    ],
+    "response": "**A clear learning workflow for modern organizations**\nEvery part of the platform is designed to help you launch programs faster, deliver consistent learning experiences, and measure progress without friction.\n\n**01. Launch role-based journeys**\nCreate onboarding, compliance, and upskilling tracks for teams, departments, or enterprise cohorts.\n\n**02. Deliver guided learning**\nCombine live sessions, self-paced modules, practice labs, and instructor checkpoints in one place.\n\n**03. Validate mastery**\nUse assessments, assignments, and certification paths to measure skill readiness with confidence.",
     "route": "https://lms.shnoor.com",
     "actionText": "View Learning Workflows"
   },
   {
     "id": "3c",
-    "keywords": ["admin control", "reports", "approvals", "progress tracking", "certifications", "outcomes", "outcome-driven", "measurable growth", "credentials"],
-    "response": "Administrators get a powerful Control Center to manage users, reports, and approvals. Our Learning Delivery Engine organizes modules and session flows, while ensuring outcome-driven progress tracking and industry-facing certifications.",
+    "keywords": [
+      "admin control",
+      "reports",
+      "approvals",
+      "outcomes",
+      "outcome-driven",
+      "measurable growth",
+      "admin dashboard"
+    ],
+    "response": "Administrators and managers are empowered with a comprehensive suite of tools built for absolute operational visibility:\n\n• **Admin Control Center:** Effortlessly manage users, learning programs, and internal communications from a single dashboard.\n• **Advanced Reporting:** Generate deep analytical reports to track granular progress metrics and ROI.\n• **Learning Delivery Engine:** Intelligently organize curriculum modules and session flows to maximize learner engagement.\n• **Outcome-Driven Tracking:** Programs map directly to measurable growth rather than just delivering content.\n• **Certification Management:** Oversee the awarding and validation of industry-facing credentials.\n\nEvery feature is designed to make professional learning feel reliable, modern, and easily measurable.",
     "route": "https://lms.shnoor.com",
     "actionText": "Explore LMS Features"
   },
   {
     "id": "4",
-    "keywords": ["assessments", "assessments.shnoor.com", "exam", "test", "evaluate", "evaluation", "recruitment portal", "placement assessment"],
-    "response": "assessments.shnoor.com is our Secure Examination Portal for SHNOOR recruitment drives. It allows candidates to access auto-assigned tests, take secure proctored exams, and track results all in one place.",
+    "keywords": [
+      "assessments",
+      "assessments.shnoor.com",
+      "exam",
+      "test",
+      "evaluate",
+      "evaluation",
+      "recruitment portal",
+      "placement assessment"
+    ],
+    "response": "assessments.shnoor.com is our highly Secure Examination Portal designed exclusively for rigorous SHNOOR recruitment drives and professional evaluations.\n\nIt provides candidates with a streamlined interface to access auto-assigned tests tailored to their profile. The platform heavily emphasizes academic and professional integrity by utilizing a highly secure, proctored testing environment.\n\nCandidates can easily track their upcoming schedules, take their exams without technical disruptions, and instantly review their results all in one unified place.",
     "route": "https://assessments.shnoor.com",
     "actionText": "Visit Assessments Portal"
   },
   {
     "id": "4a",
-    "keywords": ["how it works", "steps", "register", "take assessment", "submit exam", "what to expect", "preparation", "during exam", "after submission"],
-    "response": "Taking an assessment is a 3-step process: Register with your institute details, Take the secure proctored exam, and Submit securely. During the exam, you'll see a timer countdown and your answers will auto-save.",
+    "keywords": [
+      "how it works",
+      "steps",
+      "register",
+      "take assessment",
+      "submit exam",
+      "what to expect",
+      "preparation",
+      "during exam",
+      "after submission"
+    ],
+    "response": "Taking a professional assessment on our platform is an intuitive, 3-step process designed for candidate success:\n\n• **1. Register Securely:** Enter your verifiable institute or professional details.\n• **2. Take Assessment:** Enter our locked-down, proctored digital environment.\n• **3. Submit Exam:** Securely send your answers for immediate encrypted evaluation.\n\nDuring the examination, you are supported by a clear timer countdown and real-time auto-save functionality to prevent any data loss.",
     "route": "https://assessments.shnoor.com",
     "actionText": "View Assessment Process"
   },
   {
     "id": "4b",
-    "keywords": ["assessment features", "features", "auto-assigned", "multiple attempts", "scheduled tests", "auto-save", "submission receipt"],
-    "response": "The platform offers Auto-Assigned Tests based on your institute, Scheduled Tests with deadlines, Multiple Attempts (for some tests), Auto-Save so you can resume if disconnected, and immediate Submission Receipts.",
+    "keywords": [
+      "assessment features",
+      "features",
+      "auto-assigned",
+      "multiple attempts",
+      "scheduled tests",
+      "auto-save",
+      "submission receipt"
+    ],
+    "response": "The Assessment platform is packed with intelligent features to make testing seamless and reliable:\n\n• **Auto-Assigned Tests:** Automatically route the correct exams based on candidate profiles.\n• **Scheduled Tests:** Configure strict deadlines and time limits for massive hiring drives.\n• **Multiple Attempts:** Allow practice runs before the final certification.\n• **Real-Time Auto-Save:** Candidates can resume exactly where they left off if a connection drops.\n• **Submission Receipts:** Instant, verifiable proof of examination completion.",
     "route": "https://assessments.shnoor.com",
     "actionText": "View Platform Features"
   },
   {
     "id": "4c",
-    "keywords": ["secure", "security", "proctored", "proctoring", "webcam", "camera monitoring", "tab switch", "fullscreen", "integrity", "encrypted"],
-    "response": "Our exams use a Secure Examination Environment with Live Proctoring (webcam monitoring), Fullscreen Enforcement, Tab Switch Detection (max 3 warnings), Auto-Submit on timeout, and Encrypted Answers.",
+    "keywords": [
+      "secure",
+      "security",
+      "proctored",
+      "proctoring",
+      "webcam",
+      "camera monitoring",
+      "tab switch",
+      "fullscreen",
+      "integrity",
+      "encrypted",
+      "what are the security features",
+      "security features"
+    ],
+    "response": "Security and integrity are the core foundations of our Assessment platform, ensuring every result is trustworthy:\n\n• **Live Webcam Proctoring:** Continuous visual monitoring to verify candidate identity.\n• **Fullscreen Enforcement:** Candidates are locked into the exam environment.\n• **Tab Switch Detection:** The system issues warnings and terminates the exam after 3 violations.\n• **Encrypted Answers:** All examination data is heavily encrypted both in transit and at rest.\n• **Auto-Submit on Timeout:** Tests are forcibly submitted exactly when the time expires.",
     "route": "https://assessments.shnoor.com",
     "actionText": "View Security Details"
   },
   {
     "id": "5",
-    "keywords": ["invoice", "invoicecloud", "invoicecloud.in", "billing", "payment", "finances", "reminders", "smart invoicing"],
-    "response": "Shnoor Invoicing (invoicecloud.in) lets you create, manage, and send professional invoices without the hassle. Automate reminders, track payments, and get a real-time financial overview from one simple platform.",
+    "keywords": [
+      "invoice",
+      "invoicecloud",
+      "invoice cloud",
+      "invoice cloud platform",
+      "invoicecloud.in",
+      "billing",
+      "payment",
+      "finances",
+      "reminders",
+      "smart invoicing"
+    ],
+    "response": "Shnoor Invoicing (invoicecloud.in) is our premier financial tool that lets you create, manage, and send highly professional invoices without the usual hassle.\n\nDesigned to streamline your billing operations, it completely automates tedious tasks like payment reminders and tracks all your incoming payments seamlessly. \n\nWith our platform, you gain a crystal-clear, real-time financial overview of your business from one beautifully designed, incredibly simple dashboard, helping you get paid significantly faster.",
     "route": "https://www.invoicecloud.in/",
     "actionText": "Visit Shnoor Invoicing"
   },
   {
     "id": "5a",
-    "keywords": ["invoice features", "dashboard", "smart invoice creation", "payment reminders", "overdue", "revenue", "autofill"],
-    "response": "Our Intelligent Dashboard tracks total revenue, pending, and overdue payments. Features include Smart Invoice Creation (generate in under 30 seconds with autofill) and one-click Smart Payment Reminders.",
+    "keywords": [
+      "invoice features",
+      "dashboard",
+      "smart invoice creation",
+      "payment reminders",
+      "overdue",
+      "revenue",
+      "autofill",
+      "tell me about the dashboard"
+    ],
+    "response": "Our intelligent platform revolves around giving you complete financial control with minimal effort.\n\nStandout features include:\n• **Intelligent Dashboard:** Meticulously track total revenue, pending invoices, and overdue payments at a glance.\n• **Smart Invoice Creation:** Leverage intelligent autofill to generate professional invoices in under 30 seconds.\n• **One-Click Payment Reminders:** Automatically chase down late clients without awkward conversations.\n• **Real-Time Revenue Tracking:** Instantly see your cash flow and financial health.",
     "route": "https://www.invoicecloud.in/",
     "actionText": "Explore Invoice Features"
   },
   {
     "id": "5b",
-    "keywords": ["invoicing about", "simplify", "simplicity first", "built for growth", "customer obsessed", "founded", "clients"],
-    "response": "Shnoor Invoicing is built on Simplicity First, Built for Growth, and Customer Obsession. Founded in 2025, our team of 50+ members proudly serves over 1,000 happy clients.",
+    "keywords": [
+      "invoicing about",
+      "simplify",
+      "simplicity first",
+      "built for growth",
+      "customer obsessed",
+      "founded",
+      "clients",
+      "who founded invoicecloud",
+      "who founded invoice cloud"
+    ],
+    "response": "Shnoor Invoicing was engineered from the ground up based on three core pillars:\n\n• **Simplicity First:** Eliminating the friction from traditional, clunky billing systems.\n• **Built for Growth:** Designed to scale effortlessly as your client base expands.\n• **Customer Obsession:** Continuously iterating based on real feedback from over 1,000+ happy clients.\n\nFounded in 2025, our dedicated team of 50+ members provides the best financial tools on the market.",
     "route": "https://www.invoicecloud.in/",
     "actionText": "Learn About Us"
   },
   {
     "id": "5c",
-    "keywords": ["invoice pricing", "plans", "free plan", "professional plan", "business plan", "cost", "templates", "unlimited invoices"],
-    "response": "We offer clear value plans: Free (up to 10 invoices/mo), Professional (₹19/mo for unlimited invoices & advanced templates), and Business (₹49/mo with custom templates & 24/7 phone support).",
+    "keywords": [
+      "invoice pricing",
+      "plans",
+      "free plan",
+      "professional plan",
+      "business plan",
+      "cost",
+      "templates",
+      "unlimited invoices",
+      "how much is the business plan"
+    ],
+    "response": "We believe in highly transparent, value-driven pricing plans that scale perfectly alongside your business:\n\n• **Free Plan (₹0/mo):** Perfect for starters, allowing up to 10 invoices per month completely free.\n• **Professional Plan (₹19/mo):** Unlocks unlimited invoices and access to advanced, customizable templates.\n• **Business Plan (₹49/mo):** Provides fully bespoke custom templates and priority 24/7 phone support.\n\nThere are absolutely no hidden fees, and you can upgrade or downgrade at any time.",
     "route": "https://www.invoicecloud.in/",
     "actionText": "View Pricing Plans"
   },
   {
     "id": "6",
-    "keywords": ["hello", "hi", "hey", "greetings"],
-    "response": "Hello! I am the Shnoor AI Assistant. How can I assist you today?",
+    "keywords": [
+      "hello",
+      "hi",
+      "hey",
+      "greetings"
+    ],
+    "response": "Hello and welcome! I am the Shnoor AI Assistant, your intelligent guide to all of our platforms and services.\n\nHow can I best assist you today? Feel free to ask me anything about what we do!",
     "route": null,
     "actionText": null
   },
   {
     "id": "7",
-    "keywords": ["contact", "support", "help", "email", "reach"],
-    "response": "You can connect with us at admin@shnoor.com for further assistance, or visit our Contact page.",
+    "keywords": [
+      "contact",
+      "support",
+      "help",
+      "email",
+      "reach"
+    ],
+    "response": "We are always here to help you resolve any issues or answer any complex questions you might have.\n\nYou can easily connect with our dedicated support team by sending a detailed email to admin@shnoor.com, and one of our specialists will get back to you promptly.\n\nAlternatively, you can visit our Contact page for more information, including our office locations and direct phone lines.",
     "route": "/contact",
     "actionText": "Go to Contact Page"
   },
   {
     "id": "8",
-    "keywords": ["about", "who are we", "about us", "history"],
-    "response": "Learn about Shnoor, our mission, and our vision on the About page.",
+    "keywords": [
+      "about",
+      "who are we",
+      "about us",
+      "history"
+    ],
+    "response": "Shnoor International is a forward-thinking technology company dedicated to simplifying complex operations through innovative software solutions.\n\nOur extensive portfolio spans across HR management, Enterprise Learning, Secure Assessments, and automated financial tools. We are driven by a mission to empower global businesses with robust, scalable, and user-friendly technology.\n\nYou can dive deeper into our history, mission, and leadership vision by visiting our detailed About page.",
     "route": "/about",
     "actionText": "Go to About Page"
   },
   {
     "id": "9",
-    "keywords": ["logistics", "shipping", "transport", "freight"],
-    "response": "We offer end-to-end logistics solutions. Find out more on our Logistics page.",
+    "keywords": [
+      "logistics",
+      "shipping",
+      "transport",
+      "freight"
+    ],
+    "response": "At Shnoor, we offer highly optimized, end-to-end logistics solutions designed to streamline your supply chain.\n\nOur Logistics Services Include:\n• **Dry Container Supply from Mumbai & Mundra Ports**\n• **Cargo Handling, Packing & Securing**\n• **Customs Clearance & Regulatory Documentation**\n• **Multi-Modal Transport Solutions (Sea, Rail & Road)**\n• **Real-Time Tracking & Monitoring**\n• **End-to-End Supply Chain Support**",
     "route": "/logistics",
     "actionText": "View Logistics Details"
   },
   {
     "id": "10",
-    "keywords": ["export", "import", "trade", "international"],
-    "response": "We manage complex import and export operations globally. Discover our global trade solutions.",
+    "keywords": [
+      "export",
+      "import",
+      "trade",
+      "international",
+      "imports and exports"
+    ],
+    "response": "Navigating the complexities of international trade requires deep expertise and reliable technological infrastructure, which is exactly what Shnoor provides.\n\nWe manage intricate import and export operations on a global scale, ensuring full compliance with international regulations and smooth customs clearances.\n\nDiscover how our global trade solutions can significantly reduce your operational friction by visiting our Import & Export services page.",
     "route": "/import-and-export",
     "actionText": "View Import & Export"
   },
   {
     "id": "11",
-    "keywords": ["careers", "jobs", "hiring", "work with us", "apply"],
-    "response": "Looking to join our team? Check out our latest job openings and apply online.",
+    "keywords": [
+      "careers",
+      "jobs",
+      "hiring",
+      "work with us",
+      "apply"
+    ],
+    "response": "Are you passionate about technology and looking to make a massive impact? We are always searching for top-tier talent to join the Shnoor family.\n\nWe offer a dynamic, highly collaborative work environment with excellent opportunities for professional growth and skill development.\n\nCheck out our latest job openings across various departments and apply online directly through our comprehensive Careers portal.",
     "route": "/careers",
     "actionText": "View Careers Page"
   },
   {
     "id": "12",
-    "keywords": ["cloud", "azure", "aws", "google cloud", "hosting"],
-    "response": "We optimize workloads and build next-gen applications using Azure, AWS, and Google Cloud.",
+    "keywords": [
+      "cloud",
+      "azure",
+      "aws",
+      "google cloud",
+      "hosting"
+    ],
+    "response": "Shnoor's Cloud Services are designed to heavily optimize your digital workloads and drastically reduce infrastructure costs.\n\nWe specialize in architecting, migrating, and managing next-generation applications across leading cloud providers including Microsoft Azure, AWS, and Google Cloud.\n\nOur team ensures that your cloud environments are highly secure, infinitely scalable, and perfectly aligned with your long-term business objectives.",
     "route": "/services/cloud",
     "actionText": "View Cloud Services"
   },
   {
     "id": "13",
-    "keywords": ["enterprise", "erp", "sap", "management"],
-    "response": "Our Enterprise Management solutions streamline business operations using cutting-edge ERP systems and SAP outsourcing.",
+    "keywords": [
+      "enterprise",
+      "erp",
+      "sap",
+      "enterprise management",
+      "enterprise solutions"
+    ],
+    "response": "Our Enterprise Management solutions are meticulously crafted to streamline and unify your most complex business operations.\n\nWe implement and manage cutting-edge ERP systems and offer specialized SAP outsourcing to ensure your enterprise data flows seamlessly across all departments.\n\nBy leveraging our enterprise solutions, organizations can dramatically improve their decision-making processes and boost overall operational efficiency.",
     "route": "/services/enterprise",
     "actionText": "View Enterprise Solutions"
   },
   {
     "id": "14",
-    "keywords": ["ai", "artificial intelligence", "data", "analytics", "automation"],
-    "response": "Leverage AI-powered automation and advanced analytics to improve efficiency and decision-making.",
+    "keywords": [
+      "ai",
+      "artificial intelligence",
+      "data",
+      "analytics",
+      "automation"
+    ],
+    "response": "Unlock the true potential of your business data with Shnoor's advanced AI and Analytics services.\n\nWe help organizations leverage AI-powered automation to eliminate repetitive tasks and utilize deep analytics to gain incredibly valuable, actionable insights.\n\nFrom predictive modeling to intelligent chatbots, our AI solutions are engineered to significantly improve your operational efficiency and strategic decision-making.",
     "route": "/services/ai",
     "actionText": "View AI Services"
   },
   {
     "id": "15",
-    "keywords": ["staffing", "consulting", "talent", "recruitment", "it staffing"],
-    "response": "We connect businesses with specialized IT talent through our Consulting & Staffing services.",
+    "keywords": [
+      "staffing",
+      "consulting",
+      "talent",
+      "recruitment",
+      "it staffing"
+    ],
+    "response": "Finding the right talent is critical to your success, and our specialized IT Consulting & Staffing services are here to bridge that gap.\n\nWe connect fast-growing businesses with highly vetted, specialized IT professionals who perfectly match both technical requirements and company culture.\n\nWhether you need short-term project consultants or long-term core team members, our staffing solutions provide the flexibility and quality you demand.",
     "route": "/services/staffing",
     "actionText": "View Staffing Services"
   },
   {
     "id": "16",
-    "keywords": ["verification", "background check", "screening", "trust", "security"],
-    "response": "Ensure trust and security through our reliable background verification and professional screening services.",
+    "keywords": [
+      "verification",
+      "background check",
+      "screening",
+      "trust",
+      "security"
+    ],
+    "response": "Building a reliable team starts with trust. Our comprehensive Verification services ensure that your hiring process is secure and fully compliant.\n\nWe conduct thorough background checks, detailed professional screening, and verifiable credential checks to protect your organization from potential risks.\n\nPartner with us to maintain the highest standards of security and integrity as you scale your workforce globally.",
     "route": "/services/verification",
     "actionText": "View Verification Services"
   },
   {
     "id": "17",
-    "keywords": ["network", "infrastructure", "connectivity"],
-    "response": "We provide robust and secure network infrastructure solutions to support your global trade and IT operations seamlessly.",
+    "keywords": [
+      "network",
+      "infrastructure",
+      "connectivity",
+      "network management",
+      "network management service"
+    ],
+    "response": "Here are our core Network Management Services, tailored to keep your systems running smoothly:\n\n**Security Management**\nProtects your network from threats with proactive measures and rapid response.\n\n**Network Monitoring**\nConstantly tracks your network health to catch issues before they affect your business.\n\n**Why Choose Our Network Management:**\nOur network management saves time and cuts costs effectively.\n• **Network Control & Expert Support:** Get help from knowledgeable professionals anytime you need.\n• **Reliable Uptime:** Keep your systems running smoothly without interruptions.\n• **Cost Efficiency:** Reduce expenses with smart network resources.",
     "route": "/services/network",
     "actionText": "View Network Services"
   },
   {
     "id": "18",
-    "keywords": ["healthcare", "health", "medical", "patient", "clinical"],
-    "response": "Tailored IT solutions for the healthcare industry, ensuring data security and operational efficiency for healthcare providers.",
+    "keywords": [
+      "healthcare",
+      "health",
+      "medical",
+      "patient",
+      "clinical"
+    ],
+    "response": "Shnoor provides highly tailored IT solutions specifically engineered for the unique demands of the modern healthcare industry.\n\nWe focus heavily on ensuring absolute data security, HIPAA compliance, and streamlining operational efficiency for hospitals and clinics.\n\nOur specialized healthcare technology allows medical providers to spend less time managing software and more time delivering exceptional patient care.",
     "route": "/services/healthcare",
     "actionText": "View Healthcare Services"
   },
   {
     "id": "19",
-    "keywords": ["scam", "fraud", "fake job", "warning"],
-    "response": "Please be aware of recruitment scams. Shnoor will never ask for payment during the hiring process. Read our guidelines to stay safe.",
+    "keywords": [
+      "scam",
+      "fraud",
+      "fake job",
+      "warning"
+    ],
+    "response": "Security Warning: Please be highly vigilant and aware of potential recruitment scams falsely using the Shnoor name.\n\nShnoor International maintains a strict policy and will NEVER ask candidates for any form of payment or sensitive financial information during the hiring process.\n\nWe strongly advise all applicants to read our detailed security guidelines on our website to ensure they are interacting safely with our official recruitment team.",
     "route": "/recruitment-scams",
     "actionText": "Read About Recruitment Scams"
   },
   {
     "id": "2d",
-    "keywords": ["hrm register", "sign up hrm", "create hrm account", "join hrm", "hrm registration", "register for hrm"],
-    "response": "You can start with a free account on our HR Management portal. Click the button below to register for hrm.shnoor.com.",
+    "keywords": [
+      "hrm register",
+      "sign up hrm",
+      "create hrm account",
+      "join hrm",
+      "hrm registration",
+      "register for hrm"
+    ],
+    "response": "Taking the first step toward transforming your HR operations is incredibly simple.\n\nYou can start immediately with a free, fully-featured account on our HR Management portal with no software installation needed.\n\nSimply click the action button below to head over to hrm.shnoor.com, complete the quick registration process, and begin setting up your company dashboard in minutes.",
     "route": "https://hrm.shnoor.com/register",
     "actionText": "Register for HRM"
   },
   {
     "id": "3d",
-    "keywords": ["lms register", "sign up lms", "create lms account", "join lms", "lms registration", "register for lms"],
-    "response": "Ready to start your learning journey? You can sign up for our Learning Management System using the link below.",
+    "keywords": [
+      "lms register",
+      "sign up lms",
+      "create lms account",
+      "join lms",
+      "lms registration",
+      "register for lms"
+    ],
+    "response": "Are you completely ready to revolutionize how your workforce learns and upskills? \n\nYou can easily sign up for our Enterprise Learning Management System by following the dedicated registration link below.\n\nOnce registered, you will gain immediate access to our comprehensive suite of tools to start building your very first role-based learning journey.",
     "route": "https://lms.shnoor.com/register",
     "actionText": "Register for LMS"
   },
   {
     "id": "4d",
-    "keywords": ["assessments register", "sign up assessments", "exam register", "test registration", "register for assessments"],
-    "response": "To take a secure proctored exam, you must first register with your institute details and enrollment information.",
+    "keywords": [
+      "assessments register",
+      "sign up assessments",
+      "exam register",
+      "test registration",
+      "register for assessments"
+    ],
+    "response": "To ensure maximum security and integrity, taking a proctored exam requires a formal registration process.\n\nYou must first register on the Assessments platform using your exact institute details and official enrollment information.\n\nPlease follow the link below to securely create your profile so you can access your auto-assigned examinations.",
     "route": "https://assessments.shnoor.com/register",
     "actionText": "Register for Assessments"
   },
   {
     "id": "5d",
-    "keywords": ["invoice register", "sign up invoice", "create invoice account", "billing registration", "register for invoicing"],
-    "response": "Get started for free with Shnoor Invoicing! Create an account to automate your billing and get paid faster.",
+    "keywords": [
+      "invoice register",
+      "sign up invoice",
+      "create invoice account",
+      "billing registration",
+      "register for invoicing"
+    ],
+    "response": "Stop chasing late payments and get started entirely for free with Shnoor Invoicing today!\n\nCreating an account takes less than a minute, and you will instantly be able to automate your billing, send professional invoices, and track your revenue.\n\nClick the link below to join thousands of other businesses who are already getting paid faster using our platform.",
     "route": "https://www.invoicecloud.in/register",
     "actionText": "Register for Invoicing"
   },
   {
     "id": "20",
-    "keywords": ["register", "sign up", "create account", "join"],
-    "response": "We have multiple platforms! You can register for our specific portals by visiting their registration pages:\n- HRM: hrm.shnoor.com/register\n- LMS: lms.shnoor.com/register\n- Assessments: assessments.shnoor.com/register\n- Invoicing: invoicecloud.in/register",
+    "keywords": [
+      "register",
+      "sign up",
+      "create account",
+      "join"
+    ],
+    "response": "Shnoor International operates multiple distinct platforms, and you can easily register for the specific portal that meets your needs:\n\n• For our Human Resources suite, visit: hrm.shnoor.com/register\n• For Enterprise Training, visit: lms.shnoor.com/register\n• For Secure Examinations, visit: assessments.shnoor.com/register\n• For Automated Billing, visit: invoicecloud.in/register\n\nLet me know if you need specific details about any of these platforms!",
     "route": null,
     "actionText": null
   },
   {
     "id": "21",
-    "keywords": ["password", "secret", "private", "confidential", "salary", "revenue", "credentials", "source code", "admin login", "database"],
-    "response": "I'm sorry, but that information is private and confidential. As an AI Assistant, I am not authorized to disclose internal company data, financials, or private user credentials.",
+    "keywords": [
+      "password",
+      "secret",
+      "private",
+      "confidential",
+      "salary",
+      "revenue",
+      "credentials",
+      "source code",
+      "admin login",
+      "database"
+    ],
+    "response": "I apologize, but I must strictly adhere to Shnoor's rigorous data security protocols.\n\nThe information you are requesting is classified as private and highly confidential. As an AI Assistant, I am not authorized to disclose internal company data, financial records, employee salaries, or any private user credentials.\n\nIf you have legitimate administrative requirements, please contact your systems administrator directly.",
     "route": null,
     "actionText": null
   },
   {
     "id": "22",
-    "keywords": ["location", "address", "headquarters", "where are you located", "office"],
-    "response": "Our headquarters is located in the UAE, with additional operations running globally out of India. You can find our exact contact details on our Contact page.",
+    "keywords": [
+      "location",
+      "address",
+      "headquarters",
+      "where are you located",
+      "office"
+    ],
+    "response": "Shnoor International is a truly global organization with a strong international presence.\n\nOur primary headquarters is located in the UAE, providing a strategic hub for our enterprise operations. Additionally, we have extensive operational centers running seamlessly out of India.\n\nFor exact addresses, detailed maps, and specific contact information for our various offices, please visit our Contact page.",
     "route": "/contact",
     "actionText": "View Contact Info"
   },
   {
     "id": "23",
-    "keywords": ["operating hours", "timings", "when are you open", "working hours"],
-    "response": "We operate Monday through Friday, 9:00 AM to 6:00 PM. However, our enterprise support teams are available 24/7 for urgent requests.",
+    "keywords": [
+      "operating hours",
+      "timings",
+      "when are you open",
+      "working hours"
+    ],
+    "response": "Our standard global business operations run from Monday through Friday, between 9:00 AM and 6:00 PM.\n\nHowever, we understand that modern businesses never sleep. That is why our dedicated enterprise technical support teams are available 24/7 to handle any urgent requests or critical system emergencies.\n\nFeel free to reach out to us at any time if you require immediate assistance.",
     "route": "/contact",
     "actionText": "Contact Support"
   },
   {
     "id": "24",
-    "keywords": ["ceo", "founder", "leadership", "who owns"],
-    "response": "Shnoor International is led by a dedicated team of experienced IT and Logistics professionals committed to simplifying global trade and technology.",
+    "keywords": [
+      "ceo",
+      "founder",
+      "leadership",
+      "who owns"
+    ],
+    "response": "Shnoor International is proudly led by a deeply committed and visionary team of seasoned professionals.\n\nOur leadership comprises highly experienced experts from the IT, Logistics, and Enterprise Software sectors. Their collective goal is to simplify global trade and technology for businesses of all sizes.\n\nYou can read more extensively about our leadership team's background and our company's core vision on our About Us page.",
     "route": "/about",
     "actionText": "Learn About Us"
   },
   {
     "id": "25",
-    "keywords": ["tell me about hrm", "what is hrm platform", "hrm details", "human resources system"],
-    "response": "Our HRM (Human Resource Management) platform helps you manage employees, attendance, leaves, shifts, awards, and company policies all in one centralized dashboard. It's built for modern, scaling teams.",
+    "keywords": [
+      "tell me about hrm",
+      "what is hrm platform",
+      "hrm details",
+      "human resources system"
+    ],
+    "response": "Our HRM platform is a comprehensive, Next Generation application built for modern businesses using Vue and Laravel.\n\nIt completely centralizes all your HR operations with powerful features including:\n• HR & Employee Management\n• One Click Payroll & Salary Slips\n• Multi-location Asset Management\n• Attendance & Leave Management\n• Shifts & Holiday Tracking\n• Accounting, Expenses & Currencies\n• Appreciations & Awards\n• Company Policy, News & Survey Forms\n• Roles, Permissions & Offboarding\n• Increment/Promotion Management\n\nEmployees also receive a Powerful Dashboard to interact with all these features within a Safe and Secure cloud environment.",
     "route": "https://hrm.shnoor.com",
     "actionText": "Visit HRM Platform"
   },
   {
     "id": "26",
-    "keywords": ["tell me about lms", "what is lms platform", "lms details", "learning management system details"],
-    "response": "Our LMS (Learning Management System) provides structured training formats including instructor-led sessions, hands-on practice arenas, and compliance tracking to rapidly upskill your entire workforce.",
+    "keywords": [
+      "tell me about lms",
+      "what is lms platform",
+      "lms details",
+      "learning management system details"
+    ],
+    "response": "Our LMS is a modern, enterprise-grade educational ecosystem built to deliver structured training and measurable outcomes.\n\nThe platform supports every stage of learning through a clear workflow: Launching role-based journeys, Delivering guided learning, and Validating mastery. It is driven by a powerful Admin Control Center and a seamless Learning Delivery Engine.\n\nIt comes fully equipped with 8 core platform capabilities:\n• Structured Cohorts for group training\n• Live Instruction & Interactive Sessions\n• Practice Labs for hands-on application\n• Progress Tracking & Admin Reporting\n• Certification Paths & Credentials\n• Compliance Readiness & Audit support\n• Fast Onboarding for new hires\n• Global Accessibility via browser\n\nWith over 500+ learners onboarded and 99.9% reliable operations, it is the ultimate tool to upskill your workforce at scale.",
     "route": "https://lms.shnoor.com",
     "actionText": "Visit LMS Platform"
   },
   {
     "id": "27",
-    "keywords": ["tell me about invoicecloud", "what is invoicecloud", "invoice platform details", "billing software details"],
-    "response": "Shnoor Invoicing (invoicecloud.in) automates your billing. It lets you create professional invoices in under 30 seconds, send automated payment reminders, and track your revenue growth.",
+    "keywords": [
+      "tell me about invoicecloud",
+      "what is invoicecloud",
+      "invoice platform details",
+      "billing software details"
+    ],
+    "response": "Shnoor Invoicing (invoicecloud.in) is our incredibly powerful, yet delightfully simple automated billing platform.\n\nIt is specifically designed to let you create beautiful, professional invoices in under 30 seconds using intelligent autofill technology. The system takes over the frustrating task of chasing payments by sending automated, smart payment reminders to your clients.\n\nUltimately, it provides a clear, real-time dashboard of your revenue growth, ensuring you always know exactly where your business stands financially.",
     "route": "https://www.invoicecloud.in",
     "actionText": "Visit Invoicing Platform"
   },
   {
     "id": "28",
-    "keywords": ["how to apply for leave", "track attendance", "leave management", "attendance tracking"],
-    "response": "Using our HRM platform, employees can easily apply for leaves and track their daily attendance directly from their personal dashboard. Managers receive instant notifications for approval.",
+    "keywords": [
+      "how to apply for leave",
+      "track attendance",
+      "leave management",
+      "attendance tracking",
+      "how to track attendance"
+    ],
+    "response": "Tracking attendance and applying for leaves is an absolute breeze with our Powerful Tracking module for HRM.\n\nThe platform seamlessly integrates daily Attendance Management with Leave/Holiday Management. Employees can apply for leaves directly through their Powerful Dashboard, while the system securely tracks everything automatically.\n\nThis data is then directly tied to our Auto Generate Payroll system, ensuring that any unapproved absences or unpaid leaves are accurately deducted during the One Click Payroll process.",
     "route": "https://hrm.shnoor.com",
     "actionText": "Manage Attendance on HRM"
   },
   {
     "id": "29",
-    "keywords": ["certification courses", "get certified", "upskill", "training completion"],
-    "response": "Yes! Our LMS provides structured certification paths. Once you complete the required modules and pass the final assessments, you will be awarded an industry-recognized certificate of completion.",
+    "keywords": [
+      "certification courses",
+      "get certified",
+      "upskill",
+      "training completion"
+    ],
+    "response": "Absolutely! We strongly believe in recognizing and validating professional growth, which is why our LMS provides structured certification paths.\n\nAs you progress through your assigned learning journeys, you will complete rigorous modules and undertake final assessments to prove your mastery of the subject matter.\n\nUpon successful completion, the system automatically awards you a verifiable, industry-recognized certificate of completion to highlight your newly acquired skills.",
     "route": "https://lms.shnoor.com",
     "actionText": "View LMS Certifications"
   },
   {
     "id": "30",
-    "keywords": ["internet disconnects during exam", "power cut during test", "auto save exam", "resume assessment"],
-    "response": "Don't worry! Our Assessment platform features Auto-Save functionality. If your internet disconnects or you lose power, your progress is securely saved and you can resume the exam from where you left off.",
+    "keywords": [
+      "internet disconnects during exam",
+      "power cut during test",
+      "auto save exam",
+      "resume assessment",
+      "is the exam auto-saved",
+      "is the exam auto saved"
+    ],
+    "response": "We understand that technical issues happen, so you absolutely do not need to worry about losing your hard work during an exam!\n\nOur Assessment platform is built with a highly resilient Auto-Save functionality that continuously backs up your answers in real-time.\n\nIf your internet connection unexpectedly drops or you experience a power failure, your exact progress is securely saved. Once you reconnect, you can simply resume the assessment precisely from where you left off without penalty.",
     "route": "https://assessments.shnoor.com",
     "actionText": "Learn About Secure Exams"
   },
   {
     "id": "31",
-    "keywords": ["are exams recorded", "webcam recording", "live monitoring", "proctoring"],
-    "response": "Yes, to ensure academic integrity, our Assessment platform uses Live Proctoring. This includes secure webcam monitoring and full-screen enforcement to prevent tab-switching during exams.",
+    "keywords": [
+      "are exams recorded",
+      "webcam recording",
+      "live monitoring",
+      "proctoring"
+    ],
+    "response": "Yes, maintaining the highest levels of academic and professional integrity is a core requirement for our platform, so strict security measures are in place.\n\nDuring your exam, the Assessment platform utilizes Live Proctoring technology. This includes secure, continuous webcam monitoring to verify candidate identity and behavior.\n\nFurthermore, the system enforces a full-screen environment and actively detects any attempts to switch browser tabs, ensuring a completely fair and secure testing environment for everyone.",
     "route": "https://assessments.shnoor.com",
     "actionText": "View Assessment Security"
   },
   {
     "id": "32",
-    "keywords": ["free trial invoicing", "is invoicing free", "freelancer billing", "small business invoice"],
-    "response": "Shnoor Invoicing offers a completely Free plan perfect for freelancers and small businesses, allowing up to 10 invoices per month at no cost. You can easily upgrade as your business grows.",
+    "keywords": [
+      "free trial invoicing",
+      "is invoicing free",
+      "freelancer billing",
+      "small business invoice"
+    ],
+    "response": "Yes, we are highly committed to supporting freelancers and emerging startups by offering a completely Free tier of Shnoor Invoicing!\n\nOur Free plan is perfect for small businesses, allowing you to generate and send up to 10 highly professional invoices every single month at absolutely no cost.\n\nAs your client base expands and your billing needs become more complex, you can seamlessly upgrade to our incredibly affordable Professional or Business plans to unlock unlimited features.",
     "route": "https://www.invoicecloud.in",
     "actionText": "Start Invoicing for Free"
   },
   {
     "id": "33",
-    "keywords": ["automate payment reminders", "chase payments", "auto reminders", "late payment"],
-    "response": "Our InvoiceCloud platform allows you to set up Smart Payment Reminders. The system will automatically follow up on unpaid or overdue invoices via email, so you get paid faster without the manual hassle.",
+    "keywords": [
+      "automate payment reminders",
+      "chase payments",
+      "auto reminders",
+      "late payment"
+    ],
+    "response": "Chasing down late payments is one of the most frustrating parts of running a business, so our InvoiceCloud platform completely automates it for you.\n\nYou can easily set up customized Smart Payment Reminders within the system. Once configured, the platform will automatically send polite, professional follow-up emails to clients with unpaid or overdue invoices.\n\nThis completely removes the awkwardness and manual hassle of debt collection, helping you get paid significantly faster while maintaining excellent client relationships.",
     "route": "https://www.invoicecloud.in",
     "actionText": "Explore Smart Reminders"
   },
   {
     "id": "34",
-    "keywords": ["explore our platforms", "other platforms", "what platforms", "list platforms", "all platforms", "portals list"],
-    "response": "Shnoor International operates 4 specialized platforms:\n\n• HRM: Human Resources & Employee Management\n• LMS: Enterprise Learning & Training\n• Assessments: Secure Examinations\n• InvoiceCloud: Automated Billing\n\nTell me which one you'd like to explore in detail!",
+    "keywords": [
+      "explore our platforms",
+      "other platforms",
+      "what platforms",
+      "list platforms",
+      "all platforms",
+      "portals list"
+    ],
+    "response": "Shnoor International proudly operates a suite of 4 highly specialized, enterprise-grade platforms designed to optimize your business operations:\n\n• HRM (hrm.shnoor.com): Comprehensive Human Resources & Employee Management\n• LMS (lms.shnoor.com): Advanced Enterprise Learning & Training Ecosystem\n• Assessments (assessments.shnoor.com): Secure, Proctored Examinations\n• InvoiceCloud (invoicecloud.in): Intelligent, Automated Business Billing\n\nPlease let me know which specific platform you would like to explore in more detail, and I will gladly provide a complete overview!",
     "route": null,
     "actionText": null
+  },
+  {
+    "id": "35",
+    "keywords": [
+      "asset management",
+      "what is asset management",
+      "company assets",
+      "track assets"
+    ],
+    "response": "Asset Management on the HRM platform is a powerful tool to track and maintain company property assigned to employees.\n\nYou can easily allocate laptops, phones, office equipment, or any other company assets to specific staff members. The system keeps a detailed log of when the asset was assigned, its current condition, and ensures it is properly returned during offboarding.\n\nThis prevents inventory loss and gives admins complete visibility over all company-owned resources at any given time.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Manage Assets"
+  },
+  {
+    "id": "36",
+    "keywords": [
+      "what are shifts",
+      "shift management",
+      "work shifts",
+      "shift scheduling"
+    ],
+    "response": "Our Shift Management feature allows you to seamlessly schedule and organize complex working hours for dynamic teams.\n\nWhether your company operates 24/7 or has flexible working hours, you can create multiple shift types and assign them to specific employees or departments. The system automatically aligns their attendance tracking with their assigned shift schedule.\n\nThis ensures accurate tracking of late arrivals, early departures, and overtime, regardless of when the employee is scheduled to work.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View Shift Management"
+  },
+  {
+    "id": "37",
+    "keywords": [
+      "what are appreciations",
+      "what are awards",
+      "employee awards",
+      "appreciation feature",
+      "employee recognition"
+    ],
+    "response": "Appreciations & Awards is a dedicated feature built to boost employee morale and recognize outstanding performance.\n\nManagers and administrators can publicly award employees for their hard work, achievements, or work anniversaries. These appreciations are instantly highlighted on the employee's dashboard and visible to the entire team.\n\nIt is a fantastic way to foster a positive company culture, motivate your staff, and retain top talent by showing them their efforts are truly valued.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View Awards"
+  },
+  {
+    "id": "38",
+    "keywords": [
+      "company policy",
+      "what is company policy",
+      "distribute policies",
+      "employee guidelines",
+      "explain company policy"
+    ],
+    "response": "The Company Policy feature provides a centralized digital hub for all your important organizational guidelines and rulebooks.\n\nInstead of emailing PDFs, HR can upload policies directly to the portal where they are instantly accessible to all employees on their dashboards. You can organize policies by department and track when they were last updated.\n\nThis ensures that everyone in the company is always on the same page regarding rules, compliance, and corporate expectations.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View Company Policies"
+  },
+  {
+    "id": "39",
+    "keywords": [
+      "roles",
+      "permissions",
+      "what are roles",
+      "access control",
+      "granular permissions"
+    ],
+    "response": "Roles & Permissions give you complete control over who can see and do what within the HRM system.\n\nYou can create custom roles (like HR Manager, Team Lead, IT Admin) and assign granular permissions to each role. This means you can easily restrict sensitive financial or payroll data while allowing managers to approve leaves for their specific teams.\n\nThis guarantees that your company data remains highly secure and is only accessible to authorized personnel.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Manage Permissions"
+  },
+  {
+    "id": "40",
+    "keywords": [
+      "offboarding",
+      "what is offboarding",
+      "employee exit",
+      "resignation management"
+    ],
+    "response": "The Offboarding feature streamlines the complex process of an employee leaving the company, ensuring absolutely nothing is missed.\n\nWhen an employee resigns or is terminated, the system triggers a comprehensive offboarding checklist. This includes recovering assigned assets, calculating final payroll settlements, conducting exit surveys, and securely revoking system access.\n\nIt turns a traditionally messy process into a smooth, professional, and fully documented exit procedure.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View Offboarding"
+  },
+  {
+    "id": "41",
+    "keywords": [
+      "survey form",
+      "what is survey form",
+      "employee survey",
+      "feedback form"
+    ],
+    "response": "Survey Forms allow HR teams to easily gather valuable feedback and insights directly from employees.\n\nYou can quickly create custom questionnaires to gauge employee satisfaction, gather opinions on new policies, or run performance self-evaluations. Employees receive these surveys directly on their dashboard and can securely submit their responses.\n\nThis data helps management make informed, data-driven decisions to improve workplace culture and address employee concerns.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Create Surveys"
+  },
+  {
+    "id": "42",
+    "keywords": [
+      "accounting",
+      "expenses",
+      "what is accounting",
+      "track expenses",
+      "currencies",
+      "company expenses"
+    ],
+    "response": "The Accounting & Expenses module provides built-in financial tracking so your HR and finance teams can stay perfectly aligned.\n\nEmployees can easily submit expense claims (like travel or equipment purchases) for manager approval. The system natively supports multiple currencies, making it absolutely perfect for global teams.\n\nOnce approved, these expenses can be automatically integrated into the employee's next salary slip during the One Click Payroll process.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Manage Expenses"
+  },
+  {
+    "id": "43",
+    "keywords": [
+      "increment",
+      "promotion",
+      "what is increment",
+      "salary hike",
+      "track promotions"
+    ],
+    "response": "The Increment and Promotion tracking feature allows you to seamlessly manage employee career growth and salary adjustments.\n\nWhen an employee is promoted or receives a raise, the system formally records the change in designation and automatically updates their assigned Salary Group. \n\nThis ensures that their very next payroll generation accurately reflects their new compensation without requiring any manual data entry from the HR team.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "Manage Promotions"
+  },
+  {
+    "id": "44",
+    "keywords": [
+      "news",
+      "company news",
+      "what is news",
+      "announcements"
+    ],
+    "response": "The News module acts as your company's digital bulletin board to keep everyone highly engaged and informed.\n\nAdministrators can easily broadcast important announcements, company milestones, or upcoming events directly to every employee's dashboard. Employees can read these updates as soon as they log in.\n\nThis completely eliminates the need for mass emails and ensures that your internal corporate communication is always visible and up-to-date.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View Company News"
+  },
+  {
+    "id": "45",
+    "keywords": [
+      "lms capabilities",
+      "8 core capabilities",
+      "what are the capabilities of lms",
+      "lms features",
+      "what are the 8 core capabilities"
+    ],
+    "response": "The Shnoor LMS includes 8 core platform capabilities engineered to scale with your organization:\n\n• Structured Cohorts\n• Live Instruction\n• Practice Labs\n• Progress Tracking\n• Certification Paths\n• Compliance Readiness\n• Fast Onboarding\n• Global Accessibility\n\nWould you like me to explain any of these specific capabilities in more detail?",
+    "route": "https://lms.shnoor.com",
+    "actionText": "View LMS Capabilities"
+  },
+  {
+    "id": "46",
+    "keywords": [
+      "structured cohorts",
+      "what are structured cohorts",
+      "cohort learning",
+      "explain structured cohorts"
+    ],
+    "response": "Structured Cohorts allow you to run department-wise, company-wise, or role-wise learning journeys at a massive scale.\n\nBy organizing learners into cohorts, you ensure that teams go through structured training together. This fosters peer collaboration, maintains a consistent learning pace, and simplifies the administration of large-scale enterprise training programs.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore Cohorts"
+  },
+  {
+    "id": "47",
+    "keywords": [
+      "live instruction",
+      "what is live instruction",
+      "live sessions",
+      "virtual classes"
+    ],
+    "response": "Live Instruction allows your organization to deliver highly interactive virtual sessions directly within the LMS.\n\nIt seamlessly integrates with your self-paced modules, enabling instructors to provide guided training, host Q&A sessions, and offer real-time learner support. This hybrid approach significantly increases engagement and knowledge retention.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore Live Instruction"
+  },
+  {
+    "id": "48",
+    "keywords": [
+      "practice labs",
+      "what are practice labs",
+      "hands on practice",
+      "hands-on implementation"
+    ],
+    "response": "Practice Labs are designed to support hands-on implementation so learners can apply theoretical concepts immediately.\n\nThey provide a safe, simulated digital environment where employees can safely test their skills, configure software, or run code without impacting real production systems. It bridges the critical gap between learning and doing.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore Practice Labs"
+  },
+  {
+    "id": "49",
+    "keywords": [
+      "progress tracking",
+      "what is progress tracking",
+      "track lms progress",
+      "lms reporting"
+    ],
+    "response": "Progress Tracking provides administrators and managers with deep, actionable insights into learner performance.\n\nYou can closely monitor course completion rates, assessment scores, and overall engagement through beautifully designed, admin-friendly reporting dashboards. This ensures that no learner falls behind and training ROI is actively measured.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "View Reporting Tools"
+  },
+  {
+    "id": "50",
+    "keywords": [
+      "certification paths",
+      "how do certifications work",
+      "what are certification paths",
+      "credentials"
+    ],
+    "response": "Certification Paths allow you to bundle learning modules and rigorous evaluations into clear, measurable outcomes.\n\nThey turn learning into verifiable proof by utilizing completion tracking and exam support to issue industry-facing credentials. This helps validate the skill readiness of both individuals and entire teams with absolute confidence.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "View Certifications"
+  },
+  {
+    "id": "51",
+    "keywords": [
+      "compliance readiness",
+      "what is compliance readiness",
+      "compliance training",
+      "audit training"
+    ],
+    "response": "Compliance Readiness is crucial for regulated industries or audit-sensitive teams.\n\nOur platform helps you maintain strict records and automatically validate required skills. You can deploy mandatory training, set expiration dates for certifications, and instantly generate compliance reports when auditors request them.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore Compliance"
+  },
+  {
+    "id": "52",
+    "keywords": [
+      "fast onboarding",
+      "what is fast onboarding",
+      "onboarding new hires",
+      "employee onboarding lms"
+    ],
+    "response": "Fast Onboarding is specifically designed to get new hires productive faster while providing a stellar first impression.\n\nBy utilizing guided journeys, clear milestones, and interactive instructor checkpoints, you can significantly reduce the ramp-up time for new employees and ensure they absorb your company's core values and procedures effectively.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore Onboarding"
+  },
+  {
+    "id": "53",
+    "keywords": [
+      "global accessibility",
+      "what is global accessibility",
+      "remote training",
+      "distributed teams"
+    ],
+    "response": "Global Accessibility ensures you can seamlessly deliver high-quality training to distributed, remote teams anywhere in the world.\n\nBacked by 99.9% reliable learning operations, our modern browser-based experience requires no software installation and provides a consistent, lag-free learning environment regardless of the user's location.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Learn More"
+  },
+  {
+    "id": "54",
+    "keywords": [
+      "lms workflow",
+      "learning workflow",
+      "how does lms work",
+      "stages of learning",
+      "platform flow"
+    ],
+    "response": "**Platform Flow: How the Shnoor platform supports every stage of learning**\n\nFrom admin setup to learner achievement, the platform is built to keep programs organized, consistent, and easy to scale. Designed to keep the learner experience simple while giving administrators strong control, providing consistent workflows for onboarding, enablement, certifications, and long-term capability building.\n\n**Admin control center**\nManage users, programs, reports, approvals, and communication from a single operational dashboard.\n\n**Learning delivery engine**\nOrganize modules, lessons, assignments, and session flows with a clear learner-first experience.\n\n**Certifications and outcomes**\nTurn learning into proof with completion tracking, exam support, and industry-facing credentials.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "View Workflow"
+  },
+  {
+    "id": "55",
+    "keywords": [
+      "admin control center",
+      "learning delivery engine",
+      "lms admin",
+      "how to manage lms"
+    ],
+    "response": "The platform is driven by two core components built for operational visibility:\n\n**Admin Control Center:** Manage users, learning programs, analytical reports, and internal communications from a single, powerful operational dashboard.\n\n**Learning Delivery Engine:** Seamlessly organize modules, lessons, assignments, and session flows while maintaining a clear, friction-free, learner-first experience.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "View Admin Features"
+  },
+  {
+    "id": "56",
+    "keywords": [
+      "why choose shnoor lms",
+      "enterprise first",
+      "outcome driven",
+      "flexible delivery"
+    ],
+    "response": "Shnoor LMS is built to make professional learning feel reliable, modern, and measurable. \n\nWe are **Enterprise-first**, offering professional design language and granular administrative control. We are **Outcome-driven**, ensuring programs map directly to measurable growth rather than just content delivery.\n\nFinally, we offer **Flexible delivery** built for multiple learning models, completely designed for long-term organizational scaling.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Learn About Shnoor LMS"
+  },
+  {
+    "id": "57",
+    "keywords": [
+      "tell me about assessments",
+      "what is assessments portal",
+      "assessments details",
+      "examination portal",
+      "assessments features",
+      "assessment portal",
+      "assessments",
+      "assessment",
+      "secure examination"
+    ],
+    "response": "Our Assessments portal is a highly secure, enterprise-grade examination environment designed specifically for placement drives, recruitment, and professional certifications.\n\nIt features an incredibly intuitive 3-step process for candidates: Register, Take Assessment, and Submit Exam. \n\nThe platform is built around absolute integrity and features:\n• Auto-Assigned & Scheduled Tests\n• Live Webcam Proctoring\n• Strict Fullscreen Enforcement\n• Tab Switch Detection & Warnings\n• Real-time Auto-Save Functionality\n• Encrypted Answer Storage\n• Immediate Submission Receipts\n\nIt guarantees a fair, rigorous evaluation for all candidates while remaining straightforward to use.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "Visit Assessments Portal"
+  },
+  {
+    "id": "58",
+    "keywords": [
+      "how it works",
+      "assessment steps",
+      "how to take exam",
+      "exam process"
+    ],
+    "response": "Taking a placement assessment is completed in three simple steps:\n\n1. **Register**: Sign up securely using your institute details and enrollment information.\n2. **Take Assessment**: Complete the secure, proctored exam assigned for your campus drive directly in your browser.\n3. **Submit Exam**: Securely submit your assessment and instantly receive a completion confirmation.\n\nBefore you start, the system will run a quick check on your webcam and request fullscreen permission to ensure your environment is fully ready.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Instructions"
+  },
+  {
+    "id": "59",
+    "keywords": [
+      "auto assigned tests",
+      "assigned tests",
+      "how to get tests",
+      "find my test"
+    ],
+    "response": "Through the Auto-Assigned Tests feature, exams will automatically appear directly in your candidate dashboard based on your institute or recruitment drive.\n\nYou do not need to manually search for exam links! Your dashboard will clearly display the test name, time limit, number of questions, availability window, and the exact number of attempts remaining.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Dashboard"
+  },
+  {
+    "id": "60",
+    "keywords": [
+      "multiple attempts",
+      "retake exam",
+      "can i retake",
+      "attempts remaining"
+    ],
+    "response": "Yes, depending on the specific exam configuration! Our Multiple Attempts feature allows specific tests to be taken more than once so you can practice and improve your score.\n\nYour dashboard will clearly display 'Attempts Remaining' on each assigned test card so you always know your options before you start.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "Check My Tests"
+  },
+  {
+    "id": "61",
+    "keywords": [
+      "scheduled tests",
+      "availability window",
+      "exam deadline"
+    ],
+    "response": "Scheduled Tests have specific availability windows defined by the administrator. For example, a test might state it is 'Available until Dec 31' or 'Scheduled for Jan 15'.\n\nYou must start and complete the exam within this strict deadline. Make sure to regularly check the deadlines prominently displayed on your active dashboard.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Schedule"
+  },
+  {
+    "id": "62",
+    "keywords": [
+      "secure fullscreen",
+      "fullscreen enforcement",
+      "leave fullscreen",
+      "tab switch detection",
+      "leave tab",
+      "switch tabs"
+    ],
+    "response": "To ensure absolute exam integrity and a fair evaluation for everyone, the portal utilizes Secure Fullscreen enforcement and strict Tab Switch Detection.\n\nThe exam runs entirely in fullscreen mode. If you attempt to switch tabs, open another window, or leave fullscreen, the system will immediately issue a warning. Reaching the maximum Tab Switch Limit (usually 3 warnings) will instantly terminate your exam.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "Read Security Policy"
+  },
+  {
+    "id": "63",
+    "keywords": [
+      "submission receipt",
+      "exam confirmation",
+      "how do i know it submitted"
+    ],
+    "response": "Once you complete and submit your exam, you will instantly receive a verifiable Submission Receipt.\n\nThis provides immediate confirmation that your exam has been successfully and securely recorded in our system. After submission, you can safely return to your dashboard and wait for the result announcement.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "Return to Dashboard"
+  },
+  {
+    "id": "64",
+    "keywords": [
+      "live proctoring",
+      "webcam monitoring",
+      "camera required",
+      "is camera on",
+      "webcam"
+    ],
+    "response": "Yes, our Secure Examination Environment utilizes Live Proctoring to ensure fair evaluation for all candidates.\n\nWebcam monitoring is strictly required. The system automatically takes periodic snapshots during your exam session to verify your identity and ensure no unauthorized assistance is being used.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Proctoring Rules"
+  },
+  {
+    "id": "65",
+    "keywords": [
+      "encrypted answers",
+      "exam security",
+      "are answers safe",
+      "data security"
+    ],
+    "response": "Data security is our absolute top priority. All of your responses are treated as highly sensitive data.\n\nThe Encrypted Answers feature ensures that every single response you make is securely encrypted and stored instantly with precise timestamps.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Security Details"
+  },
+  {
+    "id": "66",
+    "keywords": [
+      "auto submit",
+      "timeout",
+      "time runs out",
+      "timer ends"
+    ],
+    "response": "You will always see a clear Timer Countdown visible on your screen during the exam. \n\nIf the time completely runs out before you finish, the Auto-Submit feature will immediately trigger on timeout. This securely submits all the answers you have completed so far, ensuring you don't lose any credit for your hard work.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "View Exam Details"
+  },
+  {
+    "id": "100",
+    "keywords": [
+      "careers",
+      "jobs",
+      "hiring",
+      "open positions",
+      "work at shnoor",
+      "careers in shnoor",
+      "are there any job openings"
+    ],
+    "response": "We are currently hiring for several Trainee and Internship positions!\n\nOur current openings include:\n• **Software Engineer Trainee - Gen AI**\n• **Software Engineer Trainee - SAP**\n• **Software Engineer Trainee - Application Development**\n• **Software Engineer Trainee - Salesforce Developer**\n\nYou can ask me for details about any of these specific roles, or click below to view the full descriptions.",
+    "route": "/latest-openings",
+    "actionText": "View Latest Openings"
+  },
+  {
+    "id": "101",
+    "keywords": [
+      "recruitment scams",
+      "scam",
+      "money for job",
+      "job fraud",
+      "fake job",
+      "fee for job",
+      "fraudulent",
+      "shnoor email"
+    ],
+    "response": "Integrity and transparency are at the heart of our recruitment process. \n\n**SHNOOR International never charges fees, requests payments, or asks for financial information at any stage of our hiring process.**\n\nTo protect yourself from spam and fraud, ensure all recruitment emails come strictly from an **@shnoor.com** address. Any communication requesting money for job opportunities is a scam and has no connection with our company.",
+    "route": "/recruitment-scams",
+    "actionText": "Read Scam Policy"
+  },
+  {
+    "id": "102",
+    "keywords": [
+      "strategic partners",
+      "clients",
+      "who do you work with",
+      "etihad",
+      "emirates",
+      "cosco",
+      "maersk",
+      "zim",
+      "shnoor partners",
+      "partners"
+    ],
+    "response": "Our Strategic Partners\n\n*\"Building long-term partnerships, one success story at a time.\"*\n\nFrom emerging startups to global enterprises, we work with businesses across industries and geographies. We take absolute pride in earning the trust of major organizations in India, UAE, Bahrain, Qatar, Oman, and Malaysia. \n\nSome of our notable Strategic Partners include:\n• **Etihad**\n• **Emirates**\n• **Cosco**\n• **Zim**\n• **Maersk**",
+    "route": "/services",
+    "actionText": "View Our Partners"
+  },
+  {
+    "id": "110",
+    "keywords": [
+      "cloud",
+      "cloud migration",
+      "aws",
+      "azure",
+      "google cloud",
+      "it solutions",
+      "cloud computing",
+      "cloud services",
+      "cloud service"
+    ],
+    "response": "Here are our core Cloud Services:\n\n**AWS Cloud**\nAt SHNOOR International LLC, we help businesses unlock the full potential of Amazon Web Services (AWS)—the world's most comprehensive and widely adopted cloud platform. Whether you're migrating to the cloud, optimizing existing workloads, or building next-gen applications, our AWS-certified experts deliver secure, scalable, and cost-effective solutions tailored to your business needs.\n\n**Google Cloud**\nAt SHNOOR International LLC, we help businesses leverage the capabilities of Google Cloud Platform (GCP) to achieve agility, scalability, and innovation. Whether you're migrating workloads, building intelligent applications, or optimizing your infrastructure, our Google Cloud experts deliver solutions that are secure, cost-effective, and performance-driven.\n\n**Microsoft Cloud**\nAt SHNOOR International LLC, we help organizations harness the full potential of Microsoft Azure—one of the world's leading cloud platforms. From infrastructure modernization to advanced analytics and AI integration, we design and implement Azure solutions that align with your business goals, ensuring security, efficiency, and growth.",
+    "route": "/services/cloud",
+    "actionText": "View Cloud Services"
+  },
+  {
+    "id": "111",
+    "keywords": [
+      "ai",
+      "artificial intelligence",
+      "data science",
+      "predictive analytics",
+      "machine learning",
+      "automation",
+      "data",
+      "ai services",
+      "ai service"
+    ],
+    "response": "Here are our core Data & AI Services:\n\n**Intelligent Automation With AI & RPA**\nOur intelligent automation solutions go beyond basic task automation—by integrating AI, we enable your systems to learn, adapt, and make smart decisions. From document processing and data entry to complex decision-making and predictive analysis, our AI-powered bots work around the clock to ensure speed, accuracy, and efficiency.\n\n**Machine Learning Model Development**\nFrom concept to deployment, we handle every stage of the ML model lifecycle—including data preparation, feature engineering, model training, testing, and optimization. Whether you need a recommendation engine, fraud detection system, demand forecasting model, or intelligent automation, our experts deliver tailored solutions that meet your specific needs.\n\n**AI Driven Predictive Analysis**\nSHNOOR International LLC utilizes AI and advanced machine learning for predictive analysis. We help businesses stay ahead by forecasting trends, identifying risks, and uncovering new opportunities. Our solutions analyze historical data and patterns to generate highly accurate, actionable forecasts that drive improved decision-making.\n\n**Additional Data & AI Solutions:**\n• **AI Concept & Automation:** Implement automation to streamline processes and enhance operational performance.\n• **Data Strategy:** Craft tailored data strategies that drive business growth and efficiency.\n• **Predictive Modeling:** Leverage predictive analytics to anticipate market trends and customer needs.",
+    "route": "/services/ai",
+    "actionText": "View AI Services"
+  },
+  {
+    "id": "112",
+    "keywords": [
+      "sap",
+      "sap outsourcing",
+      "sap support",
+      "erp",
+      "enterprise resource planning",
+      "network",
+      "sap service"
+    ],
+    "response": "Optimize your enterprise operations with our top-tier SAP outsourcing services.\n\nWe provide end-to-end implementation, flawless integration, and ongoing support to ensure your core systems run smoothly, efficiently, and with minimal downtime.",
+    "route": "/services/network",
+    "actionText": "View SAP & Network Services"
+  },
+  {
+    "id": "113",
+    "keywords": [
+      "consulting",
+      "staffing",
+      "recruitment",
+      "hire developers",
+      "it staff",
+      "consultant",
+      "consulting and staffing services",
+      "staffing services"
+    ],
+    "response": "Here are our core Consulting and Staffing Services:\n\n**IT & Technology Consulting**\nWe bring deep expertise in enterprise systems, cloud solutions, cybersecurity, application development, and emerging technologies to solve complex challenges and unlock new opportunities. From strategy formulation to implementation, our consultants work alongside your team to ensure technology becomes a driver of efficiency, competitiveness, and innovation.\n\n**Temporary & Permanent Staffing**\nOur recruitment specialists leverage industry expertise, advanced screening processes, and a vast talent network to ensure every candidate is a perfect match for your requirements. From IT specialists to business leaders, we source professionals who bring skills, dedication, and cultural fit to your organization.\n\n**Talent Acquisition & Workforce Management**\nAt SHNOOR International LLC, we help organizations attract, hire, and retain the best talent while ensuring efficient workforce management to drive business success. Our solutions are tailored to meet the unique needs of each client, from sourcing top-tier candidates to optimizing team performance.\n\n**Additional Services:**\n• **Workforce Management:** Optimizing workforce efficiency to enhance productivity and performance.\n• **Talent Acquisition:** Finding skilled professionals tailored to your business needs.\n• **Project-Based Staffing:** Flexible staffing solutions for your specific project requirements.",
+    "route": "/services/staffing",
+    "actionText": "View Staffing Solutions"
+  },
+  {
+    "id": "114",
+    "keywords": [
+      "export",
+      "exports",
+      "import",
+      "imports",
+      "global trade",
+      "export management",
+      "cross-border trade",
+      "customs",
+      "shipping"
+    ],
+    "response": "We provide end-to-end export management services to streamline global business operations with absolute trust and transparency. Our core services include:\n\n**Product Sourcing & Procurement**\nWith our deep understanding of global markets and complex supply chains, we offer complete management of your procurement process. This includes everything from identifying and qualifying reliable sources, to negotiating the best terms and ensuring quality and consistency.\n\n**International Shipping & Logistics**\nAt SHNOOR International LLC, we make global trade simple by delivering reliable, efficient, and cost-effective international shipping & logistics solutions. From India to markets across the UAE, Bahrain, Qatar, Oman, Malaysia, and beyond, we ensure your products reach their destination on time and in perfect condition.\n\n**Quality Control & Compliances**\nOur Quality Control & Compliance services ensure every product we source, export, or import meets international standards and client expectations. We work with certified inspection agencies, follow stringent testing procedures, and handle all legal and regulatory documentation for a smooth cross-border trade experience.",
+    "route": "/export",
+    "actionText": "View Export Services"
+  },
+  {
+    "id": "115",
+    "keywords": [
+      "logistics",
+      "logistics management",
+      "supply chain",
+      "freight",
+      "delivery worldwide",
+      "transportation"
+    ],
+    "response": "We deliver highly efficient logistics and supply chain solutions to keep your business moving without interruption.\n\nOur Logistics Services Include:\n• **Dry Container Supply from Mumbai & Mundra Ports**\n• **Cargo Handling, Packing & Securing**\n• **Customs Clearance & Regulatory Documentation**\n• **Multi-Modal Transport Solutions (Sea, Rail & Road)**\n• **Real-Time Tracking & Monitoring**\n• **End-to-End Supply Chain Support**",
+    "route": "/logistics",
+    "actionText": "View Logistics"
+  },
+  {
+    "id": "116",
+    "keywords": [
+      "background verification",
+      "bgv",
+      "credential validation",
+      "screening",
+      "employee verification"
+    ],
+    "response": "Protect your organization with our professional background screening and credential validation services.\n\nWe provide comprehensive background verification tailored for HR professionals, ensuring you always make safe and reliable hiring decisions.",
+    "route": "/services/verification",
+    "actionText": "View Verification"
+  },
+  {
+    "id": "117",
+    "keywords": [
+      "healthcare",
+      "healthcare it",
+      "hospital software",
+      "patient care",
+      "clinic software",
+      "healthcare services"
+    ],
+    "response": "Here are our specialized Healthcare IT Services:\n\n**Healthcare Management Systems**\nOur healthcare management systems go beyond basic digital tools by streamlining clinical and administrative workflows. From patient records and scheduling to billing and care coordination, our solutions improve efficiency, accuracy, and collaboration.\n\n**Secure Data & Compliance Solutions**\nOur secure data and compliance solutions go beyond standard protection by ensuring privacy, integrity, and regulatory compliance. From encrypted data storage to controlled access and audit tracking, our software safeguards sensitive healthcare information.\n\n**Analytics & Decision Support Tools**\nOur analytics and decision support tools exceed conventional reporting by converting healthcare data into actionable insights. Ranging from performance dashboards to predictive analyses, our solutions facilitate well-informed clinical and operational decisions.\n\n**Healthcare Data & AI Solutions**\nTransform healthcare delivery with intelligent data platforms and AI-driven software solutions:\n• **Medical Data Analytics (Clinical Intelligence & Insights):** Transforming healthcare data into actionable insights to support informed clinical and operational decisions.\n• **Intelligent Care Operations:** Streamlining clinical and administrative workflows through intelligent, integrated healthcare software platforms.\n• **Healthcare Data Security & Governance:** Protecting sensitive healthcare information with secure, compliant, and reliable data management systems.",
+    "route": "/services/healthcare",
+    "actionText": "View Healthcare IT"
+  },
+  {
+    "id": "118",
+    "keywords": [
+      "how many pages",
+      "number of pages",
+      "pages does shnoor have",
+      "how many pages does shnoor have"
+    ],
+    "response": "The main Shnoor International website consists of approximately 15 core pages.\n\nThese include our Home, About Us, Careers, and Contact pages, as well as dedicated deep-dive pages for every single one of our primary IT services, ranging from Cloud Migration and AI Solutions to Healthcare IT and Enterprise Staffing.",
+    "route": "/",
+    "actionText": "Explore Website"
+  },
+  {
+    "id": "119",
+    "keywords": [
+      "forgot password",
+      "reset password",
+      "change password",
+      "lost password",
+      "cannot login",
+      "can't log in"
+    ],
+    "response": "If you have forgotten your password, you can easily reset it directly from the login page of your respective platform.\n\nSimply click on the **'Forgot Password'** link, enter your registered email address, and we will immediately send you a secure link to create a brand new password.\n\nIf you still face issues, please contact your company's IT admin or email us at admin@shnoor.com.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "120",
+    "keywords": [
+      "refund policy",
+      "refunds",
+      "money back",
+      "cancellation policy",
+      "cancel account"
+    ],
+    "response": "We operate with a highly transparent, customer-first billing policy.\n\nYou can **cancel your subscription at any time** directly from your billing dashboard with zero hidden cancellation fees. Since our services are billed on a pay-as-you-go or monthly basis, we do not typically offer refunds for partially used months.\n\nHowever, if you experienced a technical issue or billing error, please reach out to our support team and we will gladly make it right.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "121",
+    "keywords": [
+      "payment methods",
+      "how to pay",
+      "credit card",
+      "bank transfer",
+      "accepted payments"
+    ],
+    "response": "We support a wide variety of secure global payment methods to make billing as frictionless as possible.\n\nWe accept all major **Credit and Debit Cards** (Visa, MasterCard, American Express), **PayPal**, and direct **Bank Wire Transfers** for enterprise clients.\n\nAll transactions are processed through highly secure, encrypted payment gateways.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "122",
+    "keywords": [
+      "api",
+      "integrations",
+      "integrate",
+      "third party",
+      "custom software"
+    ],
+    "response": "Absolutely! We understand that our platforms need to seamlessly fit into your existing workflow.\n\nMost of our enterprise solutions (including HRM and InvoiceCloud) offer **Robust API access** and pre-built integrations for popular software suites.\n\nIf you require highly specialized or custom integrations, our dedicated IT Consulting team can build a tailor-made connector specifically for your business.",
+    "route": "/services/cloud",
+    "actionText": "View IT Solutions"
+  },
+  {
+    "id": "123",
+    "keywords": [
+      "data privacy",
+      "gdpr",
+      "is my data safe",
+      "data protection",
+      "privacy policy"
+    ],
+    "response": "Your data security is our absolute highest priority. We employ military-grade encryption and enterprise security protocols across all Shnoor platforms.\n\nWe are fully compliant with global data protection regulations, including **GDPR**. Your sensitive financial, employee, and corporate data is stored on highly secure AWS cloud servers, heavily encrypted both in transit and at rest.\n\nWe will **never** sell your data to third parties.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "124",
+    "keywords": [
+      "mobile app",
+      "iphone app",
+      "android app",
+      "ios app",
+      "download app",
+      "on mobile"
+    ],
+    "response": "Yes! All Shnoor platforms (HRM, LMS, Assessments, and InvoiceCloud) are built using responsive, **Progressive Web App (PWA)** technology.\n\nThis means you get a flawless, app-like experience directly in your mobile browser without needing to download anything from an App Store. The interface automatically adapts perfectly to your phone or tablet screen, allowing you to manage your business on the go.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "125",
+    "keywords": [
+      "upgrade plan",
+      "downgrade plan",
+      "change plan",
+      "subscription plan"
+    ],
+    "response": "Scaling your business operations is incredibly simple with Shnoor. \n\nYou can **Upgrade or Downgrade** your current subscription plan at any time directly from your platform's Admin Dashboard under the 'Billing' section.\n\nUpgrades take effect instantly, unlocking new features immediately, while downgrades will apply at the start of your next billing cycle.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "126",
+    "keywords": [
+      "industries",
+      "who uses shnoor",
+      "who is this for",
+      "target audience"
+    ],
+    "response": "Shnoor International provides solutions for a massive variety of global industries.\n\nWhile we have highly specialized tools for **Healthcare IT**, **Logistics**, and **Enterprise Retail**, our core platforms (HRM, LMS, InvoiceCloud) are universally designed to scale with businesses of any size—from emerging startups to Fortune 500 corporations.",
+    "route": "/services",
+    "actionText": "Explore All Services"
+  },
+  {
+    "id": "127",
+    "keywords": [
+      "tech stack",
+      "technology used",
+      "what is it built on",
+      "framework"
+    ],
+    "response": "We build our platforms utilizing only the most modern, robust, and scalable technology stacks available.\n\nOur applications heavily feature **React** and **Vue.js** for lightning-fast, reactive frontend interfaces, powered by rock-solid **Node.js** and **Laravel** backends. Everything is securely hosted on top-tier cloud infrastructure, primarily leveraging **Amazon Web Services (AWS)**.",
+    "route": "/services/cloud",
+    "actionText": "View Tech Services"
+  },
+  {
+    "id": "128",
+    "keywords": [
+      "languages",
+      "multi language",
+      "arabic",
+      "spanish",
+      "french",
+      "translate"
+    ],
+    "response": "We are a global company, and our platforms are designed for global teams.\n\nOur core products, including the HRM platform, feature built-in **Multi-Language Support**. Users can easily switch the interface to their preferred native language directly from their profile settings, drastically improving usability for international workforces.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "129",
+    "keywords": [
+      "white label",
+      "white-label",
+      "customization",
+      "custom logo",
+      "branding"
+    ],
+    "response": "Yes, we strongly believe your tools should reflect your brand!\n\nOur platforms offer extensive customization capabilities. You can effortlessly upload your **Company Logo**, change brand colors, and generate fully branded documents like Dynamic Letterheads and custom Invoices directly from your dashboard.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "131",
+    "keywords": [
+      "gen ai",
+      "generative ai",
+      "ai trainee",
+      "ai developer",
+      "software engineer trainee - gen ai",
+      "agentic ai",
+      "llm"
+    ],
+    "response": "For the **Software Engineer Trainee - Gen AI** role, we are looking for final-year students or graduates (CS/IT/AI/DS) passionate about cutting-edge AI.\n\nKey Responsibilities:\n• Design applications using Gen AI (OpenAI, Claude, Gemini).\n• Work on Agentic AI systems for enterprise workflows.\n• Build prototypes using LLM APIs, prompt engineering, and vector DBs.",
+    "route": "/apply",
+    "actionText": "Apply for Gen AI"
+  },
+  {
+    "id": "132",
+    "keywords": [
+      "sap trainee",
+      "sap developer",
+      "abap",
+      "sap role",
+      "software engineer trainee - sap",
+      "sap btp"
+    ],
+    "response": "For the **Software Engineer Trainee - SAP** role, we need graduates with a strong programming foundation to build enterprise SAP apps.\n\nKey Responsibilities:\n• Collaborate with functional consultants for technical solutions.\n• Design, develop, and maintain apps using SAP ABAP.\n• Participate in code reviews and performance optimization.",
+    "route": "/apply",
+    "actionText": "Apply for SAP"
+  },
+  {
+    "id": "133",
+    "keywords": [
+      "application development",
+      "web developer",
+      "react developer",
+      "node developer",
+      "frontend trainee",
+      "backend trainee",
+      "software engineer trainee - application development"
+    ],
+    "response": "For the **Software Engineer Trainee - Application Development** role, we are seeking fresh graduates with hands-on web technology experience.\n\nKey Responsibilities:\n• Develop dynamic web apps using React/Angular and .NET/Node.js.\n• Contribute to API design and UI/UX discussions.\n• Work in agile sprints to deliver high-quality solutions.",
+    "route": "/apply",
+    "actionText": "Apply for App Dev"
+  },
+  {
+    "id": "134",
+    "keywords": [
+      "salesforce developer",
+      "salesforce trainee",
+      "apex",
+      "lightning components",
+      "cloud trainee",
+      "software engineer trainee - salesforce developer"
+    ],
+    "response": "For the **Software Engineer Trainee - Salesforce Developer** role, we want graduates passionate about cloud platforms.\n\nKey Responsibilities:\n• Build Salesforce apps using Apex, Visualforce, and Lightning.\n• Configure workflows via Flows, Process Builder, and Validation Rules.\n• Develop REST/SOAP integrations with external systems.",
+    "route": "/apply",
+    "actionText": "Apply for Salesforce"
+  },
+  {
+    "id": "135",
+    "keywords": [
+      "internship stipend",
+      "internship duration",
+      "internship details",
+      "ppo",
+      "placement offer",
+      "internship schedule",
+      "salary",
+      "internship opportunities",
+      "internships in shnoor",
+      "internship highlights"
+    ],
+    "response": "Our Software Engineering Internship is a fantastic way to launch your career!\n\n**Highlights:**\n• **Duration:** 3 Months (Remote)\n• **Schedule:** 5 Days / Week\n• **Stipend:** ₹10,000 - ₹12,000 / Month\n• **PPO Offer:** 6 LPA (Based on performance)\n\nAre you ready to apply?",
+    "route": "/apply",
+    "actionText": "Apply Now"
+  },
+  {
+    "id": "136",
+    "keywords": [
+      "requirements for internship",
+      "must have skills",
+      "internship requirements",
+      "what skills do i need",
+      "basics",
+      "must-have basics",
+      "prerequisites"
+    ],
+    "response": "To qualify for our Trainee and Internship roles, you should have a solid foundation in the following basics:\n\n• OOP Fundamentals\n• Java / Python / C++\n• HTML, CSS & JavaScript\n• RDBMS & SQL Concepts\n• Cloud & CRM Basics\n\nIf you have these skills, we would love to see your application!",
+    "route": "/apply",
+    "actionText": "Apply Now"
+  },
+  {
+    "id": "137",
+    "keywords": ["blog", "blogs", "articles", "news", "insights", "read", "newsletter", "list blogs", "show blogs"],
+    "response": "Here are some of our latest insights and articles:\n\n• <a href='/blog/general-trading-got-easier' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>General Trading Got Easier</a>\n• <a href='/blog/it-consulting-shnoor' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>IT Consulting at SHNOOR</a>\n• <a href='/blog/sap-outsourcing' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>SAP Outsourcing with Shnoor</a>\n• <a href='/blog/sap-mm-reporting' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>Unlock the Power of SAP MM Reporting</a>\n• <a href='/blog/letters-of-credit' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>Handling Letters of Credit</a>\n\nClick on any title to read the full article! If you need information on other topics, just ask.",
+    "route": null,
+    "actionText": null
+  },
+  {
+    "id": "138",
+    "keywords": [
+      "products",
+      "available products",
+      "all products",
+      "list products",
+      "search products",
+      "producks"
+    ],
+    "response": "Here are all of our available products:\n\n• **Morning Harvest Whole Grain Oats** (Bestseller)\n• **Aqua-Pure Moisturizing Hand Wash** (New Arrival)\n• **Plantation Crops Assortment** (Hand-crafted)\n• **Organic Cold-Pressed Coconut Oil** (Best Seller)\n• **Healthy Organic Cereals** (Best Seller)\n• **Mineral Oil (Food Grade)** (Best Seller)\n• **Fresh Taro Root** (Fresh Arrival)\n\nClick the button below to view them in our catalog!",
+    "route": "/import-and-export",
+    "actionText": "View Import & Export"
+  },
+  {
+    "id": "139",
+    "keywords": ["oats", "morning harvest", "whole grain oats", "premium oats", "cereal"],
+    "response": "**Morning Harvest Whole Grain Oats**\n*Premium oats for a healthy breakfast*\n\nExperience the nourishing goodness of Morning Harvest Whole Grain Oats, expertly packed in a convenient resealable pouch to ensure lasting freshness. Perfect for energizing breakfasts or adding hearty nutrition to your favorite recipes, these premium oats are a versatile pantry staple. Enjoy their natural taste and wholesome benefits in every serving. Available in a generous 1kg bag, making it ideal for families and avid oat lovers alike.",
+    "route": "/product/oats",
+    "actionText": "Enquire Now"
+  },
+  {
+    "id": "140",
+    "keywords": ["handwash", "aqua-pure", "aqua pure","moisturizing hand wash", "hand wash", "personal care", "hygiene"],
+    "response": "**Aqua-Pure Moisturizing Hand Wash**\n*Gentle protection for your family*\n\nAqua-Pure Moisturizing Hand Wash combines advanced cleansing with skin-loving nutrients. Its unique formula removes germs while leaving your hands feeling soft, smooth, and hydrated. Infused with a refreshing fragrance, it provides a spa-like experience every time you wash your hands.",
+    "route": "/product/handwash",
+    "actionText": "Enquire Now"
+  },
+  {
+    "id": "141",
+    "keywords": ["plantation", "plantation crops", "assortment", "coffee beans", "spices", "agricultural"],
+    "response": "**Plantation Crops Assortment**\n*Direct from India's finest estates*\n\nDiscover the rich diversity of India's agricultural heritage with our curated Plantation Crops Assortment. From hand-picked coffee beans to aromatic spices, each product is sourced directly from sustainable estates. We ensure the highest quality standards from farm to table.",
+    "route": "/product/plantation",
+    "actionText": "Enquire Now"
+  },
+  {
+    "id": "142",
+    "keywords": ["coconut oil", "organic coconut oil", "cold-pressed", "cooking oil", "hair care", "skin care", "oil"],
+    "response": "**Organic Cold-Pressed Coconut Oil**\n*Pure, natural, and nutrient-rich*\n\nOur Organic Cold-Pressed Coconut Oil is extracted from the finest sun-dried coconuts. Without any chemical processing, it retains all its natural nutrients, medium-chain fatty acids, and distinct aroma. Perfect for cooking, skin care, and hair care.",
+    "route": "/product/coconutoil",
+    "actionText": "Enquire Now"
+  },
+  {
+    "id": "143",
+    "keywords": ["cereals", "healthy organic cereals", "organic cereals", "healthy breakfast", "fiber", "non-gmo"],
+    "response": "**Healthy Organic Cereals**\n*A crunch of health in every bite*\n\nStart your day with a bowl of health. Our Healthy Organic Cereals are made from non-GMO grains, naturally sweetened, and packed with fiber. They are free from artificial preservatives and colors, making them the perfect choice for health-conscious families.",
+    "route": "/product/cereals",
+    "actionText": "Enquire Now"
+  },
+  {
+    "id": "144",
+    "keywords": ["mineral oil", "food grade", "food grade mineral oil", "industrial oil", "lubrication"],
+    "response": "**Mineral Oil (Food Grade)**\n*Safe, pure, and multi-purpose*\n\nOur Food Grade Mineral Oil is highly refined and meets strict international purity standards. It is odorless, tasteless, and safe for contact with food preparation surfaces. Ideal for wood conditioning, machinery lubrication, and industrial applications.",
+    "route": "/product/mineraloil",
+    "actionText": "Enquire Now"
+  },
+  {
+    "id": "145",
+    "keywords": ["taro", "taro root", "fresh taro root", "elephant yam", "root vegetables"],
+    "response": "**Fresh Taro Root**\n*Root vegetables at their freshest*\n\nOur Fresh Taro Root is harvested at peak maturity to ensure the best texture and nutritional value. Rich in fiber, potassium, and vitamins, it is a versatile ingredient for global cuisines. We handle our root vegetables with care to ensure they reach you in perfect condition.",
+    "route": "/product/taro",
+    "actionText": "Enquire Now"
+  },
+  {
+    "id": "146",
+    "keywords": [
+      "lms features",
+      "features of lms",
+      "what are the lms features",
+      "learning management system features"
+    ],
+    "response": "Here are the core features of our LMS platform:\n\n**Structured cohorts**\nRun department-wise, company-wise, or role-wise learning journeys at scale.\n\n**Live instruction**\nDeliver interactive sessions with guided training and real-time learner support.\n\n**Practice labs**\nSupport hands-on implementation so learners can apply concepts immediately.\n\n**Progress tracking**\nMonitor completion, performance, and engagement with admin-friendly reporting.\n\n**Certification paths**\nBundle learning and evaluation into clear outcomes for teams and individuals.\n\n**Compliance readiness**\nMaintain records and validate required skills for regulated or audit-sensitive teams.\n\n**Fast onboarding**\nGet new hires productive faster with guided journeys, milestones, and checkpoints.\n\n**Global accessibility**\nDeliver training to distributed teams with a modern browser-based experience.",
+    "route": "https://lms.shnoor.com",
+    "actionText": "Explore LMS"
+  },
+  {
+    "id": "147",
+    "keywords": [
+      "assessment process",
+      "what to expect",
+      "exam instructions",
+      "assessment portal",
+      "before the exam",
+      "during the exam",
+      "after submission",
+      "system checks",
+      "camera permissions",
+      "navigate freely",
+      "flag questions",
+      "visible timer",
+      "saved automatically",
+      "submit exam",
+      "securely proctored"
+    ],
+    "response": "**What to Expect: The Assessment Process**\nUnderstand the assessment process before you begin.\n\n**1. Before You Start (Preparation)**\n• Read detailed instructions and exam rules.\n• Complete system checks for webcam and fullscreen.\n• Allow camera permission requests.\n• Enter fullscreen mode to begin.\n\n**2. During Your Exam**\n• Answer multiple-choice questions at your pace.\n• Navigate freely and flag questions for review.\n• Keep track with a visible timer countdown.\n• Answers save automatically.\n\n**3. After Submission (Completion)**\n• Submit your exam securely.\n• Receive submission confirmation.\n• Return to your dashboard and wait for the result announcement.",
+    "route": "https://assessments.shnoor.com",
+    "actionText": "Go to Assessments"
+  },
+  {
+    "id": "148",
+    "keywords": [
+      "invoice features",
+      "billing tools",
+      "manage invoicing",
+      "invoicecloud features",
+      "smart invoice creation",
+      "under 30 seconds",
+      "intelligent dashboard",
+      "payment reminders",
+      "export invoices",
+      "white-label",
+      "team collaboration"
+    ],
+    "response": "**Everything You Need to Manage Invoicing Smarter**\nFrom creating invoices to tracking payments, Shnoor brings all your billing tools into one clean dashboard. Simplify your workflow and focus on growing your business.\n\n• **Smart Invoice Creation:** Convert raw text, emails, or receipts into professional invoices in seconds. Generate invoices in under 30 seconds with optimized workflow and intelligent autofill suggestions.\n• **Intelligent Dashboard:** Understand your business at a glance. Track total revenue, pending payments, and overdue invoices from one centralized place.\n• **Smart Payment Reminders:** Send professional reminder emails with one click. Stay consistent, polite, and effective without manual follow-ups.\n• **Effortless Organization:** Keep all invoices organized. Monitor their status, track payments, and manage your billing workflow effortlessly.",
+    "route": "https://www.invoicecloud.in",
+    "actionText": "Explore InvoiceCloud"
+  },
+  {
+    "id": "149",
+    "keywords": [
+      "invoice pricing plans",
+      "invoice pricing",
+      "how much is invoicecloud",
+      "invoice cost",
+      "invoice plans",
+      "billing plans",
+      "free plan",
+      "professional pricing plan",
+      "business plan",
+      "api access"
+    ],
+    "response": "**Pricing Plans: Simple Plans. Clear Value.**\nChoose the plan that fits your business. Start free and upgrade as you grow. No hidden fees, no surprises. (Save 20% on Yearly billing!)\n\n**Free (₹0/forever)**\n*Perfect for getting started with professional invoicing*\n• Up to 10 invoices per month\n• Basic invoice templates\n• Email support\n• Payment reminders\n• Basic reporting\n\n**Professional (₹19/month)**\n*Best for growing businesses*\n• Unlimited invoices\n• Advanced invoice templates\n• Priority email support\n• Smart payment reminders\n• Custom branding\n• Team collaboration (5 Users)\n• Export to PDF & Excel\n\n**Business (₹49/month)**\n*For established businesses*\n• Everything in Professional\n• Custom invoice templates\n• 24/7 phone support\n• Automated payment reminders\n• Advanced reporting & analytics\n• White-label branding\n• Unlimited team members\n• Full API access to PDF & Excel",
+    "route": "https://www.invoicecloud.in",
+    "actionText": "Start Free Trial"
+  },
+  {
+    "id": "150",
+    "keywords": [
+      "one click payroll",
+      "payroll",
+      "salary slips",
+      "how does payroll work"
+    ],
+    "response": "**One Click Payroll & Salary Slips**\nOur HRM platform features a powerful 'One Click Payroll' system. It automatically calculates salaries based on attendance, shifts, and leaves, allowing you to generate and distribute professional salary slips to all employees instantly with a single click.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "151",
+    "keywords": [
+      "attendance",
+      "leave management",
+      "track attendance",
+      "leaves"
+    ],
+    "response": "**Attendance & Leave Management**\nEmployees can easily log their attendance and apply for leaves directly through their dashboard. Managers get complete visibility into attendance logs and can approve or reject leave requests with automated tracking of leave balances.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "152",
+    "keywords": [
+      "shift management",
+      "track employee shifts",
+      "shifts",
+      "holiday tracking"
+    ],
+    "response": "**Shifts & Holiday Tracking**\nYes, you can easily track and manage employee shifts! The platform allows you to create custom shift schedules, assign them to specific employees or departments, and manage company-wide holiday calendars efficiently.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "153",
+    "keywords": [
+      "appreciations",
+      "awards",
+      "employee awards"
+    ],
+    "response": "**Appreciations & Awards**\nBoost employee morale with our built-in Appreciations & Awards module. You can recognize top performers, celebrate work anniversaries, and issue digital awards that appear on the employee's dashboard.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "154",
+    "keywords": [
+      "multi-location asset",
+      "asset management",
+      "company assets"
+    ],
+    "response": "**Multi-location Asset Management**\nEasily keep track of company equipment (laptops, phones, etc.) assigned to employees across different branches. The asset management module tracks serial numbers, assignment dates, and return statuses.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "155",
+    "keywords": [
+      "offboarding",
+      "roles and permissions",
+      "employee exit"
+    ],
+    "response": "**Roles, Permissions & Offboarding**\nMaintain strict control over who can access what with granular roles and permissions. When an employee leaves, the structured offboarding process ensures all assets are returned and access is safely revoked.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "156",
+    "keywords": [
+      "expenses",
+      "currencies",
+      "currency management"
+    ],
+    "response": "**Accounting, Expenses & Currencies**\nTrack internal company expenses and employee reimbursement requests easily. The system also supports multi-currency management, making it perfect for global teams.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "157",
+    "keywords": [
+      "company policy",
+      "news",
+      "survey forms"
+    ],
+    "response": "**Company Policy, News & Survey Forms**\nKeep your entire workforce informed by publishing company news and policy updates directly to their dashboard. You can also create and distribute internal survey forms to gather employee feedback.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "158",
+    "keywords": [
+      "increment",
+      "promotion management",
+      "employee promotion"
+    ],
+    "response": "**Increment & Promotion Management**\nManage employee growth seamlessly. The platform allows HR to track performance milestones, formally process role promotions, and record salary increments all within the employee's permanent record.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
+  },
+  {
+    "id": "159",
+    "keywords": [
+      "secure cloud environment",
+      "safe",
+      "security",
+      "hr security"
+    ],
+    "response": "**Safe & Secure Cloud Environment**\nWe take data security very seriously. The entire HRM platform operates in a highly secure, encrypted cloud environment to ensure that sensitive employee data and payroll information is always protected.",
+    "route": "https://hrm.shnoor.com",
+    "actionText": "View HRM Platform"
   }
 ]

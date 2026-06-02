@@ -12,12 +12,12 @@ const AdminPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    const stored = localStorage.getItem('shnoor_chatbot_kb_v12');
+    const stored = localStorage.getItem('shnoor_chatbot_kb_v47');
     if (stored) {
       setKnowledgeBase(JSON.parse(stored));
     } else {
       setKnowledgeBase(INITIAL_KNOWLEDGE_BASE);
-      localStorage.setItem('shnoor_chatbot_kb_v12', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
+      localStorage.setItem('shnoor_chatbot_kb_v47', JSON.stringify(INITIAL_KNOWLEDGE_BASE));
     }
     const storedUnanswered = localStorage.getItem('shnoor_unanswered');
     if (storedUnanswered) {
@@ -53,7 +53,7 @@ const AdminPage = () => {
   }, []);
 
   const saveToStorage = (newKb) => {
-    localStorage.setItem('shnoor_chatbot_kb_v12', JSON.stringify(newKb));
+    localStorage.setItem('shnoor_chatbot_kb_v47', JSON.stringify(newKb));
     setKnowledgeBase(newKb);
   };
 
