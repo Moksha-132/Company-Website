@@ -243,7 +243,7 @@ const ImportExportPage = () => {
                     </div>
 
                     {/* Content Area */}
-                    <div>
+                    <div style={{ minWidth: 0 }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }} className="grid-responsive">
                             <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: '#0f172a' }}>All products</h2>
                             <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }} className="grid-responsive">
