@@ -10,6 +10,7 @@ const ProductDetailPage = () => {
     const { id } = useParams();
     const { addToCart } = useAppContext();
     const [product, setProduct] = React.useState(null);
+    const [products, setProducts] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
@@ -18,6 +19,12 @@ const ProductDetailPage = () => {
             if (data) {
                 setProduct(data);
             }
+            
+            const { data: allProducts } = await supabase.from('products').select('*');
+            if (allProducts) {
+                setProducts(allProducts);
+            }
+            
             setLoading(false);
         };
         fetchProduct();
