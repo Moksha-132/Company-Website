@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, LogOut, UserCircle, Settings, ShoppingBag, FileText } from 'lucide-react';
+import { useAppContext } from '../AppContext';
 
 const Navbar = () => {
+    const { user, logout } = useAppContext();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,7 +35,6 @@ const Navbar = () => {
         { name: 'Logistics Management', href: '/logistics' },
         { name: 'Careers', href: '/careers' },
         { name: 'Export Management', href: '/export' },
-        { name: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -117,7 +119,55 @@ const Navbar = () => {
                             )}
                         </div>
                     ))}
-                    <Link to="/contact" className="btn-blue" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '12px', fontWeight: '700' }}>Get in Touch</Link>
+                    {user ? (
+                        <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                            <div 
+                                style={{ position: 'relative' }} 
+                                onMouseEnter={() => setProfileDropdownOpen(true)}
+                                onMouseLeave={() => setProfileDropdownOpen(false)}
+                            >
+                                <button style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: 'var(--secondary)' }}>
+                                    <UserCircle size={32} strokeWidth={1.5} />
+                                </button>
+                                {profileDropdownOpen && (
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '100%',
+                                        right: 0,
+                                        width: '200px',
+                                        background: '#ffffff',
+                                        borderRadius: '12px',
+                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                        padding: '10px',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        gap: '5px',
+                                        zIndex: 1000
+                                    }}>
+                                        <Link to="/user-requests" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 15px', borderRadius: '8px', color: 'var(--secondary)', textDecoration: 'none', fontWeight: '600' }} onMouseEnter={(e) => e.target.style.background = '#f8fafc'} onMouseLeave={(e) => e.target.style.background = 'transparent'}>
+                                            <ShoppingBag size={18} /> My Orders
+                                        </Link>
+                                        <Link to="/receipts" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 15px', borderRadius: '8px', color: 'var(--secondary)', textDecoration: 'none', fontWeight: '600' }} onMouseEnter={(e) => e.target.style.background = '#f8fafc'} onMouseLeave={(e) => e.target.style.background = 'transparent'}>
+                                            <FileText size={18} /> My Receipts
+                                        </Link>
+                                        <Link to="/settings" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 15px', borderRadius: '8px', color: 'var(--secondary)', textDecoration: 'none', fontWeight: '600' }} onMouseEnter={(e) => e.target.style.background = '#f8fafc'} onMouseLeave={(e) => e.target.style.background = 'transparent'}>
+                                            <Settings size={18} /> Profile Settings
+                                        </Link>
+                                        <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0', margin: '5px 0' }} />
+                                        <button onClick={logout} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 15px', borderRadius: '8px', color: '#ef4444', background: 'none', border: 'none', cursor: 'pointer', fontWeight: '600', width: '100%', textAlign: 'left' }} onMouseEnter={(e) => e.target.style.background = '#fef2f2'} onMouseLeave={(e) => e.target.style.background = 'transparent'}>
+                                            <LogOut size={18} /> Logout
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                            <Link to="/contact" className="btn-blue" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '12px', fontWeight: '700' }}>Get in Touch</Link>
+                        </div>
+                    ) : (
+                        <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                            <Link to="/login" style={{ fontWeight: '700', color: 'var(--secondary)' }}>Login / Sign Up</Link>
+                            <Link to="/contact" className="btn-blue" style={{ padding: '12px 28px', fontSize: '0.95rem', borderRadius: '12px', fontWeight: '700' }}>Get in Touch</Link>
+                        </div>
+                    )}
                 </div>
 
                 {/* Mobile Toggle */}
@@ -168,6 +218,34 @@ const Navbar = () => {
                             )}
                         </React.Fragment>
                     ))}
+                    <hr style={{ border: 'none', borderTop: '1px solid var(--border)', margin: '10px 0' }} />
+                    {user ? (
+                        <div style={{ padding: '15px', background: '#f8fafc', borderRadius: '12px', marginTop: '10px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
+                                <UserCircle size={32} color="var(--primary)" />
+                                <span style={{ fontWeight: '700', color: 'var(--primary)', fontSize: '1.1rem' }}>{user.username || 'My Account'}</span>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                                <Link to="/user-requests" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--secondary)', fontWeight: '600', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <ShoppingBag size={20} /> My Orders
+                                </Link>
+                                <Link to="/receipts" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--secondary)', fontWeight: '600', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <FileText size={20} /> My Receipts
+                                </Link>
+                                <Link to="/settings" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--secondary)', fontWeight: '600', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <Settings size={20} /> Profile Settings
+                                </Link>
+                                <hr style={{ border: 'none', borderTop: '1px solid #e2e8f0' }} />
+                                <button onClick={() => { logout(); setMobileMenuOpen(false); }} style={{ background: 'none', border: 'none', textAlign: 'left', padding: 0, cursor: 'pointer', color: '#ef4444', fontWeight: '700', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                    <LogOut size={20} /> Logout
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
+                        <Link to="/login" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--primary)', fontWeight: '800', fontSize: '1.2rem' }}>
+                            Login / Sign Up
+                        </Link>
+                    )}
                 </div>
             )}
 

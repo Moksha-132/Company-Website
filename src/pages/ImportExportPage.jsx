@@ -1,96 +1,134 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Search, ChevronDown, Package, ShieldCheck, Zap, ArrowRight, Star } from 'lucide-react';
+import { Search, ChevronDown, Package, ShieldCheck, Zap, ArrowRight, Star, ShoppingCart } from 'lucide-react';
+import { useAppContext } from '../AppContext';
+
+import { supabase } from '../supabase';
+
+export const INITIAL_PRODUCTS = [
+    {
+        id: "oats",
+        name: "Morning Harvest Whole Grain Oats",
+        tagline: "Premium oats for a healthy breakfast",
+        description: "Experience the nourishing goodness of Morning Harvest Whole Grain Oats, expertly packed in a convenient resealable pouch to ensure lasting freshness. Perfect for energizing breakfasts or adding hearty nutrition to your favorite recipes, these premium oats are a versatile pantry staple. Enjoy their natural taste and wholesome benefits in every serving. Available in a generous 1kg bag, making it ideal for families and avid oat lovers alike.",
+        badge: "Bestseller",
+        image: "/oats.png",
+        category: "Cereals",
+        footerText: "FMCG PRODUCTS - A WIDE RANGE OF ESSENTIAL CONSUMER GOODS MEETING GLOBAL STANDARDS",
+        price: 15.99
+    },
+    {
+        id: "handwash",
+        name: "Aqua-Pure Moisturizing Hand Wash",
+        tagline: "Gentle protection for your family",
+        description: "Aqua-Pure Moisturizing Hand Wash combines advanced cleansing with skin-loving nutrients. Its unique formula removes germs while leaving your hands feeling soft, smooth, and hydrated. Infused with a refreshing fragrance, it provides a spa-like experience every time you wash your hands.",
+        badge: "new arrival",
+        image: "/handwash.png",
+        category: "Personal Care",
+        footerText: "PERSONAL CARE - HIGH-QUALITY HYGIENE SOLUTIONS FOR MODERN HOMES",
+        price: 8.99
+    },
+    {
+        id: "plantation",
+        name: "Plantation Crops Assortment",
+        tagline: "Direct from India's finest estates",
+        description: "Discover the rich diversity of India's agricultural heritage with our curated Plantation Crops Assortment. From hand-picked coffee beans to aromatic spices, each product is sourced directly from sustainable estates. We ensure the highest quality standards from farm to table.",
+        badge: "hand-crafted",
+        image: "/plantation.png",
+        category: "Plantation Crops",
+        footerText: "PLANTATION CROPS - SUSTAINABLY SOURCED FROM PREMIUM INDIAN ESTATES",
+        price: 49.99
+    },
+    {
+        id: "coconutoil",
+        name: "Organic Cold-Pressed Coconut Oil",
+        tagline: "Pure, natural, and nutrient-rich",
+        description: "Our Organic Cold-Pressed Coconut Oil is extracted from the finest sun-dried coconuts. Without any chemical processing, it retains all its natural nutrients, medium-chain fatty acids, and distinct aroma. Perfect for cooking, skin care, and hair care.",
+        badge: "best seller",
+        image: "/coconutoil.png",
+        category: "Oil",
+        footerText: "ORGANIC OILS - 100% PURE AND COLD-PRESSED FOR MAXIMUM NUTRITION",
+        price: 24.50
+    },
+    {
+        id: "cereals",
+        name: "Healthy Organic Cereals",
+        tagline: "A crunch of health in every bite",
+        description: "Start your day with a bowl of health. Our Healthy Organic Cereals are made from non-GMO grains, naturally sweetened, and packed with fiber. They are free from artificial preservatives and colors, making them the perfect choice for health-conscious families.",
+        badge: "Best Seller",
+        image: "/cereals.png",
+        category: "Cereals",
+        footerText: "CEREAL PRODUCTS - NUTRITIOUS GRAINS SOURCED FROM ORGANIC FARMS",
+        price: 18.25
+    },
+    {
+        id: "mineraloil",
+        name: "Mineral Oil (Food Grade)",
+        tagline: "Safe, pure, and multi-purpose",
+        description: "Our Food Grade Mineral Oil is highly refined and meets strict international purity standards. It is odorless, tasteless, and safe for contact with food preparation surfaces. Ideal for wood conditioning, machinery lubrication, and industrial applications.",
+        badge: "Best Seller",
+        image: "/mineraloil.png",
+        category: "Oil",
+        footerText: "INDUSTRIAL OILS - CERTIFIED FOOD-GRADE SOLUTIONS FOR MULTIPLE INDUSTRIES",
+        price: 32.00
+    },
+    {
+        id: "taro",
+        name: "Fresh Taro Root",
+        tagline: "Root vegetables at their freshest",
+        description: "Our Fresh Taro Root is harvested at peak maturity to ensure the best texture and nutritional value. Rich in fiber, potassium, and vitamins, it is a versatile ingredient for global cuisines. We handle our root vegetables with care to ensure they reach you in perfect condition.",
+        badge: "Fresh Arrival",
+        image: "/taro root.png",
+        category: "Elephant Yam",
+        footerText: "VEGETABLE EXPORTS - FARM-FRESH ROOT CROPS FROM PREMIUM SOURCES",
+        price: 12.50
+    }
+];
 
 const ImportExportPage = () => {
     const [activeCategory, setActiveCategory] = useState('All products');
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { addToCart } = useAppContext();
     const itemsPerPage = 3;
+
+    React.useEffect(() => {
+        const fetchProducts = async () => {
+            const { data, error } = await supabase.from('products').select('*');
+            if (data && data.length > 0) {
+                setProducts(data);
+                setLoading(false);
+            } else {
+                // Auto-seed if empty
+                await supabase.from('products').insert(INITIAL_PRODUCTS);
+                setProducts(INITIAL_PRODUCTS);
+                setLoading(false);
+            }
+        };
+        fetchProducts();
+
+        const channel = supabase.channel('public_products')
+            .on('postgres_changes', { event: '*', schema: 'public', table: 'products' }, () => {
+                supabase.from('products').select('*').then(({ data }) => {
+                    if (data) setProducts(data);
+                });
+            }).subscribe();
+            
+        return () => supabase.removeChannel(channel);
+    }, []);
 
     const categories = [
         'All products', 'Cereals', 'Coconut Delights', 'Elephant Yam', 
         'FMCG Products', 'Oil', 'Personal Care', 'Plantation Crops'
     ];
 
-    const products = [
-        {
-            id: "oats",
-            name: "Morning Harvest Whole Grain Oats",
-            tagline: "Premium oats for a healthy breakfast",
-            description: "Experience the nourishing goodness of Morning Harvest Whole Grain Oats, expertly packed in a convenient resealable pouch to ensure lasting freshness. Perfect for energizing breakfasts or adding hearty nutrition to your favorite recipes, these premium oats are a versatile pantry staple. Enjoy their natural taste and wholesome benefits in every serving. Available in a generous 1kg bag, making it ideal for families and avid oat lovers alike.",
-            badge: "Bestseller",
-            image: "/oats.png",
-            category: "Cereals",
-            footerText: "FMCG PRODUCTS - A WIDE RANGE OF ESSENTIAL CONSUMER GOODS MEETING GLOBAL STANDARDS"
-        },
-        {
-            id: "handwash",
-            name: "Aqua-Pure Moisturizing Hand Wash",
-            tagline: "Gentle protection for your family",
-            description: "Aqua-Pure Moisturizing Hand Wash combines advanced cleansing with skin-loving nutrients. Its unique formula removes germs while leaving your hands feeling soft, smooth, and hydrated. Infused with a refreshing fragrance, it provides a spa-like experience every time you wash your hands.",
-            badge: "new arrival",
-            image: "/handwash.png",
-            category: "Personal Care",
-            footerText: "PERSONAL CARE - HIGH-QUALITY HYGIENE SOLUTIONS FOR MODERN HOMES"
-        },
-        {
-            id: "plantation",
-            name: "Plantation Crops Assortment",
-            tagline: "Direct from India's finest estates",
-            description: "Discover the rich diversity of India's agricultural heritage with our curated Plantation Crops Assortment. From hand-picked coffee beans to aromatic spices, each product is sourced directly from sustainable estates. We ensure the highest quality standards from farm to table.",
-            badge: "hand-crafted",
-            image: "/plantation.png",
-            category: "Plantation Crops",
-            footerText: "PLANTATION CROPS - SUSTAINABLY SOURCED FROM PREMIUM INDIAN ESTATES"
-        },
-        {
-            id: "coconutoil",
-            name: "Organic Cold-Pressed Coconut Oil",
-            tagline: "Pure, natural, and nutrient-rich",
-            description: "Our Organic Cold-Pressed Coconut Oil is extracted from the finest sun-dried coconuts. Without any chemical processing, it retains all its natural nutrients, medium-chain fatty acids, and distinct aroma. Perfect for cooking, skin care, and hair care.",
-            badge: "best seller",
-            image: "/coconutoil.png",
-            category: "Oil",
-            footerText: "ORGANIC OILS - 100% PURE AND COLD-PRESSED FOR MAXIMUM NUTRITION"
-        },
-        {
-            id: "cereals",
-            name: "Healthy Organic Cereals",
-            tagline: "A crunch of health in every bite",
-            description: "Start your day with a bowl of health. Our Healthy Organic Cereals are made from non-GMO grains, naturally sweetened, and packed with fiber. They are free from artificial preservatives and colors, making them the perfect choice for health-conscious families.",
-            badge: "Best Seller",
-            image: "/cereals.png",
-            category: "Cereals",
-            footerText: "CEREAL PRODUCTS - NUTRITIOUS GRAINS SOURCED FROM ORGANIC FARMS"
-        },
-        {
-            id: "mineraloil",
-            name: "Mineral Oil (Food Grade)",
-            tagline: "Safe, pure, and multi-purpose",
-            description: "Our Food Grade Mineral Oil is highly refined and meets strict international purity standards. It is odorless, tasteless, and safe for contact with food preparation surfaces. Ideal for wood conditioning, machinery lubrication, and industrial applications.",
-            badge: "Best Seller",
-            image: "/mineraloil.png",
-            category: "Oil",
-            footerText: "INDUSTRIAL OILS - CERTIFIED FOOD-GRADE SOLUTIONS FOR MULTIPLE INDUSTRIES"
-        },
-        {
-            id: "taro",
-            name: "Fresh Taro Root",
-            tagline: "Root vegetables at their freshest",
-            description: "Our Fresh Taro Root is harvested at peak maturity to ensure the best texture and nutritional value. Rich in fiber, potassium, and vitamins, it is a versatile ingredient for global cuisines. We handle our root vegetables with care to ensure they reach you in perfect condition.",
-            badge: "Fresh Arrival",
-            image: "/taro root.png",
-            category: "Elephant Yam",
-            footerText: "VEGETABLE EXPORTS - FARM-FRESH ROOT CROPS FROM PREMIUM SOURCES"
-        }
-    ];
-
     const filteredProducts = products.filter(p => {
         const matchesCategory = activeCategory === 'All products' || p.category === activeCategory;
-        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                             p.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesSearch = p.name?.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                             p.tagline?.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
     });
 
@@ -255,7 +293,10 @@ const ImportExportPage = () => {
                                         </span>
                                     </div>
                                     <div style={{ padding: '25px' }}>
-                                        <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', marginBottom: '15px', minHeight: '3rem' }}>{product.name}</h3>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', minHeight: '3rem', marginBottom: '15px' }}>
+                                            <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#0f172a', margin: 0 }}>{product.name}</h3>
+                                            <span style={{ fontSize: '1.2rem', fontWeight: '800', color: '#f59e0b' }}>${product.price}</span>
+                                        </div>
                                         <Link 
                                             to={`/product/${product.id}`}
                                             style={{ 
@@ -276,6 +317,28 @@ const ImportExportPage = () => {
                                         >
                                             View Details
                                         </Link>
+                                        <button 
+                                            onClick={() => addToCart(product)}
+                                            style={{ 
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                gap: '10px',
+                                                width: '100%', 
+                                                padding: '12px', 
+                                                background: '#f59e0b', 
+                                                border: 'none', 
+                                                borderRadius: '8px', 
+                                                fontWeight: '700', 
+                                                color: '#fff',
+                                                cursor: 'pointer',
+                                                textAlign: 'center',
+                                                transition: '0.3s',
+                                                marginTop: '10px'
+                                            }}
+                                        >
+                                            <ShoppingCart size={18} /> Add to Cart
+                                        </button>
                                     </div>
                                 </motion.div>
                             ))}

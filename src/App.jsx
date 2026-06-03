@@ -1,5 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { AppProvider } from './AppContext';
+import CartWidget from './components/CartWidget';
 import Layout from './components/Layout';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -21,8 +23,15 @@ const RecruitmentScamsPage = lazy(() => import('./pages/RecruitmentScamsPage'));
 const JobOpeningsPage = lazy(() => import('./pages/JobOpeningsPage'));
 const ApplicationFormPage = lazy(() => import('./pages/ApplicationFormPage'));
 const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage'));
+const CheckoutPage = lazy(() => import('./pages/CheckoutPage'));
+const ReceiptPage = lazy(() => import('./pages/ReceiptPage'));
+const UserRequestsPage = lazy(() => import('./pages/UserRequestsPage'));
 const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
 const AdminPage = lazy(() => import('./pages/AdminPage'));
+const LoginPage = lazy(() => import('./pages/LoginPage'));
+const SignupPage = lazy(() => import('./pages/SignupPage'));
+const ProfileSettingsPage = lazy(() => import('./pages/ProfileSettingsPage'));
+const MyReceiptsPage = lazy(() => import('./pages/MyReceiptsPage'));
 
 import { Cloud, Globe, Database, Users, ShieldCheck, Network, HeartPulse } from 'lucide-react';
 const ScrollToTop = () => {
@@ -73,10 +82,12 @@ const serviceData = {
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Layout>
-        <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', width: '100%' }}>Loading...</div>}>
+    <AppProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <CartWidget />
+        <Layout>
+          <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', width: '100%' }}>Loading...</div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -99,14 +110,22 @@ function App() {
             <Route path="/latest-openings" element={<JobOpeningsPage />} />
             <Route path="/apply" element={<ApplicationFormPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
+            <Route path="/checkout/:orderId" element={<CheckoutPage />} />
+            <Route path="/receipt/:orderId" element={<ReceiptPage />} />
+            <Route path="/user-requests" element={<UserRequestsPage />} />
+            <Route path="/receipts" element={<MyReceiptsPage />} />
             <Route path="/blog/:slug" element={<BlogDetailPage />} />
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/settings" element={<ProfileSettingsPage />} />
+            <Route path="/requests" element={<Navigate to="/user-requests" replace />} />
 
           </Routes>
         </Suspense>
       </Layout>
     </BrowserRouter>
+    </AppProvider>
   );
 }
-
 export default App;

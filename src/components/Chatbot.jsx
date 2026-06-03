@@ -2,8 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { MessageSquare, X, Send, Bot, User, ArrowRight } from 'lucide-react';
 import INITIAL_KNOWLEDGE_BASE from '../data/chatbotKnowledgeBase.json';
-import { db } from '../firebase';
-import { collection, onSnapshot, setDoc, doc, getDocs } from 'firebase/firestore';
+import { supabase } from '../supabase';
 import './Chatbot.css';
 
 const getLocalAIResponse = async (input, currentMode, knowledgeBase) => {
@@ -67,21 +66,24 @@ const getLocalAIResponse = async (input, currentMode, knowledgeBase) => {
   }
 
   try {
-    const querySnapshot = await getDocs(collection(db, "unanswered_queries"));
+    const { data } = await supabase.from('unanswered_queries').select('*');
     let exists = false;
-    querySnapshot.forEach((docSnap) => {
-      if (docSnap.data().query.toLowerCase() === input.toLowerCase()) {
-        exists = true;
+    if (data) {
+      for (const row of data) {
+        if (row.query.toLowerCase() === input.toLowerCase()) {
+          exists = true;
+          break;
+        }
       }
-    });
+    }
 
     if (!exists) {
       const newId = Date.now().toString();
-      await setDoc(doc(db, "unanswered_queries", newId), {
+      await supabase.from('unanswered_queries').insert([{
         id: newId,
         query: input,
-        date: new Date().toISOString()
-      });
+        timestamp: new Date().toISOString()
+      }]);
     }
   } catch (e) {
     console.error("Could not save unanswered query", e);
@@ -124,11 +126,25 @@ const Chatbot = () => {
   }, [messages, isOpen]);
 
   useEffect(() => {
-    const kbRef = collection(db, 'knowledge_base');
-    const unsubscribe = onSnapshot(kbRef, (snapshot) => {
-      if (!snapshot.empty) {
-        const newKb = snapshot.docs.map(doc => doc.data());
-        setKnowledgeBase(newKb);
+    supabase.from('knowledge_base').select('*').then(({ data }) => {
+      if (data && data.length > 0) {
+        setKnowledgeBase(data.map(item => ({
+          ...item,
+          actionText: item.actiontext || item.actionText
+        })));
+      }
+    });
+
+    const subscription = supabase
+      .channel(`chatbot_kb_${Date.now()}`)
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'knowledge_base' }, payload => {
+        supabase.from('knowledge_base').select('*').then(({ data }) => {
+          if (data && data.length > 0) {
+            const formattedData = data.map(item => ({
+              ...item,
+              actionText: item.actiontext || item.actionText
+            }));
+            setKnowledgeBase(formattedData);
 
         if (pendingQueries.length > 0) {
           const stillPending = [];
@@ -172,14 +188,12 @@ const Chatbot = () => {
             setPendingQueries(stillPending);
           }
         }
-      } else {
-        INITIAL_KNOWLEDGE_BASE.forEach(async (entry) => {
-          await setDoc(doc(db, 'knowledge_base', entry.id), entry);
-        });
-      }
-    });
+        }
+      });
+    })
+    .subscribe();
 
-    return () => unsubscribe();
+    return () => supabase.removeChannel(subscription);
   }, [pendingQueries]);
 
   const sendQuery = async (text) => {
