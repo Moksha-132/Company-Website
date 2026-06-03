@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { supabase } from './supabase';
-import { collection, setDoc, doc } from 'firebase/firestore';
 
 const AppContext = createContext();
 
