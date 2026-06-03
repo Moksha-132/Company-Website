@@ -132,14 +132,8 @@ const ImportExportPage = () => {
         return matchesCategory && matchesSearch;
     });
 
-    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
-
     const handleCategoryChange = (cat) => {
         setActiveCategory(cat);
-        setCurrentPage(1);
     };
 
     return (
@@ -265,32 +259,61 @@ const ImportExportPage = () => {
 
                         <p style={{ color: '#94a3b8', marginBottom: '30px' }}>{filteredProducts.length} products</p>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', minHeight: '600px' }} className="product-grid-responsive">
-                            {currentItems.map((product, i) => (
+                        <div 
+                            style={{ 
+                                display: 'flex', 
+                                gap: '30px', 
+                                overflowX: 'auto', 
+                                paddingBottom: '30px',
+                                scrollSnapType: 'x mandatory',
+                                scrollbarWidth: 'none', // Firefox
+                                msOverflowStyle: 'none', // IE/Edge
+                                WebkitOverflowScrolling: 'touch'
+                            }} 
+                            className="horizontal-scroll-container"
+                        >
+                            {filteredProducts.map((product, i) => (
                                 <motion.div 
                                     key={i}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
-                                    style={{ border: '1px solid #f1f5f9', borderRadius: '15px', overflow: 'hidden', transition: '0.3s' }}
+                                    style={{ 
+                                        minWidth: '350px',
+                                        maxWidth: '350px',
+                                        flex: '0 0 auto',
+                                        scrollSnapAlign: 'start',
+                                        border: '1px solid #f1f5f9', 
+                                        borderRadius: '20px', 
+                                        overflow: 'hidden', 
+                                        transition: '0.4s',
+                                        backgroundColor: '#fff',
+                                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)'
+                                    }}
                                     className="product-card"
                                 >
                                     <div style={{ position: 'relative', overflow: 'hidden' }}>
                                         <img src={product.image} alt={product.name} style={{ width: '100%', height: '300px', objectFit: 'cover', transition: '0.5s' }} className="product-img" />
-                                        <span style={{ 
-                                            position: 'absolute', 
-                                            top: '15px', 
-                                            left: '15px', 
-                                            background: '#0f172a', 
-                                            color: '#fff', 
-                                            padding: '5px 12px', 
-                                            fontSize: '0.75rem', 
-                                            fontWeight: 'bold', 
-                                            borderRadius: '4px',
-                                            textTransform: 'uppercase'
-                                        }}>
-                                            {product.badge}
-                                        </span>
+                                        {product.badge && (
+                                            <div style={{ position: 'absolute', top: '15px', left: '15px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                                                {product.badge.split(',').map((tag, idx) => (
+                                                    <span key={idx} style={{ 
+                                                        background: tag.toLowerCase().includes('best') ? 'linear-gradient(135deg, #f59e0b, #ea580c)' : '#0f172a', 
+                                                        color: '#fff', 
+                                                        padding: '6px 14px', 
+                                                        fontSize: '0.75rem', 
+                                                        fontWeight: '800', 
+                                                        borderRadius: '20px',
+                                                        textTransform: 'uppercase',
+                                                        letterSpacing: '0.5px',
+                                                        boxShadow: '0 4px 10px rgba(0,0,0,0.15)',
+                                                        zIndex: 10
+                                                    }}>
+                                                        {tag.trim()}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                     <div style={{ padding: '25px' }}>
                                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', minHeight: '3rem', marginBottom: '15px' }}>
@@ -343,40 +366,6 @@ const ImportExportPage = () => {
                                 </motion.div>
                             ))}
                         </div>
-
-                        {/* Pagination */}
-                        {totalPages > 1 && (
-                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', marginTop: '60px' }}>
-                                <button 
-                                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                                    style={{ background: 'none', border: 'none', color: currentPage === 1 ? '#cbd5e1' : '#0f172a', cursor: currentPage === 1 ? 'default' : 'pointer', fontSize: '1.5rem' }}
-                                >
-                                    &lt;
-                                </button>
-                                {[...Array(totalPages)].map((_, i) => (
-                                    <button 
-                                        key={i}
-                                        onClick={() => setCurrentPage(i + 1)}
-                                        style={{ 
-                                            background: 'none', 
-                                            border: 'none', 
-                                            fontWeight: 'bold', 
-                                            color: currentPage === i + 1 ? '#f59e0b' : '#64748b',
-                                            cursor: 'pointer',
-                                            fontSize: '1rem'
-                                        }}
-                                    >
-                                        {i + 1}
-                                    </button>
-                                ))}
-                                <button 
-                                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                                    style={{ background: 'none', border: 'none', color: currentPage === totalPages ? '#cbd5e1' : '#0f172a', cursor: currentPage === totalPages ? 'default' : 'pointer', fontSize: '1.5rem' }}
-                                >
-                                    &gt;
-                                </button>
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>
@@ -408,19 +397,17 @@ const ImportExportPage = () => {
                     }
                 }
                 .product-grid-responsive {
-                    @media (max-width: 1200px) {
-                        grid-template-columns: repeat(2, 1fr) !important;
-                    }
-                    @media (max-width: 768px) {
-                        grid-template-columns: 1fr !important;
-                    }
+                    /* Not used anymore, replaced by horizontal-scroll-container */
+                }
+                .horizontal-scroll-container::-webkit-scrollbar {
+                    display: none;
                 }
                 .product-card:hover {
-                    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-                    transform: translateY(-5px);
+                    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12) !important;
+                    transform: translateY(-8px);
                 }
                 .product-card:hover .product-img {
-                    transform: scale(1.05);
+                    transform: scale(1.08);
                 }
             `}</style>
         </motion.div>
