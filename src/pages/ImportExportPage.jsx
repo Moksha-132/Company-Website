@@ -278,45 +278,45 @@ const ImportExportPage = () => {
                                 onClick={() => scroll('left')}
                                 style={{ 
                                     position: 'absolute', 
-                                    left: '-20px', 
+                                    left: '10px', 
                                     top: '40%', 
                                     transform: 'translateY(-50%)', 
                                     zIndex: 10,
-                                    background: '#fff',
+                                    background: 'rgba(255, 255, 255, 0.9)',
                                     border: '1px solid #e2e8f0',
                                     borderRadius: '50%',
-                                    width: '40px',
-                                    height: '40px',
+                                    width: '45px',
+                                    height: '45px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     cursor: 'pointer',
-                                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
                                 }}
                             >
-                                <ChevronLeft size={24} color="#0f172a" />
+                                <ChevronLeft size={26} color="#0f172a" />
                             </button>
                             <button 
                                 onClick={() => scroll('right')}
                                 style={{ 
                                     position: 'absolute', 
-                                    right: '-20px', 
+                                    right: '10px', 
                                     top: '40%', 
                                     transform: 'translateY(-50%)', 
                                     zIndex: 10,
-                                    background: '#fff',
+                                    background: 'rgba(255, 255, 255, 0.9)',
                                     border: '1px solid #e2e8f0',
                                     borderRadius: '50%',
-                                    width: '40px',
-                                    height: '40px',
+                                    width: '45px',
+                                    height: '45px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     cursor: 'pointer',
-                                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
                                 }}
                             >
-                                <ChevronRight size={24} color="#0f172a" />
+                                <ChevronRight size={26} color="#0f172a" />
                             </button>
                             <div 
                                 ref={scrollContainerRef}
