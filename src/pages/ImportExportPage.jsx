@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Search, ChevronDown, Package, ShieldCheck, Zap, ArrowRight, Star, ShoppingCart } from 'lucide-react';
+import { Search, ChevronDown, ChevronLeft, ChevronRight, Package, ShieldCheck, Zap, ArrowRight, Star, ShoppingCart } from 'lucide-react';
 import { useAppContext } from '../AppContext';
 
 import { supabase } from '../supabase';
@@ -88,6 +88,8 @@ export const INITIAL_PRODUCTS = [
 
 const ImportExportPage = () => {
     const [activeCategory, setActiveCategory] = useState('All products');
+    const scrollContainerRef = React.useRef(null);
+
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [products, setProducts] = useState([]);
@@ -134,6 +136,18 @@ const ImportExportPage = () => {
 
     const handleCategoryChange = (cat) => {
         setActiveCategory(cat);
+    };
+
+    const scroll = (direction) => {
+        if (scrollContainerRef.current) {
+            const { current } = scrollContainerRef;
+            const scrollAmount = 380; // card width + gap
+            if (direction === 'left') {
+                current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
     };
 
     return (
@@ -259,19 +273,65 @@ const ImportExportPage = () => {
 
                         <p style={{ color: '#94a3b8', marginBottom: '30px' }}>{filteredProducts.length} products</p>
 
-                        <div 
-                            style={{ 
-                                display: 'flex', 
-                                gap: '30px', 
-                                overflowX: 'auto', 
-                                paddingBottom: '30px',
-                                scrollSnapType: 'x mandatory',
-                                scrollbarWidth: 'none', // Firefox
-                                msOverflowStyle: 'none', // IE/Edge
-                                WebkitOverflowScrolling: 'touch'
-                            }} 
-                            className="horizontal-scroll-container"
-                        >
+                        <div style={{ position: 'relative' }}>
+                            <button 
+                                onClick={() => scroll('left')}
+                                style={{ 
+                                    position: 'absolute', 
+                                    left: '-20px', 
+                                    top: '40%', 
+                                    transform: 'translateY(-50%)', 
+                                    zIndex: 10,
+                                    background: '#fff',
+                                    border: '1px solid #e2e8f0',
+                                    borderRadius: '50%',
+                                    width: '40px',
+                                    height: '40px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    cursor: 'pointer',
+                                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                                }}
+                            >
+                                <ChevronLeft size={24} color="#0f172a" />
+                            </button>
+                            <button 
+                                onClick={() => scroll('right')}
+                                style={{ 
+                                    position: 'absolute', 
+                                    right: '-20px', 
+                                    top: '40%', 
+                                    transform: 'translateY(-50%)', 
+                                    zIndex: 10,
+                                    background: '#fff',
+                                    border: '1px solid #e2e8f0',
+                                    borderRadius: '50%',
+                                    width: '40px',
+                                    height: '40px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    cursor: 'pointer',
+                                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                                }}
+                            >
+                                <ChevronRight size={24} color="#0f172a" />
+                            </button>
+                            <div 
+                                ref={scrollContainerRef}
+                                style={{ 
+                                    display: 'flex', 
+                                    gap: '30px', 
+                                    overflowX: 'auto', 
+                                    paddingBottom: '30px',
+                                    paddingLeft: '10px',
+                                    paddingRight: '10px',
+                                    scrollSnapType: 'x mandatory',
+                                    WebkitOverflowScrolling: 'touch'
+                                }} 
+                                className="horizontal-scroll-container"
+                            >
                             {filteredProducts.map((product, i) => (
                                 <motion.div 
                                     key={i}
@@ -365,6 +425,7 @@ const ImportExportPage = () => {
                                     </div>
                                 </motion.div>
                             ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -400,7 +461,18 @@ const ImportExportPage = () => {
                     /* Not used anymore, replaced by horizontal-scroll-container */
                 }
                 .horizontal-scroll-container::-webkit-scrollbar {
-                    display: none;
+                    height: 8px;
+                }
+                .horizontal-scroll-container::-webkit-scrollbar-track {
+                    background: #f1f5f9; 
+                    border-radius: 10px;
+                }
+                .horizontal-scroll-container::-webkit-scrollbar-thumb {
+                    background: #cbd5e1; 
+                    border-radius: 10px;
+                }
+                .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+                    background: #94a3b8; 
                 }
                 .product-card:hover {
                     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12) !important;

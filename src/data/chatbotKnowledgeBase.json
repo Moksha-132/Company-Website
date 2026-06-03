@@ -358,10 +358,10 @@
   {
     "id": "10",
     "keywords": [
-      "export services",
-      "import services",
-      "global trade",
-      "international trade",
+      "export",
+      "import",
+      "trade",
+      "international",
       "imports and exports"
     ],
     "response": "Navigating the complexities of international trade requires deep expertise and reliable technological infrastructure, which is exactly what Shnoor provides.\n\nWe manage intricate import and export operations on a global scale, ensuring full compliance with international regulations and smooth customs clearances.\n\nDiscover how our global trade solutions can significantly reduce your operational friction by visiting our Import & Export services page.",
@@ -1245,14 +1245,15 @@
   {
     "id": "114",
     "keywords": [
-      "export management",
-      "export services",
-      "import management",
-      "import services",
+      "export",
+      "exports",
+      "import",
+      "imports",
       "global trade",
+      "export management",
       "cross-border trade",
-      "customs clearance",
-      "international shipping"
+      "customs",
+      "shipping"
     ],
     "response": "We provide end-to-end export management services to streamline global business operations with absolute trust and transparency. Our core services include:\n\n**Product Sourcing & Procurement**\nWith our deep understanding of global markets and complex supply chains, we offer complete management of your procurement process. This includes everything from identifying and qualifying reliable sources, to negotiating the best terms and ensuring quality and consistency.\n\n**International Shipping & Logistics**\nAt SHNOOR International LLC, we make global trade simple by delivering reliable, efficient, and cost-effective international shipping & logistics solutions. From India to markets across the UAE, Bahrain, Qatar, Oman, Malaysia, and beyond, we ensure your products reach their destination on time and in perfect condition.\n\n**Quality Control & Compliances**\nOur Quality Control & Compliance services ensure every product we source, export, or import meets international standards and client expectations. We work with certified inspection agencies, follow stringent testing procedures, and handle all legal and regulatory documentation for a smooth cross-border trade experience.",
     "route": "/export",
@@ -1547,7 +1548,17 @@
   },
   {
     "id": "137",
-    "keywords": ["blog", "blogs", "articles", "news", "insights", "read", "newsletter", "list blogs", "show blogs"],
+    "keywords": [
+      "blog",
+      "blogs",
+      "articles",
+      "news",
+      "insights",
+      "read",
+      "newsletter",
+      "list blogs",
+      "show blogs"
+    ],
     "response": "Here are some of our latest insights and articles:\n\n• <a href='/blog/general-trading-got-easier' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>General Trading Got Easier</a>\n• <a href='/blog/it-consulting-shnoor' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>IT Consulting at SHNOOR</a>\n• <a href='/blog/sap-outsourcing' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>SAP Outsourcing with Shnoor</a>\n• <a href='/blog/sap-mm-reporting' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>Unlock the Power of SAP MM Reporting</a>\n• <a href='/blog/letters-of-credit' style='color:#2563eb; text-decoration:underline; font-weight:bold;'>Handling Letters of Credit</a>\n\nClick on any title to read the full article! If you need information on other topics, just ask.",
     "route": null,
     "actionText": null
@@ -1568,49 +1579,97 @@
   },
   {
     "id": "139",
-    "keywords": ["oats", "morning harvest", "whole grain oats", "premium oats", "cereal"],
+    "keywords": [
+      "oats",
+      "morning harvest",
+      "whole grain oats",
+      "premium oats",
+      "cereal"
+    ],
     "response": "**Morning Harvest Whole Grain Oats**\n*Premium oats for a healthy breakfast*\n\nExperience the nourishing goodness of Morning Harvest Whole Grain Oats, expertly packed in a convenient resealable pouch to ensure lasting freshness. Perfect for energizing breakfasts or adding hearty nutrition to your favorite recipes, these premium oats are a versatile pantry staple. Enjoy their natural taste and wholesome benefits in every serving. Available in a generous 1kg bag, making it ideal for families and avid oat lovers alike.",
     "route": "/product/oats",
     "actionText": "Enquire Now"
   },
   {
     "id": "140",
-    "keywords": ["handwash", "aqua-pure", "aqua pure","moisturizing hand wash", "hand wash", "personal care", "hygiene"],
+    "keywords": [
+      "handwash",
+      "aqua-pure",
+      "aqua pure",
+      "moisturizing hand wash",
+      "hand wash",
+      "personal care",
+      "hygiene"
+    ],
     "response": "**Aqua-Pure Moisturizing Hand Wash**\n*Gentle protection for your family*\n\nAqua-Pure Moisturizing Hand Wash combines advanced cleansing with skin-loving nutrients. Its unique formula removes germs while leaving your hands feeling soft, smooth, and hydrated. Infused with a refreshing fragrance, it provides a spa-like experience every time you wash your hands.",
     "route": "/product/handwash",
     "actionText": "Enquire Now"
   },
   {
     "id": "141",
-    "keywords": ["plantation", "plantation crops", "assortment", "coffee beans", "spices", "agricultural"],
+    "keywords": [
+      "plantation",
+      "plantation crops",
+      "assortment",
+      "coffee beans",
+      "spices",
+      "agricultural"
+    ],
     "response": "**Plantation Crops Assortment**\n*Direct from India's finest estates*\n\nDiscover the rich diversity of India's agricultural heritage with our curated Plantation Crops Assortment. From hand-picked coffee beans to aromatic spices, each product is sourced directly from sustainable estates. We ensure the highest quality standards from farm to table.",
     "route": "/product/plantation",
     "actionText": "Enquire Now"
   },
   {
     "id": "142",
-    "keywords": ["coconut oil", "organic coconut oil", "cold-pressed", "cooking oil", "hair care", "skin care", "oil"],
+    "keywords": [
+      "coconut oil",
+      "organic coconut oil",
+      "cold-pressed",
+      "cooking oil",
+      "hair care",
+      "skin care",
+      "oil"
+    ],
     "response": "**Organic Cold-Pressed Coconut Oil**\n*Pure, natural, and nutrient-rich*\n\nOur Organic Cold-Pressed Coconut Oil is extracted from the finest sun-dried coconuts. Without any chemical processing, it retains all its natural nutrients, medium-chain fatty acids, and distinct aroma. Perfect for cooking, skin care, and hair care.",
     "route": "/product/coconutoil",
     "actionText": "Enquire Now"
   },
   {
     "id": "143",
-    "keywords": ["cereals", "healthy organic cereals", "organic cereals", "healthy breakfast", "fiber", "non-gmo"],
+    "keywords": [
+      "cereals",
+      "healthy organic cereals",
+      "organic cereals",
+      "healthy breakfast",
+      "fiber",
+      "non-gmo"
+    ],
     "response": "**Healthy Organic Cereals**\n*A crunch of health in every bite*\n\nStart your day with a bowl of health. Our Healthy Organic Cereals are made from non-GMO grains, naturally sweetened, and packed with fiber. They are free from artificial preservatives and colors, making them the perfect choice for health-conscious families.",
     "route": "/product/cereals",
     "actionText": "Enquire Now"
   },
   {
     "id": "144",
-    "keywords": ["mineral oil", "food grade", "food grade mineral oil", "industrial oil", "lubrication"],
+    "keywords": [
+      "mineral oil",
+      "food grade",
+      "food grade mineral oil",
+      "industrial oil",
+      "lubrication"
+    ],
     "response": "**Mineral Oil (Food Grade)**\n*Safe, pure, and multi-purpose*\n\nOur Food Grade Mineral Oil is highly refined and meets strict international purity standards. It is odorless, tasteless, and safe for contact with food preparation surfaces. Ideal for wood conditioning, machinery lubrication, and industrial applications.",
     "route": "/product/mineraloil",
     "actionText": "Enquire Now"
   },
   {
     "id": "145",
-    "keywords": ["taro", "taro root", "fresh taro root", "elephant yam", "root vegetables"],
+    "keywords": [
+      "taro",
+      "taro root",
+      "fresh taro root",
+      "elephant yam",
+      "root vegetables"
+    ],
     "response": "**Fresh Taro Root**\n*Root vegetables at their freshest*\n\nOur Fresh Taro Root is harvested at peak maturity to ensure the best texture and nutritional value. Rich in fiber, potassium, and vitamins, it is a versatile ingredient for global cuisines. We handle our root vegetables with care to ensure they reach you in perfect condition.",
     "route": "/product/taro",
     "actionText": "Enquire Now"
@@ -1662,9 +1721,6 @@
       "intelligent dashboard",
       "payment reminders",
       "export invoices",
-      "export my invoices",
-      "pdf and excel",
-      "export to pdf",
       "white-label",
       "team collaboration"
     ],
@@ -1684,7 +1740,8 @@
       "free plan",
       "professional pricing plan",
       "business plan",
-      "api access"
+      "api access",
+      "pricing plans"
     ],
     "response": "**Pricing Plans: Simple Plans. Clear Value.**\nChoose the plan that fits your business. Start free and upgrade as you grow. No hidden fees, no surprises. (Save 20% on Yearly billing!)\n\n**Free (₹0/forever)**\n*Perfect for getting started with professional invoicing*\n• Up to 10 invoices per month\n• Basic invoice templates\n• Email support\n• Payment reminders\n• Basic reporting\n\n**Professional (₹19/month)**\n*Best for growing businesses*\n• Unlimited invoices\n• Advanced invoice templates\n• Priority email support\n• Smart payment reminders\n• Custom branding\n• Team collaboration (5 Users)\n• Export to PDF & Excel\n\n**Business (₹49/month)**\n*For established businesses*\n• Everything in Professional\n• Custom invoice templates\n• 24/7 phone support\n• Automated payment reminders\n• Advanced reporting & analytics\n• White-label branding\n• Unlimited team members\n• Full API access to PDF & Excel",
     "route": "https://www.invoicecloud.in",
