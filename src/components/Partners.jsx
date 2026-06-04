@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const partners = [
-    { name: 'AWS', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
-    { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
-    { name: 'Google Cloud', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg' },
-    { name: 'IBM', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg' },
-    { name: 'Oracle', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg' },
-    { name: 'SAP', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg' }
+    { name: 'AWS', logo: '/partners/aws.svg' },
+    { name: 'Microsoft', logo: '/partners/microsoft.svg' },
+    { name: 'Google Cloud', logo: '/partners/google_cloud.svg' },
+    { name: 'IBM', logo: '/partners/ibm.svg' },
+    { name: 'Oracle', logo: '/partners/oracle.svg' },
+    { name: 'SAP', logo: '/partners/sap.svg' }
 ];
 
 const Partners = () => {
@@ -45,6 +45,7 @@ const Partners = () => {
                             key={index}
                             src={partner.logo} 
                             alt={partner.name} 
+                            width="120" height="40" loading="lazy"
                             initial={{ opacity: 0, filter: 'grayscale(1)' }}
                             whileInView={{ opacity: 0.7, filter: 'grayscale(0)' }}
                             whileHover={{ opacity: 1, scale: 1.1 }}

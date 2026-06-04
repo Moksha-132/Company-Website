@@ -9,15 +9,16 @@ const Hero = () => {
             {/* Top Bridging Banner - Unique Royal Purple Theme */}
             <div style={{ 
                 height: '650px', 
-                background: 'url("https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&output=webp") center/cover no-repeat',
                 position: 'relative',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 textAlign: 'center',
                 color: '#fff',
-                paddingTop: '80px'
+                paddingTop: '80px',
+                overflow: 'hidden'
             }}>
+                <img src="https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&output=webp" alt="Background" fetchpriority="high" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
                 {/* Blue Gradient Overlay */}
                 <div style={{ 
                     position: 'absolute', 
