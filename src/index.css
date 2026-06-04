@@ -128,6 +128,7 @@ button {
   }
   h1 { font-size: 2.5rem !important; }
   h2 { font-size: 2rem !important; }
+  p { text-align: justify !important; }
 }
 
 @media (max-width: 480px) {
