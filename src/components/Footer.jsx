@@ -39,7 +39,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Quick Links</h4>
+                        <h3 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Quick Links</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                             {Object.entries({
                                 'Home': '/',
@@ -55,7 +55,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Services</h4>
+                        <h3 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Services</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                             <Link to="/services/cloud" style={{ color: '#fff', opacity: 0.8 }}>Cloud Solutions</Link>
                             <Link to="/services/enterprise" style={{ color: '#fff', opacity: 0.8 }}>Enterprise MGMT</Link>
@@ -66,7 +66,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Contact Us</h4>
+                        <h3 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Contact Us</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
                             <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                                 <Mail size={22} color="var(--accent)" />

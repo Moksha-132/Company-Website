@@ -48,7 +48,7 @@ const Testimonial = () => {
                             <Quote size={40} color="var(--accent)" style={{ opacity: 0.3, marginBottom: '20px' }} />
                             <p style={{ fontSize: '1.25rem', lineHeight: 1.8, marginBottom: '30px', fontStyle: 'italic' }}>"{t.quote}"</p>
                             <div>
-                                <h4 style={{ color: 'var(--accent)', marginBottom: '5px' }}>{t.author}</h4>
+                                <h3 style={{ color: 'var(--accent)', marginBottom: '5px' }}>{t.author}</h3>
                                 <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t.company}</p>
                             </div>
                         </motion.div>
