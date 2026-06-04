@@ -6,15 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.weserv.nl" crossorigin>
     <link rel="preload" as="image" fetchpriority="high" href="https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&output=webp" imagesrcset="https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=600&output=webp 600w, https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&output=webp 1200w, https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&output=webp 2000w" imagesizes="100vw" />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=optional" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=optional" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=optional" /></noscript>
     <meta name="description" content="Shnoor International provides global IT services, cloud solutions, logistics management, and trade intelligence to bridge innovation with expert reach." />
     <title>Shnoor International | Global IT & Trade Solutions</title>
+    <style>
+      body { margin: 0; background-color: #0f172a; }
+      #root-skeleton {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0f172a;
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        border-top-color: #3b82f6;
+        animation: spin 1s ease-in-out infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="root-skeleton"><div class="spinner"></div></div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

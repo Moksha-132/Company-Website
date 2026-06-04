@@ -37,7 +37,7 @@ const Hero = () => {
                 }}></div>
                 
                 <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-                    <div className="fade-in">
+                    <div>
                         <h1 style={{ 
                             fontSize: 'clamp(2.5rem, 6vw, 5rem)', 
                             fontWeight: '800', 
@@ -49,8 +49,7 @@ const Hero = () => {
                             Bridging <span style={{ color: 'var(--accent)' }}>Innovation</span> and Trade with Expert Reach
                         </h1>
                         <div 
-                            className="fade-in"
-                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center', animationDelay: '0.5s' }}
+                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center' }}
                         >
                             <Link to="/services" className="btn-blue" style={{ padding: '18px 40px', fontSize: '1.1rem', textDecoration: 'none' }}>Explore Services</Link>
                             <Link to="/about" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff', padding: '16px 40px', borderRadius: '12px', fontWeight: '700', textDecoration: 'none' }}>Learn More About Us</Link>
@@ -83,10 +82,10 @@ const Hero = () => {
                             style={{ position: 'relative' }}
                         >
                             <img 
-                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&h=533&fit=cover&output=webp" 
+                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=900&h=600&fit=cover&output=webp" 
                                 srcSet="
-                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=400&h=267&fit=cover&output=webp 400w,
-                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&h=533&fit=cover&output=webp 800w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=450&h=300&fit=cover&output=webp 450w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=900&h=600&fit=cover&output=webp 900w,
                                     https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=1200&h=800&fit=cover&output=webp 1200w
                                 "
                                 sizes="(max-width: 992px) 100vw, 50vw"
