@@ -1,30 +1,21 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React, { lazy, Suspense } from 'react';
 import Hero from '../components/Hero';
 
-const HomePageContent = lazy(() => import('../components/HomePageContent'));
+const Banner = lazy(() => import('../components/Banner'));
+const Partners = lazy(() => import('../components/Partners'));
+const News = lazy(() => import('../components/News'));
+const Testimonial = lazy(() => import('../components/Testimonial'));
 
 const HomePage = () => {
-    const [shouldLoad, setShouldLoad] = useState(false);
-
-    useEffect(() => {
-        // Defer loading below-the-fold content to ensure FCP/LCP happens instantly
-        // without competing for CPU resources on mobile devices.
-        const timer = setTimeout(() => {
-            setShouldLoad(true);
-        }, 500);
-        return () => clearTimeout(timer);
-    }, []);
-
     return (
         <>
             <Hero />
-            {shouldLoad ? (
-                <Suspense fallback={<div style={{ minHeight: '300vh', background: 'var(--background)' }}></div>}>
-                    <HomePageContent />
-                </Suspense>
-            ) : (
-                <div style={{ minHeight: '300vh', background: 'var(--background)' }}></div>
-            )}
+            <Suspense fallback={<div style={{ minHeight: '300vh', background: 'var(--background)' }}></div>}>
+                <Banner />
+                <Partners />
+                <News />
+                <Testimonial />
+            </Suspense>
         </>
     );
 };

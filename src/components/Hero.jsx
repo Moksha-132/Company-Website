@@ -38,7 +38,11 @@ const Hero = () => {
                 }}></div>
                 
                 <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-                    <div className="fade-in">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1 }}
+                    >
                         <h1 style={{ 
                             fontSize: 'clamp(2.5rem, 6vw, 5rem)', 
                             fontWeight: '800', 
@@ -49,14 +53,16 @@ const Hero = () => {
                         }}>
                             Bridging <span style={{ color: 'var(--accent)' }}>Innovation</span> and Trade with Expert Reach
                         </h1>
-                        <div 
-                            className="fade-in"
-                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center', animationDelay: '0.5s' }}
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.5 }}
+                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center' }}
                         >
                             <Link to="/services" className="btn-blue" style={{ padding: '18px 40px', fontSize: '1.1rem', textDecoration: 'none' }}>Explore Services</Link>
                             <Link to="/about" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff', padding: '16px 40px', borderRadius: '12px', fontWeight: '700', textDecoration: 'none' }}>Learn More About Us</Link>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
 
@@ -86,16 +92,16 @@ const Hero = () => {
                             style={{ position: 'relative' }}
                         >
                             <img 
-                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&output=webp" 
+                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&h=533&fit=cover&output=webp" 
                                 srcSet="
-                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=400&output=webp 400w,
-                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&output=webp 800w,
-                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=1200&output=webp 1200w
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=400&h=267&fit=cover&output=webp 400w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&h=533&fit=cover&output=webp 800w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=1200&h=800&fit=cover&output=webp 1200w
                                 "
                                 sizes="(max-width: 992px) 100vw, 50vw"
                                 alt="Team Work" 
                                 width="600" height="400" loading="lazy" 
-                                style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} 
+                                style={{ width: '100%', height: 'auto', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} 
                             />
                             <div style={{ position: 'absolute', bottom: '-30px', right: '-30px', background: 'var(--secondary)', color: '#fff', padding: '35px', borderRadius: '24px', boxShadow: '0 30px 60px rgba(15, 23, 42, 0.3)' }}>
                                 <Globe size={45} color="var(--accent)" style={{ marginBottom: '15px' }} />
