@@ -51,7 +51,7 @@ const Partners = () => {
                             whileHover={{ opacity: 1, scale: 1.1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            style={{ height: '40px', width: 'auto', objectFit: 'contain' }}
+                            style={{ height: '40px', width: '120px', objectFit: 'contain' }}
                         />
                     ))}
                 </div>
