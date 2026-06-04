@@ -18,7 +18,18 @@ const Hero = () => {
                 paddingTop: '80px',
                 overflow: 'hidden'
             }}>
-                <img src="https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&output=webp" alt="Background" fetchpriority="high" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
+                <img 
+                    src="https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&output=webp" 
+                    srcSet="
+                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=600&output=webp 600w,
+                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&output=webp 1200w,
+                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&output=webp 2000w
+                    "
+                    sizes="100vw"
+                    alt="Background" 
+                    fetchpriority="high" 
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} 
+                />
                 {/* Blue Gradient Overlay */}
                 <div style={{ 
                     position: 'absolute', 
@@ -80,7 +91,18 @@ const Hero = () => {
                             viewport={{ once: true }}
                             style={{ position: 'relative' }}
                         >
-                            <img src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=1200&output=webp" alt="Team Work" width="600" height="400" loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} />
+                            <img 
+                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&output=webp" 
+                                srcSet="
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=400&output=webp 400w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=800&output=webp 800w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=1200&output=webp 1200w
+                                "
+                                sizes="(max-width: 992px) 100vw, 50vw"
+                                alt="Team Work" 
+                                width="600" height="400" loading="lazy" 
+                                style={{ width: '100%', height: 'auto', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} 
+                            />
                             <div style={{ position: 'absolute', bottom: '-30px', right: '-30px', background: 'var(--secondary)', color: '#fff', padding: '35px', borderRadius: '24px', boxShadow: '0 30px 60px rgba(15, 23, 42, 0.3)' }}>
                                 <Globe size={45} color="var(--accent)" style={{ marginBottom: '15px' }} />
                                 <h3 style={{ fontSize: '1.8rem', fontWeight: '800' }}>10+ Countries</h3>
@@ -110,7 +132,13 @@ const Hero = () => {
                         </motion.div>
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} style={{ display: 'flex', justifyContent: 'center' }}>
                             <img 
-                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=1200&output=webp" 
+                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=800&output=webp" 
+                                srcSet="
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=400&output=webp 400w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=800&output=webp 800w,
+                                    https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=1200&output=webp 1200w
+                                "
+                                sizes="(max-width: 992px) 100vw, 50vw"
                                 alt="Innovation Tech" 
                                 width="600" height="400" loading="lazy"
                                 style={{ width: '100%', height: 'auto', borderRadius: '50px', border: '12px solid rgba(255,255,255,0.05)' }} 
