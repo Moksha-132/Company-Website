@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, Globe, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -38,11 +37,7 @@ const Hero = () => {
                 }}></div>
                 
                 <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1 }}
-                    >
+                    <div className="fade-in">
                         <h1 style={{ 
                             fontSize: 'clamp(2.5rem, 6vw, 5rem)', 
                             fontWeight: '800', 
@@ -53,16 +48,14 @@ const Hero = () => {
                         }}>
                             Bridging <span style={{ color: 'var(--accent)' }}>Innovation</span> and Trade with Expert Reach
                         </h1>
-                        <motion.div 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5 }}
-                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center' }}
+                        <div 
+                            className="fade-in"
+                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center', animationDelay: '0.5s' }}
                         >
                             <Link to="/services" className="btn-blue" style={{ padding: '18px 40px', fontSize: '1.1rem', textDecoration: 'none' }}>Explore Services</Link>
                             <Link to="/about" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff', padding: '16px 40px', borderRadius: '12px', fontWeight: '700', textDecoration: 'none' }}>Learn More About Us</Link>
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -70,7 +63,7 @@ const Hero = () => {
             <div className="section-padding" style={{ background: '#f8fafc' }}>
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'center' }} className="grid-2">
-                        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                        <div className="fade-in">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: 'var(--primary)', marginBottom: '20px' }}>
                                 <div style={{ height: '2px', width: '50px', background: 'var(--primary)' }}></div>
                                 <span style={{ fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem' }}>The Shnoor Legacy</span>
@@ -84,11 +77,9 @@ const Hero = () => {
                             <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', lineHeight: 2, textAlign: 'justify' }}>
                                 Headquartered in **MUSCAT - Oman**, we guarantee assistance by qualified consultants to establish a strong global presence. Our final aspiration is to close the gap in the foreign market between buyers and sellers.
                             </p>
-                        </motion.div>
-                        <motion.div 
-                            initial={{ opacity: 0, scale: 0.95 }} 
-                            whileInView={{ opacity: 1, scale: 1 }} 
-                            viewport={{ once: true }}
+                        </div>
+                        <div 
+                            className="fade-in"
                             style={{ position: 'relative' }}
                         >
                             <img 
@@ -108,7 +99,7 @@ const Hero = () => {
                                 <h3 style={{ fontSize: '1.8rem', fontWeight: '800' }}>10+ Countries</h3>
                                 <p style={{ opacity: 0.8, fontSize: '1rem' }}>Seamless Trade Network</p>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,7 +110,7 @@ const Hero = () => {
                 
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                     <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '80px', alignItems: 'center' }} className="grid-2">
-                        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                        <div className="fade-in">
                             <h2 style={{ fontSize: '4.5rem', fontWeight: '900', marginBottom: '30px', lineHeight: 1.1 }}>
                                 Predict the future <br/>with <span style={{ color: 'var(--accent)' }}>SHNOOR</span>
                             </h2>
@@ -129,8 +120,8 @@ const Hero = () => {
                             <Link to="/about" className="btn-blue" style={{ background: '#fff', color: 'var(--secondary)', padding: '20px 50px', fontSize: '1.1rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
                                 CREATE IT <ArrowRight size={22} />
                             </Link>
-                        </motion.div>
-                        <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} style={{ display: 'flex', justifyContent: 'center' }}>
+                        </div>
+                        <div className="fade-in" style={{ display: 'flex', justifyContent: 'center' }}>
                             <img 
                                 src="https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=800&output=webp" 
                                 srcSet="
@@ -143,7 +134,7 @@ const Hero = () => {
                                 width="600" height="400" loading="lazy"
                                 style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', borderRadius: '50px', border: '12px solid rgba(255,255,255,0.05)' }} 
                             />
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>

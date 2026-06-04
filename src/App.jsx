@@ -1,7 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AppProvider } from './AppContext';
-import CartWidget from './components/CartWidget';
+const CartWidget = lazy(() => import('./components/CartWidget'));
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -85,7 +85,9 @@ function App() {
     <AppProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <CartWidget />
+        <Suspense fallback={null}>
+          <CartWidget />
+        </Suspense>
         <Layout>
           <Suspense fallback={<div style={{ minHeight: '200vh', width: '100%', background: 'var(--background)' }}></div>}>
           <Routes>

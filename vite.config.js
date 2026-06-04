@@ -10,7 +10,8 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes('node_modules')) {
             if (id.includes('@supabase')) return 'supabase';
-            if (id.includes('framer-motion') || id.includes('lucide-react')) return 'ui';
+            if (id.includes('framer-motion')) return 'framer';
+            if (id.includes('lucide-react')) return 'ui';
             if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) return 'vendor';
             return 'modules';
           }
