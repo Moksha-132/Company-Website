@@ -7,10 +7,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          db: ['@supabase/supabase-js']
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('@supabase')) return 'supabase';
+            if (id.includes('framer-motion') || id.includes('lucide-react')) return 'ui';
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) return 'vendor';
+            return 'modules';
+          }
         }
       }
     }
