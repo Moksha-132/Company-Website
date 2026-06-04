@@ -9,7 +9,7 @@ const Footer = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1.2fr', gap: '60px', marginBottom: '80px' }} className="grid-footer">
                     <div>
                         <div style={{ background: '#fff', padding: '15px', borderRadius: '15px', display: 'inline-block', marginBottom: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-                            <img src="/logo.png" alt="SHNOOR Logo" width="200" height="60" loading="lazy" style={{ height: '60px', width: 'auto', display: 'block' }} />
+                            <img src="/logo.png" alt="SHNOOR Logo" width="60" height="60" loading="lazy" style={{ height: '60px', display: 'block' }} />
                         </div>
                         <p style={{ opacity: 0.8, lineHeight: 1.8, marginBottom: '30px', maxWidth: '350px' }}>
                             Bridging innovation and trade with expert IT solutions and global reach. Headquartered in Muscat, Oman.

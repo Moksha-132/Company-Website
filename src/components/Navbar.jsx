@@ -53,7 +53,7 @@ const Navbar = () => {
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Link to="/" aria-label="Shnoor Home" style={{ display: 'flex', alignItems: 'center' }}>
-                    <img src="/logo.png" alt="SHNOOR Logo" width="200" height="65" style={{ height: scrolled ? '55px' : '65px', width: 'auto', transition: '0.3s' }} />
+                    <img src="/logo.png" alt="SHNOOR Logo" width="65" height="65" style={{ height: scrolled ? '55px' : '65px', transition: '0.3s' }} />
                 </Link>
 
                 {/* Desktop Nav */}
