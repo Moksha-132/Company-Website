@@ -7,14 +7,14 @@ const Footer = () => {
         <footer style={{ background: 'var(--secondary)', color: '#fff', paddingTop: '100px', paddingBottom: '50px' }}>
             <div className="container">
                 <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1.2fr', gap: '60px', marginBottom: '80px' }} className="grid-footer">
-                    <div>
+                    <div className="footer-col">
                         <div style={{ background: '#fff', padding: '15px', borderRadius: '15px', display: 'inline-block', marginBottom: '30px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
                             <img src="/logo.png" alt="SHNOOR Logo" width="60" height="60" loading="lazy" style={{ height: '60px', display: 'block' }} />
                         </div>
                         <p style={{ opacity: 0.8, lineHeight: 1.8, marginBottom: '30px', maxWidth: '350px' }}>
                             Bridging innovation and trade with expert IT solutions and global reach. Headquartered in Muscat, Oman.
                         </p>
-                        <div style={{ display: 'flex', gap: '15px' }}>
+                        <div style={{ display: 'flex', gap: '15px', flexDirection: 'row' }} className="social-icons">
                             {[
                                 { name: 'Facebook', Icon: Facebook, url: '#' },
                                 { name: 'LinkedIn', Icon: Linkedin, url: 'https://www.linkedin.com/company/shnoor-international/' },
@@ -38,9 +38,9 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="footer-col">
                         <h3 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Quick Links</h3>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }} className="link-list">
                             {Object.entries({
                                 'Home': '/',
                                 'About Us': '/about',
@@ -54,9 +54,9 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="footer-col">
                         <h3 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Services</h3>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }} className="link-list">
                             <Link to="/services/cloud" style={{ color: '#fff', opacity: 0.8 }}>Cloud Solutions</Link>
                             <Link to="/services/enterprise" style={{ color: '#fff', opacity: 0.8 }}>Enterprise MGMT</Link>
                             <Link to="/services/ai" style={{ color: '#fff', opacity: 0.8 }}>Data & AI</Link>
@@ -65,23 +65,23 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="footer-col">
                         <h3 style={{ fontSize: '1.3rem', marginBottom: '30px', color: 'var(--accent)', fontWeight: '700' }}>Contact Us</h3>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
-                            <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }} className="contact-list">
+                            <div style={{ display: 'flex', gap: '15px', alignItems: 'center', justifyContent: 'center' }} className="contact-item">
                                 <Mail size={22} color="var(--accent)" />
-                                <div>
+                                <div style={{ textAlign: 'left' }}>
                                     <span style={{ opacity: 0.9, display: 'block' }}>admin@shnoor.com</span>
                                     <span style={{ opacity: 0.7, fontSize: '0.85rem' }}>proc@shnoor.com (Sales)</span>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                            <div style={{ display: 'flex', gap: '15px', alignItems: 'center', justifyContent: 'center' }} className="contact-item">
                                 <Phone size={22} color="var(--accent)" />
                                 <span style={{ opacity: 0.9 }}>+968 1234 5678</span>
                             </div>
-                            <div style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
+                            <div style={{ display: 'flex', gap: '15px', alignItems: 'flex-start', justifyContent: 'center' }} className="contact-item">
                                 <MapPin size={22} color="var(--accent)" style={{ marginTop: '5px' }} />
-                                <div>
+                                <div style={{ textAlign: 'left' }}>
                                     <span style={{ opacity: 0.9, display: 'block' }}>Muscat, Sultanate of Oman</span>
                                     <span style={{ opacity: 0.7, fontSize: '0.85rem' }}>Odessa Missouri, United States</span>
                                 </div>
@@ -112,7 +112,12 @@ const Footer = () => {
                 }
                 @media (max-width: 576px) {
                     .grid-footer { grid-template-columns: 1fr !important; text-align: center; }
-                    .grid-footer div { align-items: center; display: flex; flex-direction: column; }
+                    .footer-col { display: flex; flex-direction: column; align-items: center; }
+                    .social-icons { flex-direction: row !important; justify-content: center; width: 100%; }
+                    .link-list { align-items: center; }
+                    .contact-list { align-items: center; }
+                    .contact-item { flex-direction: column; text-align: center !important; gap: 10px !important; }
+                    .contact-item div { text-align: center !important; }
                 }
             `}</style>
         </footer>

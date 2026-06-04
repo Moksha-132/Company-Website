@@ -101,7 +101,7 @@ const Hero = () => {
                                 sizes="(max-width: 992px) 100vw, 50vw"
                                 alt="Team Work" 
                                 width="600" height="400" loading="lazy" 
-                                style={{ width: '100%', height: 'auto', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} 
+                                style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} 
                             />
                             <div style={{ position: 'absolute', bottom: '-30px', right: '-30px', background: 'var(--secondary)', color: '#fff', padding: '35px', borderRadius: '24px', boxShadow: '0 30px 60px rgba(15, 23, 42, 0.3)' }}>
                                 <Globe size={45} color="var(--accent)" style={{ marginBottom: '15px' }} />
@@ -141,7 +141,7 @@ const Hero = () => {
                                 sizes="(max-width: 992px) 100vw, 50vw"
                                 alt="Innovation Tech" 
                                 width="600" height="400" loading="lazy"
-                                style={{ width: '100%', height: 'auto', borderRadius: '50px', border: '12px solid rgba(255,255,255,0.05)' }} 
+                                style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', borderRadius: '50px', border: '12px solid rgba(255,255,255,0.05)' }} 
                             />
                         </motion.div>
                     </div>
