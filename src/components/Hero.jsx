@@ -38,11 +38,7 @@ const Hero = () => {
                 }}></div>
                 
                 <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1 }}
-                    >
+                    <div className="fade-in">
                         <h1 style={{ 
                             fontSize: 'clamp(2.5rem, 6vw, 5rem)', 
                             fontWeight: '800', 
@@ -53,16 +49,14 @@ const Hero = () => {
                         }}>
                             Bridging <span style={{ color: 'var(--accent)' }}>Innovation</span> and Trade with Expert Reach
                         </h1>
-                        <motion.div 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5 }}
-                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center' }}
+                        <div 
+                            className="fade-in"
+                            style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center', animationDelay: '0.5s' }}
                         >
                             <Link to="/services" className="btn-blue" style={{ padding: '18px 40px', fontSize: '1.1rem', textDecoration: 'none' }}>Explore Services</Link>
                             <Link to="/about" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff', padding: '16px 40px', borderRadius: '12px', fontWeight: '700', textDecoration: 'none' }}>Learn More About Us</Link>
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
