@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-route
 import { AppProvider } from './AppContext';
 import CartWidget from './components/CartWidget';
 import Layout from './components/Layout';
-const HomePage = lazy(() => import('./pages/HomePage'));
+import HomePage from './pages/HomePage';
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const LogisticsPage = lazy(() => import('./pages/LogisticsPage'));
 const ExportPage = lazy(() => import('./pages/ExportPage'));
