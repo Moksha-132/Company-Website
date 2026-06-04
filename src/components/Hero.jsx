@@ -18,11 +18,11 @@ const Hero = () => {
                 overflow: 'hidden'
             }}>
                 <img 
-                    src="https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&output=webp" 
+                    src="https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&q=60&output=webp" 
                     srcSet="
-                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=600&output=webp 600w,
-                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&output=webp 1200w,
-                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&output=webp 2000w
+                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=600&q=60&output=webp 600w,
+                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=1200&q=60&output=webp 1200w,
+                        https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&q=60&output=webp 2000w
                     "
                     sizes="100vw"
                     alt="Background" 
