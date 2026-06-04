@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Hero from '../components/Hero';
-import Banner from '../components/Banner';
 
-import Testimonial from '../components/Testimonial';
-import Partners from '../components/Partners';
-import News from '../components/News';
+const Banner = lazy(() => import('../components/Banner'));
+const Partners = lazy(() => import('../components/Partners'));
+const News = lazy(() => import('../components/News'));
+const Testimonial = lazy(() => import('../components/Testimonial'));
 
 const HomePage = () => {
     return (
         <>
             <Hero />
-            <Banner />
-            <Partners />
-            <News />
-            <Testimonial />
+            <Suspense fallback={<div style={{ minHeight: '300vh', background: 'var(--background)' }}></div>}>
+                <Banner />
+                <Partners />
+                <News />
+                <Testimonial />
+            </Suspense>
         </>
     );
 };
