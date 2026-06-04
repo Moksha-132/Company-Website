@@ -16,12 +16,12 @@ const Footer = () => {
                         </p>
                         <div style={{ display: 'flex', gap: '15px' }}>
                             {[
-                                { Icon: Facebook, url: '#' },
-                                { Icon: Linkedin, url: 'https://www.linkedin.com/company/shnoor-international/' },
-                                { Icon: Twitter, url: '#' },
-                                { Icon: Instagram, url: '#' }
-                            ].map(({ Icon, url }, i) => (
-                                <a key={i} href={url} target="_blank" rel="noopener noreferrer" style={{ 
+                                { name: 'Facebook', Icon: Facebook, url: '#' },
+                                { name: 'LinkedIn', Icon: Linkedin, url: 'https://www.linkedin.com/company/shnoor-international/' },
+                                { name: 'Twitter', Icon: Twitter, url: '#' },
+                                { name: 'Instagram', Icon: Instagram, url: '#' }
+                            ].map(({ name, Icon, url }, i) => (
+                                <a key={i} href={url} aria-label={name} target="_blank" rel="noopener noreferrer" style={{ 
                                     background: 'rgba(255,255,255,0.1)', 
                                     width: '40px', 
                                     height: '40px', 

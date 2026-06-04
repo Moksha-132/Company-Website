@@ -173,11 +173,12 @@ const News = () => {
                                     <motion.img 
                                         whileHover={{ scale: 1.05 }}
                                         transition={{ duration: 0.4 }}
-                                        src={item.image} 
+                                        src={`${item.image}&output=webp`} 
                                         alt={item.title} 
+                                        width="400" height="250" loading="lazy"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                         onError={(e) => {
-                                            e.target.src = 'https://images.weserv.nl/?url=images.unsplash.com/photo-1460925895917-afdab827c52f&w=1000';
+                                            e.target.src = 'https://images.weserv.nl/?url=images.unsplash.com/photo-1460925895917-afdab827c52f&w=1000&output=webp';
                                         }}
                                     />
                                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
@@ -193,11 +194,11 @@ const News = () => {
                                     }} className="group-hover:text-blue-600">
                                         {item.title}
                                     </h3>
-                                    <p style={{ color: '#64748b', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '20px', flex: 1 }}>
+                                    <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '20px', flex: 1 }}>
                                         {item.desc}
                                     </p>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                        <p style={{ fontSize: '0.9rem', color: '#94a3b8', fontWeight: '500' }}>
+                                        <p style={{ fontSize: '0.9rem', color: '#475569', fontWeight: '500' }}>
                                             {item.date}
                                         </p>
                                         <div className="flex items-center gap-1 text-blue-600 font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
@@ -214,8 +215,9 @@ const News = () => {
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', marginTop: '40px' }}>
                     <button 
                         onClick={() => handlePageChange(currentPage - 1)}
-                        style={{ background: 'none', border: 'none', cursor: 'pointer', color: currentPage === 0 ? '#cbd5e1' : '#64748b' }}
+                        style={{ background: 'none', border: 'none', cursor: 'pointer', color: currentPage === 0 ? '#cbd5e1' : '#475569' }}
                         disabled={currentPage === 0}
+                        aria-label="Previous Page"
                     >
                         <ChevronLeft size={20} />
                     </button>
@@ -229,7 +231,7 @@ const News = () => {
                                 cursor: 'pointer', 
                                 fontSize: '1rem', 
                                 fontWeight: currentPage === index ? 'bold' : 'normal',
-                                color: currentPage === index ? '#f59e0b' : '#64748b',
+                                color: currentPage === index ? '#b45309' : '#475569',
                                 padding: '5px 10px'
                             }}
                         >
@@ -238,8 +240,9 @@ const News = () => {
                     ))}
                     <button 
                         onClick={() => handlePageChange(currentPage + 1)}
-                        style={{ background: 'none', border: 'none', cursor: 'pointer', color: currentPage === newsItems.length - 1 ? '#cbd5e1' : '#64748b' }}
+                        style={{ background: 'none', border: 'none', cursor: 'pointer', color: currentPage === newsItems.length - 1 ? '#cbd5e1' : '#475569' }}
                         disabled={currentPage === newsItems.length - 1}
+                        aria-label="Next Page"
                     >
                         <ChevronRight size={20} />
                     </button>

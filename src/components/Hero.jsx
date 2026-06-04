@@ -9,7 +9,7 @@ const Hero = () => {
             {/* Top Bridging Banner - Unique Royal Purple Theme */}
             <div style={{ 
                 height: '650px', 
-                background: 'url("https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000") center/cover no-repeat',
+                background: 'url("https://images.weserv.nl/?url=images.unsplash.com/photo-1451187580459-43490279c0fa&w=2000&output=webp") center/cover no-repeat',
                 position: 'relative',
                 display: 'flex',
                 alignItems: 'center',
@@ -48,7 +48,7 @@ const Hero = () => {
                             style={{ marginTop: '40px', display: 'flex', gap: '25px', justifyContent: 'center' }}
                         >
                             <Link to="/services" className="btn-blue" style={{ padding: '18px 40px', fontSize: '1.1rem', textDecoration: 'none' }}>Explore Services</Link>
-                            <Link to="/about" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff', padding: '16px 40px', borderRadius: '12px', fontWeight: '700', textDecoration: 'none' }}>Learn More</Link>
+                            <Link to="/about" style={{ background: 'transparent', border: '2px solid #fff', color: '#fff', padding: '16px 40px', borderRadius: '12px', fontWeight: '700', textDecoration: 'none' }}>Learn More About Us</Link>
                         </motion.div>
                     </motion.div>
                 </div>
@@ -79,10 +79,10 @@ const Hero = () => {
                             viewport={{ once: true }}
                             style={{ position: 'relative' }}
                         >
-                            <img src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=1200" alt="Team Work" style={{ width: '100%', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} />
+                            <img src="https://images.weserv.nl/?url=images.unsplash.com/photo-1522202176988-66273c2fd55f&w=1200&output=webp" alt="Team Work" width="600" height="400" loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: '40px', boxShadow: '0 40px 80px rgba(15, 23, 42, 0.15)' }} />
                             <div style={{ position: 'absolute', bottom: '-30px', right: '-30px', background: 'var(--secondary)', color: '#fff', padding: '35px', borderRadius: '24px', boxShadow: '0 30px 60px rgba(15, 23, 42, 0.3)' }}>
                                 <Globe size={45} color="var(--accent)" style={{ marginBottom: '15px' }} />
-                                <h4 style={{ fontSize: '1.8rem', fontWeight: '800' }}>10+ Countries</h4>
+                                <h3 style={{ fontSize: '1.8rem', fontWeight: '800' }}>10+ Countries</h3>
                                 <p style={{ opacity: 0.8, fontSize: '1rem' }}>Seamless Trade Network</p>
                             </div>
                         </motion.div>
@@ -109,9 +109,10 @@ const Hero = () => {
                         </motion.div>
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} style={{ display: 'flex', justifyContent: 'center' }}>
                             <img 
-                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=1200" 
+                                src="https://images.weserv.nl/?url=images.unsplash.com/photo-1485827404703-89b55fcc595e&w=1200&output=webp" 
                                 alt="Innovation Tech" 
-                                style={{ width: '100%', borderRadius: '50px', border: '12px solid rgba(255,255,255,0.05)' }} 
+                                width="600" height="400" loading="lazy"
+                                style={{ width: '100%', height: 'auto', borderRadius: '50px', border: '12px solid rgba(255,255,255,0.05)' }} 
                             />
                         </motion.div>
                     </div>

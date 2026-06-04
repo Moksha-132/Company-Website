@@ -126,7 +126,7 @@ const Navbar = () => {
                                 onMouseEnter={() => setProfileDropdownOpen(true)}
                                 onMouseLeave={() => setProfileDropdownOpen(false)}
                             >
-                                <button style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: 'var(--secondary)' }}>
+                                <button aria-label="User Profile" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: 'var(--secondary)' }}>
                                     <UserCircle size={32} strokeWidth={1.5} />
                                 </button>
                                 {profileDropdownOpen && (
