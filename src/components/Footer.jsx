@@ -111,13 +111,14 @@ const Footer = () => {
                     .grid-footer { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
                 }
                 @media (max-width: 576px) {
-                    .grid-footer { grid-template-columns: 1fr !important; text-align: center; }
-                    .footer-col { display: flex; flex-direction: column; align-items: center; }
+                    .grid-footer { grid-template-columns: 1fr 1fr !important; gap: 30px !important; text-align: left; }
+                    .footer-col:first-child { grid-column: span 2; display: flex; flex-direction: column; align-items: center; text-align: center; }
+                    .footer-col:last-child { grid-column: span 2; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
                     .social-icons { flex-direction: row !important; justify-content: center; width: 100%; }
-                    .link-list { align-items: center; }
-                    .contact-list { align-items: center; }
-                    .contact-item { flex-direction: column; text-align: center !important; gap: 10px !important; }
-                    .contact-item div { text-align: center !important; }
+                    .link-list { align-items: flex-start; }
+                    .contact-list { align-items: flex-start; width: 100%; }
+                    .contact-item { flex-direction: row !important; text-align: left !important; gap: 15px !important; }
+                    .contact-item div { text-align: left !important; }
                 }
             `}</style>
         </footer>
