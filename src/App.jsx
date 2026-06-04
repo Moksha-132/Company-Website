@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-route
 import { AppProvider } from './AppContext';
 import CartWidget from './components/CartWidget';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
+const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const LogisticsPage = lazy(() => import('./pages/LogisticsPage'));
 const ExportPage = lazy(() => import('./pages/ExportPage'));
@@ -87,7 +87,7 @@ function App() {
         <ScrollToTop />
         <CartWidget />
         <Layout>
-          <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', width: '100%' }}>Loading...</div>}>
+          <Suspense fallback={<div style={{ minHeight: '200vh', width: '100%', background: 'var(--background)' }}></div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
